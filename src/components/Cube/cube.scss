@@ -1,0 +1,11 @@
+.main{
+    height: 1300px;
+    flex:content;
+    justify-content: center;
+
+    .cube{
+        position: sticky;
+        top: 0;
+        height: 1100px;
+    }
+}
