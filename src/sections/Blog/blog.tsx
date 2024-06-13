@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Lottie from "lottie-react";
+import dragSide from "./dragSide.json";
 import { FaArrowAltCircleRight } from "react-icons/fa"; // Import the right arrow icon from Font Awesome
 
 const Blog = () => {
@@ -62,12 +64,21 @@ const Blog = () => {
         {/* Add more ThreeDCardDemo components here */}
       </Slider>
 
-      <div className="text-white flex justify-end pr-5 ">Drag to explore ➡</div>
-      <div className="flex justify-center">
+      <div className="text-white flex justify-end pr-5 align-middle items-center ">
+        <div className="mr-2 pt-5">
+          {" "}
+          <Lottie
+            animationData={dragSide}
+            style={{ width: "60px", height: "60px" }}
+          />
+        </div>
+        Drag to explore ➡
+      </div>
+      {/* <div className="flex justify-center">
         <button className="text-black bg-white rounded-full px-5 py-4">
           Explore More
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

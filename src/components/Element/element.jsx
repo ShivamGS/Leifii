@@ -7,7 +7,7 @@ import love from "./love.json";
 
 const Element = () => {
   return (
-    <div className="h-[60rem] bg-[#fff] flex flex-col">
+    <div className="h-[57rem] bg-[#fff] flex flex-col">
       <div className="text-container flex flex-row items-center pb-10 pt-[4rem]">
         <p className="text-[4rem] w-1/2 pl-12 mt-10">
           Designing your

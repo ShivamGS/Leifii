@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 import "./branding.css";
+import SliderComponent from "./sliderComponent";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -467,25 +468,15 @@ const Branding = () => {
           <div class="caption">The Art of Perfection?</div>
         </div>
       </div>
+      <div className="flex text-justify justify-center text-[3rem]">
+        Explore the projects
+      </div>
 
-      <section class="project project--details">
-        <span class="project__label project__label--default">
-          Societal Impact
-        </span>
-        <p>
-          As AI-generated art becomes more prevalent, its long-term impact on
-          the art market, art institutions, and the broader societal perception
-          of art needs to be carefully examined. Understanding the implications
-          of AI-generated art for art sales, copyright laws, and the dynamics of
-          the art market is crucial for shaping future policies and practices.
-          Additionally, exploring the ways in which AI-generated art can
-          democratize artistic expression and challenge traditional hierarchies
-          is an ongoing challenge that requires proactive engagement and
-          collaboration.
-        </p>
-      </section>
+      <div className="h-screen text-white">
+        <SliderComponent />{" "}
+      </div>
 
-      <div class="gallery-wrap gallery-wrap--dense">
+      {/* <div class="gallery-wrap gallery-wrap--dense">
         <div
           class="gallery gallery--stack gallery--stack-inverse gallery--stack-dark"
           id="gallery-4"
@@ -662,7 +653,9 @@ const Branding = () => {
           the profound human expression that sparks true resonance, evoking a
           sense of emptiness in the face of machine-driven artistry.
         </p>
-      </section>
+      </section> */}
+
+      {/* <div className="h-screen bg-black"></div> */}
     </main>
   );
 };

@@ -1,18 +1,16 @@
-.main{
+.mainn{
     position: relative;
     display: flex;
-    /* height: 30vh; */
-    margin-bottom: 0vh;
+    height: 50vh;
+    // margin-bottom: 100vh;
     overflow: hidden;
+    background-color: black;
   }
   
-  .main img{
-    object-fit: cover;
-  }
-  
+
   .sliderContainer{
     position: absolute;
-    /* top: calc(100vh - 350px); */
+    // top: calc(100vh - 350px);
   }
   
   .slider{
@@ -24,8 +22,8 @@
     position: relative;
     margin: 0px;
     color: white;
-    font-size: 170px;
-    font-weight: 400;
+    font-size: 100px;
+    font-weight: 50;
     padding-right: 50px;
   }
   

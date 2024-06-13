@@ -24,8 +24,8 @@ const Hero = () => {
 
             <motion.div
               className="ml-[30px] mt-[10px] w-[150px] h-[80px] rounded-full overflow-hidden rounded-tr-[0] rounded-bl-[0]"
-              initial={{ x: 200, rotate: 0 }}
-              animate={{ x: 10, rotate: 180 }}
+              initial={{ x: 200 }}
+              animate={{ x: 10 }}
               transition={{
                 type: "spring",
                 stiffness: 100,

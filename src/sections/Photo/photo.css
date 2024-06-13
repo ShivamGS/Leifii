@@ -29,10 +29,29 @@ body {
 }
 
 .bodyyy{
+	height: 600vh;
 	background-color: black;
 	color: white;
 }
 
+.single-image-section, .second-image-section, .third-image-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	perspective: 1500px; /* Ensure perspective is applied */
+  }
+  
+  .single-image, .second-image, .third-image {
+	width: calc(1 / var(--grid-inner-scale) * 20%);
+	height: auto;
+	aspect-ratio: var(--grid-item-ratio);
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	transform-origin: 50% 0%; /* Ensure it aligns with the animation logic */
+  }
 /* Page Loader */
 .js .loading::before,
 .js .loading::after {

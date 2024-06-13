@@ -1,0 +1,17 @@
+/* styles.css */
+/* styles.css */
+.gradient-bg-1 {
+    background: linear-gradient(to left bottom, #0b0041, #0c075b, #0f0c77, #121194, #1416b2);
+  }
+  
+  .gradient-bg-2 {
+    background:linear-gradient(to left bottom, #000000, #230718, #360733, #3a105a, #082589);
+  }
+  
+  .gradient-bg-3 {
+    background:  linear-gradient(to right bottom, #020773, #004dba, #007ebf, #00a982, #00cc0f);
+  }
+  
+
+  /* background-image: linear-gradient(to bottom, #2100ff, #007cff, #00b1ff, #00dbff, #00ffdf); */
+  /* background-image: linear-gradient(to left top, #01032f, #002348, #003846, #004b2b, #385801); */

@@ -64,8 +64,8 @@ const ServicesMain = () => {
                   </div>
                 </div>
 
-                <div className="h-[800px]  ml-10 mb-10">
-                  <div>
+                <div className="h-[800px] w-[1400px]  ml-10 mb-10">
+                  <div className="w-[1400px]">
                     <TextRevealCardPreview />
                   </div>
                 </div>
