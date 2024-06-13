@@ -116,7 +116,7 @@ const Marketing = () => {
       <div className="flex justify-center gap-[120px] my-[200px] ">
         <div className="flex px-10 pt-4 flex-col ">
           <h2 className="text-[3rem] font-medium mt-10 leading-18">
-            Recent Projects
+            Recent Work
           </h2>
           <div className="bg-black h-[2px] w-[180px] mt-5"></div>
         </div>

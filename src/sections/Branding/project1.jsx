@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
@@ -71,6 +71,10 @@ const Project1 = () => {
   if (inViewReviewDesc) {
     controlsReviewDesc.start("visible");
   }
+  useEffect(() => {
+    // Scroll to the top of the page when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <CursorProvider>
@@ -84,9 +88,9 @@ const Project1 = () => {
             variants={revealVariant}
             className="text-[6rem] p-[10rem] pb-5"
           >
-            <span className="italic font-normal font-[questrial]">Cloud </span>
-            Based
-            <br /> network management
+            <span className="italic font-normal font-[questrial]">Blind </span>
+            Media
+            <br /> Entertainment
           </motion.div>
 
           <div className="flex mx-[10rem] space-x-4 my-5">
@@ -110,9 +114,16 @@ const Project1 = () => {
             ref={ref1}
             initial={{ scale: 0.8 }}
             animate={controls1}
-            className="mb-8 bg-red-100 flex justify-center w-[1500px] h-[600px] rounded-lg"
+            className="mb-8 flex justify-center w-[1500px] h-[600px] rounded-lg"
           >
-            <img src="/assets/pod02.png" />
+            <motion.video
+              className="video_section h-full w-[98%] object-cover border rounded-3xl"
+              src="/project1/1_2.mp4"
+              playsInline
+              autoPlay
+              loop
+              muted
+            ></motion.video>
           </motion.div>
         </div>
 
@@ -160,13 +171,13 @@ const Project1 = () => {
           <div className="flex justify-between w-full max-w-7xl mb-8">
             <div className="w-[48%] bg-blue-100 h-[300px] flex justify-center items-center rounded-lg overflow-hidden">
               <img
-                src="/assets/pod04.png"
+                src="/project1/1_1.png"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-[48%] bg-green-100 h-[300px] flex justify-center items-center rounded-lg overflow-hidden">
               <img
-                src="/assets/pod01.png"
+                src="/project1/1_3.png"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -228,14 +239,13 @@ const Project1 = () => {
 
         {/* Additional large banner */}
         <div className="flex justify-center mt-8">
-          <motion.div
+          <motion.img
+            src="/project1/Blindd-03.jpg"
             ref={ref2}
             initial={{ scale: 0.8 }}
             animate={controls2}
             className="mb-8 bg-yellow-100 flex justify-center w-[1500px] h-[600px] rounded-lg"
-          >
-            another large banner
-          </motion.div>
+          />
         </div>
 
         {/* Summary of Project */}
@@ -256,11 +266,17 @@ const Project1 = () => {
           </motion.div>
 
           <div className="flex justify-between w-full max-w-7xl mb-8">
-            <div className="w-[48%] bg-purple-100 h-[300px] flex justify-center items-center rounded-lg">
-              banner 3
+            <div className="w-[48%] bg-purple-100 h-[300px] flex justify-center  items-center">
+              <img
+                src="/project1/1_3.png"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             <div className="w-[48%] bg-orange-100 h-[300px] flex justify-center items-center rounded-lg">
-              banner 4
+              <img
+                src="/project1/1_1.png"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>

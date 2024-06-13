@@ -1,10 +1,15 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 // import { calsans } from "@/fonts/calsans";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "./tracingBeam.jsx";
 
 export function TracingBeamDemo() {
+  useEffect(() => {
+    // Scroll to the top of the page when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-black ">
       <TracingBeam className="px-6">

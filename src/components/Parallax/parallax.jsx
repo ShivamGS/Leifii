@@ -1,7 +1,7 @@
-import React from "react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./parallax.scss";
 
 const images = [
@@ -27,6 +27,7 @@ const Parallax = () => {
     target: gallery,
     offset: ["start end", "end start"],
   });
+
   const { height } = dimension;
   const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
@@ -71,14 +72,15 @@ const Parallax = () => {
 const Column = ({ images, y }) => {
   return (
     <motion.div className="column" style={{ y }}>
-      {images.map((src, i) => {
-        return (
-          <div key={i} className="imageContainer">
-            <img src={`/images/${src}`} alt="image" fill />
-          </div>
-        );
-      })}
+      {images.map((src, i) => (
+        <div key={i} className="imageContainer">
+          <Link to={`/project/${i}`}>
+            <img src={`/images/${src}`} alt={`image ${i}`} fill />
+          </Link>
+        </div>
+      ))}
     </motion.div>
   );
 };
+
 export default Parallax;

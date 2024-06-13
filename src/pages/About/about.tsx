@@ -16,53 +16,50 @@ const About = () => {
   const { scrollYProgress } = useScroll();
 
   // Transform properties for the first figure (top-left)
-  const top = useTransform(scrollYProgress, [0, 0.25], ["-50%", "34.8%"]);
-  const left = useTransform(scrollYProgress, [0, 0.25], ["-50%", "25%"]);
-  const scale = useTransform(scrollYProgress, [0, 0.25], [0.5, 5]);
-  const opacity = useTransform(scrollYProgress, [0, 0.25], [0, 1]);
+  const top = useTransform(scrollYProgress, [0, 0.1], ["-50%", "34.8%"]);
+  const left = useTransform(scrollYProgress, [0, 0.1], ["-50%", "25%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [0.5, 5]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   // Transform properties for the second figure (top-right)
-  const top2 = useTransform(scrollYProgress, [0.25, 0.5], ["-50%", "34.8%"]);
-  const left2 = useTransform(scrollYProgress, [0.25, 0.5], ["150%", "35.75%"]);
-  const scale2 = useTransform(scrollYProgress, [0.25, 0.5], [0.5, 5]);
-  const opacity2 = useTransform(scrollYProgress, [0.25, 0.5], [0, 1]);
+  const top2 = useTransform(scrollYProgress, [0.1, 0.2], ["-50%", "34.8%"]);
+  const left2 = useTransform(scrollYProgress, [0.1, 0.2], ["150%", "35.75%"]);
+  const scale2 = useTransform(scrollYProgress, [0.1, 0.2], [0.5, 5]);
+  const opacity2 = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
 
   // Transform properties for the third figure (bottom-left)
-  const top3 = useTransform(scrollYProgress, [0.5, 0.75], ["150%", "55.05%"]);
-  const left3 = useTransform(scrollYProgress, [0.5, 0.75], ["-50%", "29.35%"]);
-  const scale3 = useTransform(scrollYProgress, [0.5, 0.75], [0.5, 5]);
-  const opacity3 = useTransform(scrollYProgress, [0.5, 0.75], [0, 1]);
-
-  // Transform properties for the fourth figure (bottom-right)
-  const top4 = useTransform(scrollYProgress, [0.75, 1], ["150%", "55%"]);
-  const left4 = useTransform(scrollYProgress, [0.75, 1], ["150%", "35.7%"]);
-  const scale4 = useTransform(scrollYProgress, [0.75, 1], [0.5, 5]);
-  const opacity4 = useTransform(scrollYProgress, [0.75, 1], [0, 1]);
+  const top3 = useTransform(scrollYProgress, [0.2, 0.3], ["150%", "55.05%"]);
+  const left3 = useTransform(scrollYProgress, [0.2, 0.3], ["-50%", "29.35%"]);
+  const scale3 = useTransform(scrollYProgress, [0.2, 0.3], [0.5, 5]);
+  const opacity3 = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
 
   // State to handle text appearance
   const [content, setContent] = useState({ title: "", description: "" });
 
+  // Opacity transform for fading out blocks and text
+  const fadeOutOpacity = useTransform(scrollYProgress, [0.4, 0.5], [1, 0]);
+
   // Update text when scroll reaches a certain point
   useEffect(() => {
     return scrollYProgress.onChange((v) => {
-      if (v > 0.75) {
+      if (v > 0.3) {
         setContent({
-          title: "Building Block 4: Our Future Vision",
+          title: "Building Block 3: Our Future Vision",
           description: "A description about our vision for the future.",
         });
-      } else if (v > 0.5) {
+      } else if (v > 0.2) {
         setContent({
-          title: "Building Block 3: Our Collaboration and Commitment",
+          title: "Building Block 2: Our Collaboration and Commitment",
           description: "A description about our collaboration and commitment.",
         });
-      } else if (v > 0.25) {
+      } else if (v > 0.1) {
         setContent({
-          title: "Building Block 2: Our Expertise and Innovation",
+          title: "Building Block 1: Our Expertise and Innovation",
           description: "A description about our expertise and innovation.",
         });
       } else if (v > 0) {
         setContent({
-          title: "Building Block 1: Our Vision and Mission",
+          title: "Continue Scrolling",
           description: "A description about our vision and mission.",
         });
       } else {
@@ -80,42 +77,48 @@ const About = () => {
 
       <motion.div
         ref={targetRef}
-        style={{ top, left, scale, opacity }}
+        style={{ top, left, scale, opacity: fadeOutOpacity }}
         className="fixed w-8 h-8 rounded-br-full gradient-bg-1"
       />
 
       <motion.div
-        style={{ top: top2, left: left2, scale: scale2, opacity: opacity2 }}
+        style={{
+          top: top2,
+          left: left2,
+          scale: scale2,
+          opacity: fadeOutOpacity,
+        }}
         className="fixed bg-blue-900 w-8 h-8 rounded-br-full gradient-bg-2"
       />
 
       <motion.div
-        style={{ top: top3, left: left3, scale: scale3, opacity: opacity3 }}
+        style={{
+          top: top3,
+          left: left3,
+          scale: scale3,
+          opacity: fadeOutOpacity,
+        }}
         className="fixed bg-green-600 w-16 h-8 rounded-bl-full rounded-tr-full gradient-bg-3 "
       />
-
-      {/* <motion.div
-        style={{ top: top4, left: left4, scale: scale4, opacity: opacity4 }}
-        className="fixed bg-green-600 w-8 h-8 rounded-tr-full"
-      /> */}
 
       {content.title && (
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
+          style={{ opacity: fadeOutOpacity }}
           className="fixed top-[40%] right-[10%] transform -translate-y-1/2 p-4 rounded"
         >
-          <div className="text-black">
-            <h2 className="text-xl font-bold">{content.title}</h2>
-            <p className="text-sm">{content.description}</p>
+          <div className="text-black py-10 ml-10">
+            <h2 className="text-3xl font-bold">{content.title}</h2>
+            <p className="text-lg">{content.description}</p>
           </div>
         </motion.div>
       )}
-
       <div className="h-screen"></div>
 
-      <div className="h-[30rem] bg-[#edeaed] grid grid-cols-4 gap-x-8 items-end">
+      <div className="h-[30rem] bg-[#fff] grid grid-cols-4 gap-x-8 items-end">
         <div className="h-[70%] w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-[1.6rem] flex flex-col">
           <div className="text-[hsla(0,0%,7%,.7)]">001</div>
           <div className="h-[12rem] py-5 pr-10">
@@ -170,6 +173,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <div className="h-screen"></div>
     </div>
   );
 };

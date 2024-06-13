@@ -164,16 +164,7 @@ const Testimonials = () => {
           </p>
         </div>
       ))}
-      <div
-        className="custom-cursor"
-        style={{
-          top: `${cursorPosition.x}px`,
-          left: `${cursorPosition.y}px`,
-          opacity: isCursorVisible ? 1 : 0,
-        }}
-      >
-        Click me
-      </div>
+     
     </div>
   );
 };
