@@ -8,8 +8,8 @@ import { PointLightHelper } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useHelper, Html } from "@react-three/drei";
 import CustomShaderMaterial from "three-custom-shader-material";
-import vertexShader from "../shaders/vertex.glsl";
-import fragmentShader from "../shaders/fragment.glsl";
+import vertexShader from "./shaders/vertex.glsl";
+import fragmentShader from "./shaders/fragment.glsl";
 import html2canvas from "html2canvas";
 
 const useDomToCanvas = (domEl) => {

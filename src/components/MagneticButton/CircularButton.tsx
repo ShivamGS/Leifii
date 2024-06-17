@@ -244,7 +244,7 @@ export const CircularButton = ({
       onClick={handleMenuOpen}
     >
       <>
-        <span style={{ opacity: isMenuOpened ? 0 : 1 }}>menu</span>
+        <span style={{ opacity: isMenuOpened ? 0 : 1 }}></span>
         <span className="menu-box" ref={DOM.el}>
           <span></span>
           <span></span>

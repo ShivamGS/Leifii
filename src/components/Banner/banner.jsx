@@ -44,7 +44,7 @@ const Banner = () => {
       <SectionWrapper>
         <Container id="up">
           <BannerComponent>
-            <Link to="/photography">
+            <Link to="/services/photography">
               <img
                 src="img/pod01.png"
                 className="ban-pic"
@@ -57,7 +57,7 @@ const Banner = () => {
             </Link>
           </BannerComponent>
           <BannerComponent>
-            <Link to="/branding">
+            <Link to="/services/branding">
               <img
                 src="img/pod02.png"
                 className="ban-pic"
@@ -69,26 +69,30 @@ const Banner = () => {
             </Link>
           </BannerComponent>
           <BannerComponent>
-            <img
-              src="img/pod03.png"
-              className="ban-pic"
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="6"
-              data-scroll-target="#up"
-            ></img>
+            <Link to="/services/marketing">
+              <img
+                src="img/pod03.png"
+                className="ban-pic"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="6"
+                data-scroll-target="#up"
+              ></img>
+            </Link>
           </BannerComponent>
           <BannerComponent>
-            <img
-              src="img/pod04.png"
-              className="ban-pic"
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="-4"
-              data-scroll-target="#up"
-            ></img>
+            <Link to="/services/web">
+              <img
+                src="img/pod04.png"
+                className="ban-pic"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-4"
+                data-scroll-target="#up"
+              ></img>
+            </Link>
           </BannerComponent>
-          <BannerComponent>
+          {/* <BannerComponent>
             <img
               src="img/pod02.png"
               className="ban-pic"
@@ -107,7 +111,7 @@ const Banner = () => {
               data-scroll-speed="-4"
               data-scroll-target="#up"
             ></img>
-          </BannerComponent>
+          </BannerComponent> */}
         </Container>
       </SectionWrapper>
     </div>

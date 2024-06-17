@@ -7,6 +7,7 @@ import cubes from "./cubes.json";
 import leaves from "./leaves.json";
 import uiux from "./uiux.json";
 import designSprint from "./designSprint.json";
+import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 
 const About = () => {
   const ref = useRef(null);
@@ -70,6 +71,7 @@ const About = () => {
 
   return (
     <div>
+      <PageLoader />
       <Navbar />
       <div className="h-[150px] "></div>
 

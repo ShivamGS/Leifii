@@ -20,7 +20,7 @@ export const Menu = ({ isMenuOpened, handleMenuOpen }: Props) => {
   //   "Twitter",
   //   "Github",
   // ;
-  const links2 = ["Work", "About", "Services", "Careers", "Contact"];
+  const links2 = ["About", "Services", "Careers", "Contact"];
 
   const [isTouchScreen, setIsTouchScreen] = useState(false);
 
@@ -60,7 +60,7 @@ export const Menu = ({ isMenuOpened, handleMenuOpen }: Props) => {
               <p className={"navbar-menu__title"}>Menu</p>
               <div className={"navbar-menu__links-list"}>
                 {links2.map((link) => (
-                  <TransitionLink link={link} size="lg" />
+                  <TransitionLink link={link} size="lg" key={link} />
                 ))}
               </div>
             </div>

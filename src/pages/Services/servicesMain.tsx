@@ -11,6 +11,7 @@ import { Footer } from "../../sections/Footer/index.tsx";
 import { Cursor } from "../../components/Cursor/index.tsx";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
 import { TextRevealCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
+import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 
 const ServicesMain = () => {
   const containerRef = useRef(null);
@@ -38,7 +39,9 @@ const ServicesMain = () => {
         containerRef={containerRef}
       >
         <AnimatePresence>
+        <PageLoader />
           <CursorProvider>
+           
             <main
               className="App bg-white"
               data-scroll-container

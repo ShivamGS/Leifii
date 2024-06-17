@@ -16,6 +16,7 @@ import Project2 from "./sections/Branding/project2.jsx";
 import Project3 from "./sections/Branding/project3.jsx";
 import HeroSection from "./sections/Marketing/marketing.jsx";
 import Marketing from "./sections/Marketing/marketing.jsx";
+import Contact from "./pages/Contact/contact.jsx";
 // import Contact from "./pages/Contact/contact.jsx";
 
 function App() {
@@ -23,16 +24,20 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/work" element={<Work />} />
+        {/* <Route path="/work" element={<Work />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicesMain />} />
+        <Route path="/contact" element={<Contact />} />
+
         <Route path="/blog" element={<TracingBeamDemo />} />
-        <Route path="/photography" element={<Photo />} />
-        <Route path="/branding" element={<Branding />} />
+
+        <Route path="/services/photography" element={<Photo />} />
+        <Route path="/services/branding" element={<Branding />} />
+        <Route path="/services/marketing" element={<Marketing />} />
 
         <Route path="/project/1" element={<Project1 />} />
         <Route path="/project/2" element={<Marketing />} />
-        <Route path="/project/3" element={<Project3 />} />
+        {/* <Route path="/project/3" element={<Bulge />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </>

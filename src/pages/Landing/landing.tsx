@@ -35,9 +35,9 @@ const Landing = () => {
   return (
     <CursorProvider>
       <div>
-        {/* <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
-        </AnimatePresence> */}
+        </AnimatePresence>
         <Navbar />
         <div className="h-20"></div>
 

@@ -164,6 +164,8 @@ const Photo = () => {
     const thirdImage = document.querySelector(".third-image");
     applyThirdImageAnimation(thirdImage);
   });
+
+  
   return (
     <div className="bodyyy">
       <div className="intro">
@@ -399,7 +401,7 @@ const Photo = () => {
           }}
         ></div>
         <div className="text-[3rem] mt-[10rem]">Real Estate</div>
-      </section>
+      </section> 
     </div>
   );
 };

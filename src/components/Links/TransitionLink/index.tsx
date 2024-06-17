@@ -15,7 +15,7 @@ export const TransitionLink = ({
 }: Props) => {
   return (
     <Link
-      to={link.toLowerCase()}
+      to={`/${link.toLowerCase()}`}
       reloadDocument={true}
       className={`${"t-link__item"} ${size} ${
         darkmode ? "t-link__item--dark" : ""
