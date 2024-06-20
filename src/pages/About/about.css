@@ -1,15 +1,15 @@
 /* styles.css */
 /* styles.css */
 .gradient-bg-1 {
-    background: linear-gradient(to left bottom, #0b0041, #0c075b, #0f0c77, #121194, #1416b2);
+    background: linear-gradient(#0B29C9,#0B25B6,#072474);
   }
   
   .gradient-bg-2 {
-    background:linear-gradient(to left bottom, #000000, #230718, #360733, #3a105a, #082589);
+    background:linear-gradient(#1547B3,#010D23,#000000);
   }
   
   .gradient-bg-3 {
-    background:  linear-gradient(to right bottom, #020773, #004dba, #007ebf, #00a982, #00cc0f);
+    background:  linear-gradient(#0a6d94,#089477,#07FA3E);
   }
   
 

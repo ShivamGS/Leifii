@@ -24,6 +24,7 @@ import Cube from "../../components/Cube/cube.jsx";
 import drag from "./dragWhite.json";
 import Lottie from "lottie-react";
 import FooterText from "../../sections/FooterText/footerText.jsx";
+import BlogList from "../../sections/Blog/blogList.jsx";
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -78,7 +79,8 @@ const Landing = () => {
           <InfiniteMovingCardsDemo />
         </div> */}
 
-        <Blog />
+        {/* <Blog /> */}
+        <BlogList />
 
         {/* <Bulge /> */}
 

@@ -7,6 +7,7 @@ import cubes from "./cubes.json";
 import leaves from "./leaves.json";
 import uiux from "./uiux.json";
 import designSprint from "./designSprint.json";
+import scroll from "./scroll.json";
 import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 
 const About = () => {
@@ -24,7 +25,7 @@ const About = () => {
 
   // Transform properties for the second figure (top-right)
   const top2 = useTransform(scrollYProgress, [0.1, 0.2], ["-50%", "34.8%"]);
-  const left2 = useTransform(scrollYProgress, [0.1, 0.2], ["150%", "35.75%"]);
+  const left2 = useTransform(scrollYProgress, [0.1, 0.2], ["150%", "35.85%"]);
   const scale2 = useTransform(scrollYProgress, [0.1, 0.2], [0.5, 5]);
   const opacity2 = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
 
@@ -50,17 +51,17 @@ const About = () => {
         });
       } else if (v > 0.2) {
         setContent({
-          title: "Building Block 2: Our Collaboration and Commitment",
+          title: "Building Block 2: Our Collaboration ",
           description: "A description about our collaboration and commitment.",
         });
       } else if (v > 0.1) {
         setContent({
-          title: "Building Block 1: Our Expertise and Innovation",
+          title: "Building Block 1: Our Expertise",
           description: "A description about our expertise and innovation.",
         });
       } else if (v > 0) {
         setContent({
-          title: "Continue Scrolling",
+          title: "This is showcase of our logo",
           description: "A description about our vision and mission.",
         });
       } else {
@@ -75,7 +76,20 @@ const About = () => {
       <Navbar />
       <div className="h-[150px] "></div>
 
-      <div className="h-screen"></div>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+        className="h-screen flex flex-col items-center pt-[10rem]"
+      >
+        <div className="text-[2rem] font-[questrial] mb-5">Scroll Down</div>
+        <div style={{ width: "100px", height: "80px" }}>
+          <Lottie
+            animationData={scroll}
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+      </motion.div>
 
       <motion.div
         ref={targetRef}
@@ -119,8 +133,22 @@ const About = () => {
         </motion.div>
       )}
       <div className="h-screen"></div>
+      <div className="h-screen"></div>
 
-      <div className="h-[30rem] bg-[#fff] grid grid-cols-4 gap-x-8 items-end">
+      <div className="text-[3rem] font-[questrial] text-center">
+        Pillars at Leifii
+        <div
+          style={{
+            width: "50px",
+            height: "2px",
+            backgroundColor: "#000",
+            margin: "auto",
+            marginTop: "10px",
+          }}
+        ></div>
+      </div>
+
+      <div className="pillars h-[30rem] bg-[#fff] grid grid-cols-4 gap-x-8 items-end">
         <div className="h-[70%] w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-[1.6rem] flex flex-col">
           <div className="text-[hsla(0,0%,7%,.7)]">001</div>
           <div className="h-[12rem] py-5 pr-10">

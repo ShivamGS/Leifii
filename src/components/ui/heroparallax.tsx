@@ -104,7 +104,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto pb-0  px-4 w-full left-0 top-0 ">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white font-[questrial]">
-        Leifii, We do <br /> things differently
+        Check out our <br /> other websites
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 font-[questrial]">
         Check out our projects here. We build beautiful products with the latest

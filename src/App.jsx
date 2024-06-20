@@ -17,6 +17,10 @@ import Project3 from "./sections/Branding/project3.jsx";
 import HeroSection from "./sections/Marketing/marketing.jsx";
 import Marketing from "./sections/Marketing/marketing.jsx";
 import Contact from "./pages/Contact/contact.jsx";
+import BlogList from "./sections/Blog/blogList.jsx";
+import BlogDetail from "./sections/Blog/blogDetail.jsx";
+import Web from "./sections/Web/web.tsx";
+
 // import Contact from "./pages/Contact/contact.jsx";
 
 function App() {
@@ -29,11 +33,14 @@ function App() {
         <Route path="/services" element={<ServicesMain />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/blog" element={<TracingBeamDemo />} />
+        {/* <Route path="/blog" element={<TracingBeamDemo />} /> */}
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
 
         <Route path="/services/photography" element={<Photo />} />
         <Route path="/services/branding" element={<Branding />} />
         <Route path="/services/marketing" element={<Marketing />} />
+        <Route path="/services/web" element={<Web />} />
 
         <Route path="/project/1" element={<Project1 />} />
         <Route path="/project/2" element={<Marketing />} />
