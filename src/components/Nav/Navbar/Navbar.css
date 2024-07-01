@@ -1,3 +1,4 @@
+/** CSS Variables **/
 :root {
   --black: #000;
   --white: #fff;
@@ -18,13 +19,16 @@
   --color-link: #89639e;
   --color-link-hover: #ce1352;
   --button-filler: #ce1352;
-  --light-grey: rgba(0, 0, 0, 0.3);
+  --light-grey: rgba(0,0,0,.3);
   --light-grey-100: #6f6f6f;
-  --light-grey-200: rgba(255, 255, 255, 0.43);
+  --light-grey-200: rgba(255,255,255,.43);
   --nav-height-desktop: 150px;
   --column1400Width: 57px;
 }
 
+/** Mixins **/
+/** Sizes **/
+/** Font face **/
 @font-face {
   font-family: "Averta CY";
   src: url("../../../fonts/AvertaCY-Light.woff2") format("woff2");
@@ -40,7 +44,7 @@
   src: url("../../../fonts/AvertaCY-Semibold.woff2") format("woff2");
   font-weight: 600;
 }
-
+/** Base styles **/
 body {
   margin: 0;
   font-family: "Averta CY", sans-serif;
@@ -95,6 +99,7 @@ img {
      object-fit: cover;
 }
 
+/** Common styles **/
 section {
   padding-bottom: 60px;
 }
@@ -137,15 +142,11 @@ section {
   max-width: 100%;
   width: 100%;
 }
-.container.container--left > *,
-.container.container--right > *,
-.container.container--center > * {
+.container.container--left > *, .container.container--right > *, .container.container--center > * {
   max-width: 100%;
 }
 @media (min-width: 768px) {
-  .container.container--left > *,
-  .container.container--right > *,
-  .container.container--center > * {
+  .container.container--left > *, .container.container--right > *, .container.container--center > * {
     max-width: 70%;
   }
 }
@@ -160,8 +161,7 @@ section {
 .container.container--center > * {
   margin: 0 auto;
 }
-.container.container--row,
-.container.container--column {
+.container.container--row, .container.container--column {
   display: flex;
 }
 .container.container--row {
@@ -250,6 +250,7 @@ button.circular.active > span:first-of-type {
   background: var(--cursor-stroke);
 }
 
+/* Viewport wrapper - Needed for Smoothscroll - DEBUG*/
 #viewport {
   position: fixed;
   top: 0;
@@ -258,6 +259,7 @@ button.circular.active > span:first-of-type {
   left: 0;
 }
 
+/* More wrapper to center buttons */
 .more-wrapper {
   padding-top: 50px;
   display: flex;
@@ -272,7 +274,9 @@ button.circular.active > span:first-of-type {
 
 .navbar {
   position: absolute;
-  top: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  top: 80px;
   left: 15px;
   right: 15px;
   width: calc(100% - 30px);
@@ -293,20 +297,16 @@ button.circular.active > span:first-of-type {
     width: calc(100% - 120px);
   }
 }
-@media (max-width: 480px) {
-  .navbar {
-    top: 50px;
-    left: 40px;
-    right: 40px;
-    width: calc(100% - 60px);
-  }
-}
 .navbar-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.navbar-left{
+  padding-left: 20px;
+}
 .navbar-right {
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -339,10 +339,15 @@ button.circular.active > span:first-of-type {
     display: inline-block;
   }
 }
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar .logo-container {
   display: flex;
   align-items: center;
   gap: 20px;
   width: 150px;
   height: 30px;
-}
+}/*# sourceMappingURL=Navbar.module.css.map */
