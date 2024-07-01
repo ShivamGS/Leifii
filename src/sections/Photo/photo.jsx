@@ -77,14 +77,15 @@ const Photo = () => {
             z: -500,
             scale: 0.2,
             filter: "brightness(0%)",
-            yPercent: 100, // Start the image at the bottom center
+            yPercent: -50, // Start the image at the vertical center
           },
           {
             z: 0,
             scale: 2, // Scale the image
             filter: "brightness(100%)",
             xPercent: -100, // Move the image horizontally to left
-            transformOrigin: "bottom center", // Set the transform origin to bottom center
+            yPercent: -50, // Keep the image vertically centered
+            transformOrigin: "center center", // Set the transform origin to center center
           }
         );
       }
@@ -116,14 +117,15 @@ const Photo = () => {
           z: -500,
           scale: 0.2,
           filter: "brightness(0%)",
-          yPercent: 100, // Start the image at the bottom center
+          yPercent: -50, // Start the image at the vertical center
         },
         {
           z: 0,
           scale: 2, // Scale the image
           filter: "brightness(100%)",
-          xPercent: 40, // Move the image horizontally to left
-          transformOrigin: "bottom center", // Set the transform origin to bottom center
+          xPercent: 40, // Move the image horizontally to right
+          yPercent: -50, // Keep the image vertically centered
+          transformOrigin: "center center", // Set the transform origin to center center
         }
       );
     };
@@ -145,14 +147,15 @@ const Photo = () => {
           z: -500,
           scale: 0.2,
           filter: "brightness(0%)",
-          yPercent: 100, // Start the image at the bottom center
+          yPercent: -50, // Start the image at the vertical center
         },
         {
           z: 0,
           scale: 2, // Scale the image
           filter: "brightness(100%)",
           xPercent: -100, // Move the image horizontally to left
-          transformOrigin: "bottom center", // Set the transform origin to bottom center
+          yPercent: -50, // Keep the image vertically centered
+          transformOrigin: "center center", // Set the transform origin to center center
         }
       );
     };
@@ -165,7 +168,6 @@ const Photo = () => {
     applyThirdImageAnimation(thirdImage);
   });
 
-  
   return (
     <div className="bodyyy">
       <div className="intro">
@@ -401,7 +403,7 @@ const Photo = () => {
           }}
         ></div>
         <div className="text-[3rem] mt-[10rem]">Real Estate</div>
-      </section> 
+      </section>
     </div>
   );
 };

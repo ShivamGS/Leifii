@@ -8,43 +8,30 @@ const Intro = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="h-[700px] flex flex-row justify-center items-center">
-      <div className="w-[50%] flex justify-center">
-        <div className="align-middle flex items-center justify-center p-[20px] rounded-3xl h-[35rem]">
+    <div className="h-auto flex flex-col md:flex-row justify-center items-center p-4 md:h-[700px]">
+      <div className="w-full md:w-[50%] flex justify-center mb-8 md:mb-0">
+        <div className="align-middle flex items-center justify-center p-4 md:p-[20px] rounded-3xl h-[20rem] md:h-[35rem]">
           <Lottie
             animationData={zeroTree}
             style={{ width: "100%", height: "100%" }}
           />
         </div>
       </div>
-      <div className="w-[50%] flex flex-col justify-center items-start">
-        {" "}
-        {/* Adjusted from items-center to items-start */}
-        <div className="info text-3xl font-[questrial] m-10 text-left">
+      <div className="w-full md:w-[50%] flex flex-col justify-center items-start">
+        <div className="info text-lg md:text-3xl font-[questrial] m-4 md:m-10 text-left">
           Leifii is a leading digital product agency focused on branding, UI/UX
           design, mobile, and web development.
         </div>
         <motion.div
           ref={constraintRef}
-          className="my-20 mx-10 flex items-center justify-start rounded-3xl w-full pl-2"
+          className="my-10 mx-4 md:my-20 md:mx-10 flex items-center justify-center md:justify-start rounded-3xl w-full pl-2"
         >
           <div className="button-container-3">
-            <span className="mas text-[1.5rem] text-black p-7">Know More</span>
+            <span className="mas text-[1rem] md:text-[1.5rem] text-black p-4 md:p-7">Know More</span>
             <button type="button" name="Hover">
               Know More
             </button>
           </div>
-
-          {/* <motion.button
-            drag
-            dragConstraints={constraintRef}
-            dragElastic={0.2}
-            dragSnapToOrigin={true}
-            dragMomentum={true}
-            className="border border-black rounded-full p-[3rem] text-3xl transition-all duration-400 hover:scale-105 hover:text-white hover:bg-black"
-          >
-            Know more
-          </motion.button> */}
         </motion.div>
       </div>
     </div>

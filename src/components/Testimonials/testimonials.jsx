@@ -18,7 +18,7 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: "Increased Online Presence - without the hassle",
+      quote: "Increased Online Presence",
       name: "I am very much satisfied with how the team is handling the work. They all are painstaking and very dedicated, understands the requirements and keeps themselves on toes.",
       title: "Pooja - CEO of Pooja Khandelwal Designs",
     },
@@ -28,12 +28,12 @@ const Testimonials = () => {
       title: "Amit Firodiya From Alsan India",
     },
     {
-      quote: "Leifii Co is the Digital Marketing Partner You Can Trust",
+      quote: "Leifii Co is the Digital Marketing Partner ",
       name: "You just give them a small brief and they are up with ideas that make your work look damn good. Within the span of just 15 days of interacting they already knew my preferences and could understand my points without even explaining.",
       title: "Rohan Hasabnis CEO of Asian Box",
     },
     {
-      quote: "Effortless Expansion of Digital Footprint - Thanks to Leifii Co",
+      quote: "Effortless Expansion of Digital Footprint ",
       name: "Leifii Co has been instrumental in expanding our online presence seamlessly. Their team's meticulous attention to detail and unwavering dedication have made the process hassle-free.",
       title: "Neha Sharma, Marketing Director at TechSavvy Solutions",
     },
@@ -164,7 +164,6 @@ const Testimonials = () => {
           </p>
         </div>
       ))}
-     
     </div>
   );
 };

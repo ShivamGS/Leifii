@@ -5,6 +5,9 @@ import { Navbar } from "../../components/Nav/Navbar/index.tsx";
 import { Footer } from "../Footer/index.tsx";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import "./swiperr.css";
 
 const Marketing = () => {
   const [ref1, inView1] = useInView({ threshold: 0.1 });
@@ -113,49 +116,109 @@ const Marketing = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-[120px] my-[200px] ">
-        <div className="flex px-10 pt-4 flex-col ">
-          <h2 className="text-[3rem] font-medium mt-10 leading-18">
-            Recent Work
-          </h2>
-          <div className="bg-black h-[2px] w-[180px] mt-5"></div>
+      <div className="mt-[100px]">
+        <div className="flex justify-center">
+          <div className="flex px-10 pt-4 flex-col">
+            <h2 className="text-[3rem] font-medium mt-10 ">Recent Work</h2>
+            <div className="bg-black h-[2px] w-[280px] mt-5"></div>
+          </div>
         </div>
 
-        {/* First item */}
-        <div className="group relative w-[400px] h-[300px] ">
-          <img
-            src="/images/blob3.png"
-            className="w-80 h-80  transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[200%]"
-          />
-          <img
-            src="/images/cover1.jpg"
-            className="absolute inset-0 flex items-center justify-center w-[400px] h-[400px] bg-blue-500 hover:scale-100 transition-transform duration-800 transform origin-center z-10 rounded-2xl"
-          />
-        </div>
+        <Swiper
+          spaceBetween={120}
+          slidesPerView={1}
+          centeredSlides={true}
+          loop={true}
+          breakpoints={{
+            // Adjust these breakpoints as per your design requirements
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {/* First item */}
+          {/* <SwiperSlide>
+            <div className="group relative w-[400px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[200%]"
+              />
+              <img
+                src="/images/cover1.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[400px] h-[400px] bg-blue-500 hover:scale-100 transition-transform duration-800 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide> */}
 
-        {/* Second item */}
-        <div className="group relative w-[300px] h-[300px] ">
-          <img
-            src="/images/blob3.png"
-            className="w-80 h-80  transform scale-0 transition-transform  duration-700 origin-center group-hover:scale-[150%]"
-          />
-          <img
-            src="/images/6.jpg"
-            className="absolute inset-0 flex items-center justify-center w-[300px] h-[300px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
-          />
-        </div>
+          {/* Second item */}
+          <SwiperSlide>
+            <div className="group relative w-[300px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+              />
+              <img
+                src="/images/6.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[300px] h-[300px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide>
 
-        {/* Third item */}
-        <div className="group relative w-[400px] h-[300px] ">
-          <img
-            src="/images/blob3.png"
-            className="w-80 h-80 transform scale-0 transition-transform  duration-700 origin-center group-hover:scale-[180%]"
-          />
-          <img
-            src="/images/cover1.jpg"
-            className="absolute inset-0 flex items-center justify-center w-[400px] h-[400px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
-          />
-        </div>
+          {/* Third item */}
+          {/* <SwiperSlide>
+            <div className="group relative w-[400px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[180%]"
+              />
+              <img
+                src="/images/cover1.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[400px] h-[400px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide> */}
+
+          <SwiperSlide>
+            <div className="group relative w-[300px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+              />
+              <img
+                src="/images/8.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[300px] h-[300px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="group relative w-[300px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+              />
+              <img
+                src="/images/4.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[300px] h-[300px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="group relative w-[300px] h-[300px]">
+              <img
+                src="/images/blob3.png"
+                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+              />
+              <img
+                src="/images/9.jpg"
+                className="absolute inset-0 flex items-center justify-center w-[300px] h-[300px] bg-blue-500 hover:scale-100 transition-transform duration-300 transform origin-center z-10 rounded-2xl"
+              />
+            </div>
+          </SwiperSlide>
+
+          {/* Add more SwiperSlide components as needed */}
+        </Swiper>
       </div>
 
       <Footer />

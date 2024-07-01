@@ -20,6 +20,8 @@ import Contact from "./pages/Contact/contact.jsx";
 import BlogList from "./sections/Blog/blogList.jsx";
 import BlogDetail from "./sections/Blog/blogDetail.jsx";
 import Web from "./sections/Web/web.tsx";
+import Careers from "./pages/Careers/careers.tsx";
+import Trail from "./sections/Trial/trail.jsx";
 
 // import Contact from "./pages/Contact/contact.jsx";
 
@@ -31,6 +33,7 @@ function App() {
         {/* <Route path="/work" element={<Work />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicesMain />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* <Route path="/blog" element={<TracingBeamDemo />} /> */}
@@ -43,7 +46,7 @@ function App() {
         <Route path="/services/web" element={<Web />} />
 
         <Route path="/project/1" element={<Project1 />} />
-        <Route path="/project/2" element={<Marketing />} />
+        <Route path="/project/2" element={<Trail />} />
         {/* <Route path="/project/3" element={<Bulge />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>

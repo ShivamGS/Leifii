@@ -25,6 +25,8 @@ import drag from "./dragWhite.json";
 import Lottie from "lottie-react";
 import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
+import { TextRevealCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
+import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -40,7 +42,9 @@ const Landing = () => {
           {isLoading && <Preloader />}
         </AnimatePresence>
         <Navbar />
-        <div className="h-20"></div>
+        <div className="h-20  "></div>
+
+        {/* <HeroCardPreview /> */}
 
         <Hero />
         <Video />
@@ -50,23 +54,21 @@ const Landing = () => {
         {/* <HeroParallaxDemo /> */}
         <Element />
 
-        <div className=" bg-black ">
-          <div className="text-white text-[45px] p-10 pb-0 flex justify-center font-[Questrial]">
+        <div className="bg-black text-white pt-10">
+          <div className="text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] p-4 sm:p-10 pb-0 flex justify-center font-[Questrial]">
             Why us?
           </div>
 
-          <div className="flex flex-row w-full h-[85vh] justify-center pl-10">
-            <div className="w-[50%]">
+          <div className="flex flex-col sm:flex-row w-full h-screen sm:h-[85vh] justify-center pl-4 sm:pl-10">
+            <div className="w-full sm:w-[75%] md:w-[60%] lg:w-[50%]">
               <Cube />
             </div>
-            {/* <div className="w-[50%]">
-      <Cube />
-    </div> */}
           </div>
+
           <div className="flex justify-center pb-0 mb-0">
             <Lottie
               animationData={drag}
-              style={{ width: "200", height: "200px" }}
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40"
             />
           </div>
         </div>

@@ -19,13 +19,19 @@ const BlogList = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280, // Small laptops and larger tablets
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024, // Larger tablets
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 600, // Small tablets and phones
         settings: {
           slidesToShow: 1,
         },
@@ -36,7 +42,7 @@ const BlogList = () => {
   return (
     <div className="bg-black pb-20 px-10">
       <div className="bg-white h-[1px] w-[80%] mx-auto"></div>
-      <div className="overflow-hidden flex flex-col items-center justify-center ">
+      <div className="overflow-hidden flex flex-col items-center justify-center">
         <motion.h1 className="text-[40px] text-white ml-5 mt-12 mr-5 mb-3 font-[Questrial]">
           Resources
         </motion.h1>
@@ -44,7 +50,7 @@ const BlogList = () => {
           The Latest from LEIFII Co
         </motion.h1>
       </div>
-      <Slider {...settings}>
+      <Slider {...settings} className="flex flex-wrap justify-center">
         {blogData.map((blog) => (
           <ThreeDCardDemo key={blog.id} blog={blog} />
         ))}

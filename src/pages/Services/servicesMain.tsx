@@ -61,7 +61,7 @@ const ServicesMain = () => {
         <AnimatePresence>
           <PageLoader />
           <CursorProvider>
-            <main
+            <div
               className="App bg-white"
               data-scroll-container
               ref={containerRef}
@@ -178,7 +178,7 @@ const ServicesMain = () => {
 
               <Footer />
               <Cursor />
-            </main>
+            </div>
           </CursorProvider>
         </AnimatePresence>
       </LocomotiveScrollProvider>

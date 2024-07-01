@@ -16,6 +16,7 @@
     "clsx": "^2.1.0",
     "context": "^3.0.29",
     "emailjs-com": "^3.2.0",
+    "firebase": "^10.12.2",
     "flip": "^1.0.0",
     "framer-motion": "^11.0.28",
     "framer-motion-3d": "^11.0.28",
