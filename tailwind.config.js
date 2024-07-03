@@ -1,11 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 
 const defaultTheme = require("tailwindcss/defaultTheme");
- 
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = {
   content: [
@@ -15,11 +12,10 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       fontFamily: {
-          glimer: ['"Questrial"']
+        glimer: ['"Questrial"', ...defaultTheme.fontFamily.sans], // Add Questrial font
       },
       keyframes: {
         scroll: {
@@ -28,18 +24,17 @@ module.exports = {
           },
         },
       },
+    },
   },
-  plugins: [addVariablesForColors,],
-}
-}
-
+  plugins: [addVariablesForColors],
+};
 
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

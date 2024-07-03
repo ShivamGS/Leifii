@@ -70,34 +70,42 @@ const ServicesMain = () => {
             >
               <Navbar />
               <div className="h-[150px] "></div>
-              <div className="text-[50px] sm:text-[60px] md:text-[70px] p-[10px] sm:p-[15px] md:p-[20px] bg-white text-black text-left font-[questrial] ml-4 sm:ml-6 md:ml-10 pb-0">
+              <div className="text-[30px] sm:text-[50px] md:text-[70px] p-[10px] sm:p-[15px] md:p-[20px] bg-white text-black text-left font-[questrial] ml-4 sm:ml-6 md:ml-10 pb-0">
                 Our Services
               </div>
               <div className="min-h-screen bg-white flex flex-col pt-0 pl-0">
                 <div className="flex flex-wrap font-[questrial] justify-between">
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16 pl-6 sm:pl-8 md:pl-12">
-                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                    <span className="text-[30px] sm:text-[40px] md:text-[60px]">
                       <CountUp end={123} duration={4} />+
                     </span>
-                    Completed Projects
+                    <div className="text-[16px] sm:text-[18px] md:text-[20px]">
+                      Completed Projects
+                    </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
-                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                    <span className="text-[30px] sm:text-[40px] md:text-[60px]">
                       <CountUp end={25} duration={4} />+
                     </span>
-                    Awards & Features
+                    <div className="text-[16px] sm:text-[18px] md:text-[20px]">
+                      Awards & Features
+                    </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
-                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                    <span className="text-[30px] sm:text-[40px] md:text-[60px]">
                       <CountUp end={80} duration={4} />+
                     </span>
-                    Products Guided
+                    <div className="text-[16px] sm:text-[18px] md:text-[20px]">
+                      Products Guided
+                    </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
-                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                    <span className="text-[30px] sm:text-[40px] md:text-[60px]">
                       <CountUp end={50} duration={4} />+
                     </span>
-                    Websites Recreated
+                    <div className="text-[16px] sm:text-[18px] md:text-[20px]">
+                      Websites Recreated
+                    </div>
                   </div>
                 </div>
 
