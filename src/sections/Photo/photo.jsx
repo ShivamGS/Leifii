@@ -1,17 +1,15 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./photo.css";
 import { useGSAP } from "@gsap/react";
-
-// Register ScrollTrigger with GSAP
+import Trail from "../Trial/trail";
 
 const Photo = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    // Function to apply type3 animation to the grid or a single item
-    const applyAnimation = (element, isGrid) => {
+    const applyAnimation = (element) => {
       const timeline = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {
@@ -22,150 +20,55 @@ const Photo = () => {
         },
       });
 
-      if (isGrid) {
-        const gridWrap = element.querySelector(".grid-wrap");
-        const gridItems = element.querySelectorAll(".grid__item");
-        const gridItemsInner = [...gridItems].map((item) =>
-          item.querySelector(".grid__item-inner")
-        );
+      const gridWrap = element.querySelector(".grid-wrap");
+      const gridItems = element.querySelectorAll(".grid__item");
+      const gridItemsInner = [...gridItems].map((item) =>
+        item.querySelector(".grid__item-inner")
+      );
 
-        // Set some CSS related style values for type3 animation
-        element.style.setProperty("--grid-width", "105%");
-        element.style.setProperty("--grid-columns", "8");
-        element.style.setProperty("--perspective", "1500px");
-        element.style.setProperty("--grid-inner-scale", "0.5");
+      element.style.setProperty("--grid-width", "105%");
+      element.style.setProperty("--grid-columns", "8");
+      element.style.setProperty("--perspective", "1500px");
+      element.style.setProperty("--grid-inner-scale", "0.5");
 
-        timeline
-          .set(gridItems, {
-            transformOrigin: "50% 0%",
-            z: () => gsap.utils.random(-5000, -2000),
-            rotationX: () => gsap.utils.random(-65, -25),
-            filter: "brightness(0%)",
-          })
-          .to(
-            gridItems,
-            {
-              xPercent: () => gsap.utils.random(-150, 150),
-              yPercent: () => gsap.utils.random(-300, 300),
-              rotationX: 0,
-              filter: "brightness(200%)",
-            },
-            0
-          )
-          .to(
-            gridWrap,
-            {
-              z: 6500,
-            },
-            0
-          )
-          .fromTo(
-            gridItemsInner,
-            {
-              scale: 2,
-            },
-            {
-              scale: 0.5,
-            },
-            0
-          );
-      } else {
-        // Animation for single image
-        timeline.fromTo(
-          element,
+      timeline
+        .set(gridItems, {
+          transformOrigin: "50% 0%",
+          z: () => gsap.utils.random(-5000, -2000),
+          rotationX: () => gsap.utils.random(-65, -25),
+          filter: "brightness(0%)",
+        })
+        .to(
+          gridItems,
           {
-            z: -500,
-            scale: 0.2,
-            filter: "brightness(0%)",
-            yPercent: -50, // Start the image at the vertical center
+            xPercent: () => gsap.utils.random(-150, 150),
+            yPercent: () => gsap.utils.random(-300, 300),
+            rotationX: 0,
+            filter: "brightness(200%)",
+          },
+          0
+        )
+        .to(
+          gridWrap,
+          {
+            z: 6500,
+          },
+          0
+        )
+        .fromTo(
+          gridItemsInner,
+          {
+            scale: 2,
           },
           {
-            z: 0,
-            scale: 2, // Scale the image
-            filter: "brightness(100%)",
-            xPercent: -100, // Move the image horizontally to left
-            yPercent: -50, // Keep the image vertically centered
-            transformOrigin: "center center", // Set the transform origin to center center
-          }
+            scale: 0.5,
+          },
+          0
         );
-      }
     };
 
-    // Apply animation to the grid
-    const grid = document.querySelector(".grid");
-    applyAnimation(grid, true);
-
-    // Apply animation to the single image
-    const singleImage = document.querySelector(".single-image");
-    applyAnimation(singleImage, false);
-
-    // New function for applying a different animation to another image
-    const applySecondImageAnimation = (element) => {
-      const timeline = gsap.timeline({
-        defaults: { ease: "none" },
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom+=5%",
-          end: "center center-=5%",
-          scrub: true,
-        },
-      });
-
-      timeline.fromTo(
-        element,
-        {
-          z: -500,
-          scale: 0.2,
-          filter: "brightness(0%)",
-          yPercent: -50, // Start the image at the vertical center
-        },
-        {
-          z: 0,
-          scale: 2, // Scale the image
-          filter: "brightness(100%)",
-          xPercent: 40, // Move the image horizontally to right
-          yPercent: -50, // Keep the image vertically centered
-          transformOrigin: "center center", // Set the transform origin to center center
-        }
-      );
-    };
-
-    const applyThirdImageAnimation = (element) => {
-      const timeline = gsap.timeline({
-        defaults: { ease: "none" },
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom+=5%",
-          end: "center center-=5%",
-          scrub: true,
-        },
-      });
-
-      timeline.fromTo(
-        element,
-        {
-          z: -500,
-          scale: 0.2,
-          filter: "brightness(0%)",
-          yPercent: -50, // Start the image at the vertical center
-        },
-        {
-          z: 0,
-          scale: 2, // Scale the image
-          filter: "brightness(100%)",
-          xPercent: -100, // Move the image horizontally to left
-          yPercent: -50, // Keep the image vertically centered
-          transformOrigin: "center center", // Set the transform origin to center center
-        }
-      );
-    };
-
-    // Apply animation to the second image
-    const secondImage = document.querySelector(".second-image");
-    applySecondImageAnimation(secondImage);
-
-    const thirdImage = document.querySelector(".third-image");
-    applyThirdImageAnimation(thirdImage);
+    const grids = document.querySelectorAll(".grid");
+    grids.forEach((grid) => applyAnimation(grid));
   });
 
   return (
@@ -183,230 +86,48 @@ const Photo = () => {
       <section className="content content--spacing">
         <div className="grid grid--3">
           <div className="grid-wrap">
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/1.jpg?updatedAt=1714918929784)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/10.jpg?updatedAt=1714919587647)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/11.jpg?updatedAt=1714919587656)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/13.jpg?updatedAt=1714919587544)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/16.jpg?updatedAt=1714919587742)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/18.jpg?updatedAt=1714919587753)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/17.jpg?updatedAt=1714919587653)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/14.jpg?updatedAt=1714919587758)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/1.jpg?updatedAt=1714919587762)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/15.jpg?updatedAt=1714919587676)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/12.jpg?updatedAt=1714919587672)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/19.jpg?updatedAt=1714919590601)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/25.jpg?updatedAt=1714919590653)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://ik.imagekit.io/6lj9fhksv/img/22.jpg?updatedAt=1714919590801)",
-                }}
-              ></div>
-            </div>
+            {[
+              "1.jpg",
+              "10.jpg",
+              "11.jpg",
+              "13.jpg",
+              "16.jpg",
+              "18.jpg",
+              "17.jpg",
+              "14.jpg",
+              "1.jpg",
+              "15.jpg",
+              "12.jpg",
+              "19.jpg",
+              "25.jpg",
+              "22.jpg",
+              "22.jpg",
+              "22.jpg",
+              "22.jpg",
+              "22.jpg",
+              "22.jpg",
+              "22.jpg",
+            ].map((image, index) => (
+              <div key={index} className="grid__item">
+                <div
+                  className="grid__item-inner"
+                  style={{
+                    backgroundImage: `url(https://ik.imagekit.io/6lj9fhksv/img/${image}?updatedAt=1714919590801)`,
+                  }}
+                ></div>
+              </div>
+            ))}
           </div>
         </div>
         <h3 className="content__title content__title--left content__title--bottom">
-          Product <br />
-          Placements.
+          Explore <br />
+          Categories.
         </h3>
-      </section>
-
-      <section className="single-image-section">
-        <div
-          className="single-image"
-          style={{
-            backgroundImage:
-              "url(https://ik.imagekit.io/6lj9fhksv/Veerali/SAH_0923.jpg)",
-          }}
-        ></div>
-        <div className="text-[3rem] mt-[10rem]"> Clothing</div>
-      </section>
-
-      <section className="second-image-section">
-        <div className="text-[3rem] mr-[10rem] mt-[10rem]">
-          Food Photography
-        </div>
-        <div
-          className="second-image"
-          style={{
-            backgroundImage:
-              "url(https://ik.imagekit.io/6lj9fhksv/img/24.jpg?updatedAt=1714919590801)",
-          }}
-        ></div>
-      </section>
-
-      <section className="third-image-section">
-        <div
-          className="third-image"
-          style={{
-            backgroundImage: "url(https://ik.imagekit.io/6lj9fhksv/4.jpg)",
-          }}
-        ></div>
-        <div className="text-[3rem] mt-[10rem]">Real Estate</div>
       </section>
     </div>
   );
 };
+
 export default Photo;
 
 // import React, { useEffect } from "react";

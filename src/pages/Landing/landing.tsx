@@ -94,7 +94,7 @@ const Landing = () => {
 
         <FooterText />
         <Footer />
-        <Cursor />
+        {/* <Cursor /> */}
       </div>
     </CursorProvider>
   );

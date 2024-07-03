@@ -28,11 +28,16 @@ body {
 	-moz-osx-font-smoothing: grayscale; */
 }
 
-.bodyyy{
-	height: 600vh;
+.bodyyy {
+	height: 210vh; /* Adjusted to fit more sections */
 	background-color: black;
 	color: white;
-}
+  }
+  
+  .single-image-section, .second-image-section, .third-image-section {
+	display: none; /* Hide single image sections */
+  }
+  
 
 .single-image-section, .second-image-section, .third-image-section {
 	display: flex;
@@ -306,6 +311,7 @@ body #cdawrap {
 }
 
 .content__title {
+	font-family: 'Questrial';
 	position: absolute;
 	height: 100vh;
 	width: 100vw;

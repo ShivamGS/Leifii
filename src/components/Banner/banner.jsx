@@ -15,18 +15,20 @@ const SectionWrapper = styled.section`
 
 const Container = styled.div`
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 const BannerComponent = styled.p`
   font-size: ${(props) => props.theme.fontxxxl};
   font-family: "Lora", serif;
-
   color: ${(props) => props.theme.text};
   white-space: nowrap;
   text-transform: uppercase;
@@ -35,6 +37,13 @@ const BannerComponent = styled.p`
     display: block;
     background-color: ${(props) => props.theme.body};
     padding: 1rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontxl};
+    span {
+      padding: 0.5rem 1rem;
+    }
   }
 `;
 
@@ -50,7 +59,7 @@ const Banner = () => {
                 className="ban-pic"
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="8"
+                data-scroll-speed="10"
                 data-scroll-target="#up"
                 alt="Image 1"
               />
@@ -65,7 +74,8 @@ const Banner = () => {
                 data-scroll-direction="horizontal"
                 data-scroll-speed="-6"
                 data-scroll-target="#up"
-              ></img>
+                alt="Image 2"
+              />
             </Link>
           </BannerComponent>
           <BannerComponent>
@@ -77,7 +87,8 @@ const Banner = () => {
                 data-scroll-direction="horizontal"
                 data-scroll-speed="6"
                 data-scroll-target="#up"
-              ></img>
+                alt="Image 3"
+              />
             </Link>
           </BannerComponent>
           <BannerComponent>
@@ -89,29 +100,10 @@ const Banner = () => {
                 data-scroll-direction="horizontal"
                 data-scroll-speed="-4"
                 data-scroll-target="#up"
-              ></img>
+                alt="Image 4"
+              />
             </Link>
           </BannerComponent>
-          {/* <BannerComponent>
-            <img
-              src="img/pod02.png"
-              className="ban-pic"
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="6"
-              data-scroll-target="#up"
-            ></img>
-          </BannerComponent>
-          <BannerComponent>
-            <img
-              src="img/pod01.png"
-              className="ban-pic"
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="-4"
-              data-scroll-target="#up"
-            ></img>
-          </BannerComponent> */}
         </Container>
       </SectionWrapper>
     </div>

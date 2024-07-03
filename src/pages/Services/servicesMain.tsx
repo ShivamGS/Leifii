@@ -14,6 +14,8 @@ import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 import Lottie from "lottie-react";
 import arroww from "./arroww.json";
 import emailjs from "emailjs-com";
+import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
+import CountUp from "react-countup";
 
 const ServicesMain = () => {
   const containerRef = useRef(null);
@@ -68,62 +70,69 @@ const ServicesMain = () => {
             >
               <Navbar />
               <div className="h-[150px] "></div>
-              <div className="text-[70px] p-[20px] bg-white text-black text-left font-[questrial] ml-10 pb-0 ">
+              <div className="text-[50px] sm:text-[60px] md:text-[70px] p-[10px] sm:p-[15px] md:p-[20px] bg-white text-black text-left font-[questrial] ml-4 sm:ml-6 md:ml-10 pb-0">
                 Our Services
               </div>
-              <div className="h-[1300px] bg-white flex flex-col p-10 pt-0 pl-0">
-                <div className=" h-[300px] flex flex-row font-[questrial] justify-end">
-                  <div className="w-[25%] p-10 mt-16 pl-12 ">
-                    <span className="text-[60px]">123</span> Completed Projects
+              <div className="min-h-screen bg-white flex flex-col pt-0 pl-0">
+                <div className="flex flex-wrap font-[questrial] justify-between">
+                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16 pl-6 sm:pl-8 md:pl-12">
+                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                      <CountUp end={123} duration={4} />+
+                    </span>
+                    Completed Projects
                   </div>
-                  <div className="w-[25%] p-10 mt-16">
-                    <span className="text-[60px]">25</span> Awards & Features
+                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
+                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                      <CountUp end={25} duration={4} />+
+                    </span>
+                    Awards & Features
                   </div>
-                  <div className="w-[50%] text-3xl text-justify p-20">
-                    Choose Leifii Co for all your marketing needs. Proven
-                    results, full services - strategy to deployment.
+                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
+                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                      <CountUp end={80} duration={4} />+
+                    </span>
+                    Products Guided
+                  </div>
+                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
+                    <span className="text-[40px] sm:text-[50px] md:text-[60px]">
+                      <CountUp end={50} duration={4} />+
+                    </span>
+                    Websites Recreated
                   </div>
                 </div>
 
-                <div className="h-[800px] w-[1400px]  ml-10 mb-10">
-                  <div className="w-[1400px]">
-                    <TextRevealCardPreview />
-                  </div>
-                </div>
+                <HeroCardPreview />
 
-                <div className=" flex flex-row">
-                  <div className="w-[50%] flex flex-col justify-start">
-                    <div className="text-[60px] font-[questrial] text-justify pl-20">
+                <div className="flex flex-col lg:flex-row mt-10">
+                  <div className="w-full lg:w-[50%] flex flex-col justify-start">
+                    <div className="text-[40px] sm:text-[50px] md:text-[60px] font-[questrial] text-justify pl-10 sm:pl-16 md:pl-20">
                       Approach
                     </div>
-                    <div className="text-[20px] text-justify p-20 font-[questrial]">
+                    <div className="text-[16px] sm:text-[18px] md:text-[20px] text-justify p-10 sm:p-16 md:p-20 font-[questrial]">
                       Explore Leifii Co's winning formula: Strategize. Design.
                       Marketing. Crafting digital success through analysis and
                       precision.
                     </div>
                   </div>
-                  <div className="relative w-[40%] bg-blue-600 rounded-3xl text-white text-2xl m-10 mt-0 pt-5  pl-10">
+                  <div className="relative w-[90%] m-5 lg:w-[40%] bg-blue-600 rounded-3xl text-white text-xl sm:m-8 md:m-10 mt-0 pt-5 pl-6 sm:pl-8 md:pl-10">
                     <div className="mb-3 text-justify text-slate-200">
                       Our Design
                     </div>
-
-                    <div className="mb-3 text-[1rem] pr-20 text-left">
+                    <div className="mb-3 text-[0.9rem] sm:text-[1rem] pr-10 sm:pr-16 md:pr-20 text-left">
                       I hold that blending an artisan's method with creativity
                       empowers us to craft greatness and surpass limits in every
                       project.
                     </div>
-
-                    <div className="flex items-center text-[1rem] text-justify mb-4">
+                    <div className="flex items-center text-[0.9rem] sm:text-[1rem] text-justify mb-4">
                       <div className="flex-shrink-0 mr-4">
                         <img
                           src="/images/cover2.jpeg"
                           alt="Photo"
-                          className="w-14 h-14 rounded-full"
+                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full"
                         />
                       </div>
-
                       <div>
-                        <div className="">Kshitija Whaval</div>
+                        <div>Kshitija Whaval</div>
                         <div className="text-slate-200">
                           Founder & Head Of Design
                         </div>
@@ -134,29 +143,29 @@ const ServicesMain = () => {
               </div>
               <Banner />
 
-              <div className="relative h-[400px] bg-white font-[Questrial] p-10 pt-0 flex">
-                <div className="flex-1 flex items-start justify-left mt-[6rem]">
-                  <div className="text-[3rem] text-left font-bold leading-[4rem]">
+              <div className="relative h-auto min-h-[400px] bg-white font-[Questrial] p-6  md:p-10 pt-0 flex flex-col md:flex-row">
+                <div className="flex-1 flex items-center justify-center md:justify-start mt-8 md:mt-[6rem]">
+                  <div className="text-2xl md:text-[3rem] text-center md:text-left font-bold leading-snug md:leading-[4rem]">
                     Want Leifii updates sent straight to your mailbox?
                   </div>
                 </div>
 
-                <div className="flex-1 flex items-end justify-center pb-10">
+                <div className="flex-1 flex items-center md:items-end justify-center  mt-10 md:mt-0">
                   <form
                     ref={formRef}
                     onSubmit={sendEmail}
-                    className="flex pl-[10rem]"
+                    className="flex flex-col md:flex-row md:pl-[5rem] lg:pl-[10rem] w-full"
                   >
                     <input
                       type="email"
                       name="user_email"
                       placeholder="We saved a spot for your email"
-                      className="text-xl p-2 w-[350px] border-b-2 border-black outline-none"
+                      className="text-base md:text-xl p-2 w-full md:w-[250px] lg:w-[350px] border-b-2 border-black outline-none mb-4 md:mb-0 md:mr-2"
                       required
                     />
                     <button
                       type="submit"
-                      className={`text-xl px-4 py-2 rounded-r-md transition-colors duration-300 ${
+                      className={`text-base md:text-xl px-4 py-2 rounded-md md:rounded-r-md transition-colors duration-300 ${
                         isSubmitting
                           ? "bg-green-500 text-white"
                           : "bg-black text-white"
@@ -168,11 +177,11 @@ const ServicesMain = () => {
                   </form>
                 </div>
 
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-[5rem]">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-0 md:pt-[12rem]">
                   <Lottie
                     animationData={arroww}
-                    style={{ width: "400px", height: "400px" }}
-                  ></Lottie>
+                    className="w-48 h-48 md:w-96 md:h-96"
+                  />
                 </div>
               </div>
 

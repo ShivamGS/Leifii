@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useEffect } from "react";
 import { HeroParallaxDemo } from "../src/components/ui/HeroParallaxDemo.tsx";
 import Landing from "./pages/Landing/landing.tsx";
 import ReactDOM from "react-dom/client";
@@ -10,7 +11,7 @@ import Testimonials from "./components/Testimonials/testimonials.jsx";
 import { TracingBeamDemo } from "./components/ui/TracingBeamDemo.tsx";
 import Work from "./pages/Work/work.jsx";
 import Branding from "./sections/Branding/branding.jsx";
-import About from "./pages/About/about.tsx";
+import About from "./pages/About/about.jsx";
 import Project1 from "./sections/Branding/project1.jsx";
 import Project2 from "./sections/Branding/project2.jsx";
 import Project3 from "./sections/Branding/project3.jsx";
@@ -22,10 +23,25 @@ import BlogDetail from "./sections/Blog/blogDetail.jsx";
 import Web from "./sections/Web/web.tsx";
 import Careers from "./pages/Careers/careers.tsx";
 import Trail from "./sections/Trial/trail.jsx";
+import Photography from "./sections/Photography/photography.tsx";
 
 // import Contact from "./pages/Contact/contact.jsx";
 
 function App() {
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        document.body.classList.add("no-cursor");
+      } else {
+        document.body.classList.remove("no-cursor");
+      }
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <Routes>
@@ -40,7 +56,7 @@ function App() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
 
-        <Route path="/services/photography" element={<Photo />} />
+        <Route path="/services/photography" element={<Photography />} />
         <Route path="/services/branding" element={<Branding />} />
         <Route path="/services/marketing" element={<Marketing />} />
         <Route path="/services/web" element={<Web />} />

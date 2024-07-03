@@ -24,10 +24,12 @@ const Intro = () => {
         </div>
         <motion.div
           ref={constraintRef}
-          className="my-10 mx-4 md:my-20 md:mx-10 flex items-center justify-center md:justify-start rounded-3xl w-full pl-2"
+          className="my-10 mx-4 md:my-20 md:mx-10 flex items-center justify-start rounded-3xl w-full pl-2"
         >
           <div className="button-container-3">
-            <span className="mas text-[1rem] md:text-[1.5rem] text-black p-4 md:p-7">Know More</span>
+            <span className="mas text-[1rem] md:text-[1.5rem] text-black p-4 md:p-7">
+              Know More
+            </span>
             <button type="button" name="Hover">
               Know More
             </button>

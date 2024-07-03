@@ -1,6 +1,18 @@
-.App {
-  text-align: center;
+/* Default cursor styles */
+body {
+  cursor: default;
 }
+
+/* Hide cursor for mobile screens */
+@media (max-width: 768px) {
+  body {
+    cursor: none;
+  }
+}
+
+/* .App {
+  text-align: center;
+} */
 
 .App-logo {
   height: 40vmin;
