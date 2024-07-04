@@ -69,34 +69,35 @@ const ServicesMain = () => {
               ref={containerRef}
             >
               <Navbar />
-              <div className="h-[150px] "></div>
-              <div className="text-[30px] sm:text-[50px] md:text-[70px] p-[10px] sm:p-[15px] md:p-[20px] bg-white text-black text-left font-[questrial] ml-4 sm:ml-6 md:ml-10 pb-0">
+              <div className="h-[7rem] md:h-[10.5rem] "></div>
+              <div className="text-[2rem] sm:text-[2rem] md:text-[3.5rem] p-[10px] sm:p-[15px] md:p-[20px] bg-white text-black text-left font-[questrial] ml-4 sm:ml-6 md:ml-10 pb-0">
                 Our Services
               </div>
               <div className="min-h-screen bg-white flex flex-col pt-0 pl-0">
-                <div className="flex flex-wrap font-[questrial] justify-between">
-                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16 pl-6 sm:pl-8 md:pl-12">
+                <div className="flex flex-wrap font-[questrial] justify-between mx-[0.5rem] mb-[2rem] md:mx-[1.5rem]">
+                  <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16 ">
                     <span className="text-[30px] sm:text-[40px] md:text-[60px]">
                       <CountUp end={123} duration={4} />+
                     </span>
                     <div className="text-[16px] sm:text-[18px] md:text-[20px]">
-                      Completed Projects
+                      Content Created
                     </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
                     <span className="text-[30px] sm:text-[40px] md:text-[60px]">
-                      <CountUp end={25} duration={4} />+
+                      <CountUp end={45} duration={4} />+
                     </span>
                     <div className="text-[16px] sm:text-[18px] md:text-[20px]">
-                      Awards & Features
+                      Brands Build
                     </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
                     <span className="text-[30px] sm:text-[40px] md:text-[60px]">
-                      <CountUp end={80} duration={4} />+
+                      <CountUp end={21} duration={4} />
+                      K+
                     </span>
                     <div className="text-[16px] sm:text-[18px] md:text-[20px]">
-                      Products Guided
+                      Content Created
                     </div>
                   </div>
                   <div className="w-[50%] md:w-[25%] p-5 sm:p-8 md:p-10 mt-8 sm:mt-12 md:mt-16">
@@ -104,16 +105,16 @@ const ServicesMain = () => {
                       <CountUp end={50} duration={4} />+
                     </span>
                     <div className="text-[16px] sm:text-[18px] md:text-[20px]">
-                      Websites Recreated
+                      Websites Developed
                     </div>
                   </div>
                 </div>
 
                 <HeroCardPreview />
 
-                <div className="flex flex-col lg:flex-row mt-10">
+                <div className="flex flex-col lg:flex-row my-10">
                   <div className="w-full lg:w-[50%] flex flex-col justify-start">
-                    <div className="text-[40px] sm:text-[50px] md:text-[60px] font-[questrial] text-justify pl-10 sm:pl-16 md:pl-20">
+                    <div className="text-[40px] sm:text-[50px] md:text-[60px] font-[questrial] text-justify pl-10 sm:pl-16 md:pl-20 pt-[3rem]">
                       Approach
                     </div>
                     <div className="text-[16px] sm:text-[18px] md:text-[20px] text-justify p-10 sm:p-16 md:p-20 font-[questrial]">
