@@ -27,6 +27,7 @@ import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
 import { TextRevealCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
 import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
+
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -84,6 +85,11 @@ const Landing = () => {
         {/* <Blog /> */}
         <BlogList />
 
+        <div className="h-[50vh] flex text-center items-center justify-center text-[5rem] bg-white text-black">
+          {" "}
+          Video Upcoming
+        </div>
+
         {/* <Bulge /> */}
 
         {/* <div className="rounded-xl bg-slate-400  mt-10  ">
@@ -92,7 +98,7 @@ const Landing = () => {
 
         {/* <div className="h-screen"></div> */}
 
-        <FooterText />
+        {/* <FooterText /> */}
         <Footer />
         {/* <Cursor /> */}
       </div>

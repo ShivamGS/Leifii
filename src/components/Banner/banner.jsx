@@ -49,7 +49,7 @@ const BannerComponent = styled.p`
 
 const Banner = () => {
   return (
-    <div className="pt-12 bg-black rounded-t-[20px]">
+    <div className="pt-12 bg-black rounded-t-3xl">
       <SectionWrapper>
         <Container id="up">
           <BannerComponent>

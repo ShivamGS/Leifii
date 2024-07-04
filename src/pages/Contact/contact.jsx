@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import "./contact.css";
 import attachment from "./attachment.svg";
+import { Navbar } from "../../components/Nav/Navbar/index.tsx";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -105,6 +106,7 @@ const Contact = () => {
 
   return (
     <div>
+      <Navbar />
       <header className="cb-request">
         <div className="cb-request-content">
           <div className="cb-request-container">

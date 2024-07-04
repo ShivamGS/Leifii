@@ -115,7 +115,71 @@ export const Footer = () => {
       onMouseLeave={() => handleCursorInvert(false)}
       ref={footerRef}
     >
-      <Container direction="column" fullwidth>
+      <div className="ml-[5rem] pt-[2rem] mt-[2rem] bg-black h-screen w-[90%] flex flex-col">
+        <div className="h-[20%] flex flex-row justify-between px-[5rem] ">
+          <div>&copy; 2024 LEIFII MEDIA LLP</div>
+          <div>
+            <a href="#" className="flex items-center justify-center">
+              <span className="mr-2">BACK TO TOP</span>
+              <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full text-white">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 15l7-7 7 7"
+                  ></path>
+                </svg>
+              </div>
+            </a>{" "}
+          </div>
+        </div>
+        <div className="h-[60%] flex flex-row pl-[5rem] ">
+          <div className="w-2/3 text-left pt-[5rem]">
+            <div className="text-[1.5rem] text-white font-medium">
+              HAVE A PROJECT IN MIND?
+            </div>
+            <div className="text-white/[0.60] text-[8rem] font-medium hover:text-white hover:text-opacity-100">
+              LET'S TALK
+            </div>
+          </div>
+          <div className="w-1/3 pr-[3rem]">
+            {" "}
+            <AnimatedPinDemo />
+          </div>
+        </div>
+        <div className="h-[20%] flex flex-row justify-between px-[5rem] mt-[5rem]">
+          <div className="flex flex-row gap-10">
+            <div className="h-[4rem] w-[11rem] flex justify-center items-center text-white border-[1.5px] border-white rounded-full hover:text-black hover:bg-white hover:border-black">
+              BEHANCE
+            </div>
+            <div className="h-[4rem] w-[11rem] flex justify-center items-center text-white border-[1.5px] border-white rounded-full hover:text-black hover:bg-white hover:border-black">
+              INSTAGRAM
+            </div>
+            <div className="h-[4rem] w-[11rem] flex justify-center items-center text-white border-[1.5px] border-white rounded-full hover:text-black hover:bg-white hover:border-black">
+              FACEBOOK
+            </div>
+          </div>
+          <div className="flex flex-row text-[1rem] gap-10 justify-end items-center pb-2">
+            <div>ABOUT US</div>
+            <div>SERVICES</div>
+            <div>CAREERS</div>
+            <div>CONTACT US</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+{
+  /* <Container direction="column" fullwidth>
         <div className="footer-content" ref={footerContentRef}>
           <div className="footer-content__top">
             <div className="footer-content__cta m-20">
@@ -154,7 +218,5 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-      </Container>
-    </footer>
-  );
-};
+      </Container> */
+}
