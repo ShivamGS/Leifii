@@ -9,7 +9,7 @@ const Element = () => {
   return (
     <div className="h-auto bg-[#fff] flex flex-col px-4 sm:px-8 lg:px-16">
       <div className="text-container flex flex-col lg:flex-row items-center pb-10 pt-16">
-        <p className="text-2xl md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-12 mt-10 lg:mt-0">
+        <p className="text-2xl md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-[1.5rem] mt-10 lg:mt-0">
           Designing your
           <br /> leaves with
         </p>
@@ -75,7 +75,7 @@ const Element = () => {
               style={{ width: "100px", height: "100px" }}
             />
           </div>
-          <div className="text-lg lg:text-xl">Love</div>
+          <div className="text-lg lg:text-xl">Content</div>
           <div className="text-[hsla(0,0%,7%,.7)] text-sm lg:text-base">
             We facilitate workshops that fast track discovery of your brand’s
             identity
