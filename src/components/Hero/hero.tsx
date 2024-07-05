@@ -17,15 +17,15 @@ const Hero = () => {
             <div className="flex flex-row justify-between items-center w-full">
               <motion.div
                 className="rounded-full rounded-tr-[0] rounded-bl-[0] overflow-hidden w-[80px] h-[40px]"
-                // initial={{ x: 0 }}
-                // animate={{ x: 40 }}
-                // transition={{
-                //   type: "spring",
-                //   stiffness: 100,
-                //   repeat: Infinity,
-                //   repeatType: "mirror",
-                //   repeatDelay: 0.1,
-                // }}
+                initial={{ x: 10 }}
+                animate={{ x: 50 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  repeatDelay: 0.1,
+                }}
               >
                 <video
                   className=""

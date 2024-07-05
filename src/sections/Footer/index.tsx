@@ -101,14 +101,14 @@ export const Footer = () => {
       ref={footerRef}
     >
       <div className="ml-[1rem] md:ml-[5rem] pt-[2rem] mt-0 md:mt-[2rem] bg-black w-[95%] md:w-[90%] flex flex-col">
-        <div className="h-auto md:h-[20%] flex flex-row justify-between pb-0 md:pb-[3rem] px-[1rem] md:px-[5rem] text-[1rem]">
+        <div className="h-auto md:h-[20%] flex flex-row justify-between pb-0 md:pb-[3rem] px-[1rem] md:px-[5rem] text-[0.75rem] md:text-[1rem]">
           <div className="flex justify-center items-center">
             &copy; 2024 LEIFII MEDIA LLP
           </div>
           <div className="mt-0">
             <a
               href="#"
-              className="flex items-center justify-center text-[1rem]"
+              className="flex items-center justify-center text-[0.75rem] md:text-[1rem]"
             >
               <span className="mr-2">BACK TO TOP</span>
               <div className="w-8 h-8 flex items-center justify-between bg-black rounded-full text-white">
@@ -139,7 +139,7 @@ export const Footer = () => {
               LET'S TALK
             </div>
           </div>
-          <div className="w-full md:w-1/3 pr-[1rem] md:pr-[3rem] mt-8 md:mt-0">
+          <div className="w-full md:w-1/3  md:pr-[3rem] mt-8 md:mt-0">
             <AnimatedPinDemo />
           </div>
         </div>

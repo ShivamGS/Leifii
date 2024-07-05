@@ -49,7 +49,7 @@ const Landing = () => {
 
         <Hero />
         <Video />
-        <div className="h-[70vh]"></div>
+        <div className="h-[80vh]"></div>
         <Intro />
         <Parallax />
         {/* <HeroParallaxDemo /> */}
