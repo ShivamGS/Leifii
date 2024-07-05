@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       {isMobile ? (
-        <div className="text-black h-[200px] w-full flex flex-col mt-[200px]">
+        <div className="text-black h-[200px] w-full flex flex-col mt-[100px]">
           {/* Alternate layout for mobile */}
           <div className="mb-0 mt-3 flex flex-col items-center px-[2rem] w-full">
             <h1 className="text-[2.5rem] font-medium py-3 text-left w-full">
@@ -17,15 +17,15 @@ const Hero = () => {
             <div className="flex flex-row justify-between items-center w-full">
               <motion.div
                 className="rounded-full rounded-tr-[0] rounded-bl-[0] overflow-hidden w-[80px] h-[40px]"
-                initial={{ x: 0 }}
-                animate={{ x: 40 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 100,
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  repeatDelay: 0.1,
-                }}
+                // initial={{ x: 0 }}
+                // animate={{ x: 40 }}
+                // transition={{
+                //   type: "spring",
+                //   stiffness: 100,
+                //   repeat: Infinity,
+                //   repeatType: "mirror",
+                //   repeatDelay: 0.1,
+                // }}
               >
                 <video
                   className=""
@@ -36,7 +36,7 @@ const Hero = () => {
                   muted
                 ></video>
               </motion.div>
-              <div className="text-[2.5rem] mr-[6rem] font-extralight italic">
+              <div className="text-[2.5rem] pr-[3rem] font-extralight italic">
                 Makes
               </div>
             </div>
