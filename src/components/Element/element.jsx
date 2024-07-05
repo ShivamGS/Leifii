@@ -8,18 +8,18 @@ import love from "./love.json";
 const Element = () => {
   return (
     <div className="h-auto bg-[#fff] flex flex-col px-4 sm:px-8 lg:px-16">
-      <div className="text-container flex flex-col lg:flex-row items-center pb-10 pt-16">
-        <p className="text-2xl md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-[1.5rem] mt-10 lg:mt-0">
+      <div className="text-container ml-[2rem] md:ml-[0rem] flex flex-col lg:flex-row items-center pb-10 pt-16">
+        <p className="text-[2rem] md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-[1.5rem] mt-10 lg:mt-0">
           Designing your
           <br /> leaves with
         </p>
         <div className="flex flex-col w-full lg:w-1/2 mt-8 lg:mt-20">
-          <p className="text-base md:text-lg lg:text-xl">
+          <p className="text-[1.2rem] md:text-lg lg:text-xl">
             We can help you grow those leaves to reach all the right people, and
             make sure they understand what sets you apart from the competition
           </p>
           <div>
-            <button className="bg-black text-white rounded-full py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 mt-8 font-[Questrial] text-sm md:text-base lg:text-lg">
+            <button className="bg-black text-white rounded-full py-6 px-10 md:py-3 md:px-6 lg:py-4 lg:px-8 mt-10 font-[Questrial] text-[1rem] md:text-base lg:text-lg">
               Explore Services 👀
             </button>
           </div>

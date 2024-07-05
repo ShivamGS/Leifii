@@ -8,7 +8,7 @@ const Intro = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="h-auto flex flex-col md:flex-row justify-center items-center p-4 md:h-[700px]">
+    <div className="h-auto flex flex-col md:flex-row justify-center items-center p-4 md:h-[700px]  pt-0 md:pt-[10rem]">
       <div className="w-full md:w-[50%] flex justify-center mb-8 md:mb-0">
         <div className="align-middle flex items-center justify-center p-4 md:p-[20px] rounded-3xl h-[20rem] md:h-[35rem]">
           <Lottie
@@ -18,7 +18,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="w-full md:w-[50%] flex flex-col justify-center items-start">
-        <div className="info text-lg md:text-3xl font-[questrial] m-4 md:m-10 text-left">
+        <div className="info text-[1.2rem] md:text-3xl font-[questrial] m-4 md:m-10 text-left">
           Leifii is a leading digital product agency focused on branding, UI/UX
           design, mobile, and web development.
         </div>
@@ -27,7 +27,7 @@ const Intro = () => {
           className="my-10 mx-4 md:my-20 md:mx-10 flex items-center justify-start rounded-3xl w-full pl-2"
         >
           <div className="button-container-3">
-            <span className="mas text-[1rem] md:text-[1.5rem] text-black p-4 md:p-7">
+            <span className="mas text-[2rem] md:text-[2rem] text-black p-4 md:p-7">
               Know More
             </span>
             <button type="button" name="Hover">

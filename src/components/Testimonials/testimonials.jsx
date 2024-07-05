@@ -135,10 +135,10 @@ const Testimonials = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="text-black flex justify-center text-[55px]">
+      <div className="text-black flex justify-center text-[2.5rem] md:text-[4rem] pt-[2rem]">
         Testimonials
       </div>
-      <div className="text-black flex justify-center text-[20px]">
+      <div className="text-[#3f3f3f] flex justify-center text-[1.2rem] pt-[1rem]">
         Click to reveal
       </div>
       {testimonies.map((testimony, index) => (

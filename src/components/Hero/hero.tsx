@@ -8,10 +8,10 @@ const Hero = () => {
   return (
     <>
       {isMobile ? (
-        <div className="text-black h-[200px] w-full flex flex-col mt-[100px]">
+        <div className="text-black h-[200px] w-full flex flex-col mt-[120px]">
           {/* Alternate layout for mobile */}
-          <div className="mb-0 mt-3 flex flex-col items-center px-[2rem] w-full">
-            <h1 className="text-[2.5rem] font-medium py-3 text-left w-full">
+          <div className="mb-0 mt-3 flex flex-col items-center px-[1rem] w-full">
+            <h1 className="text-[2.8rem] font-medium py-3 text-left w-full">
               Only Creativity
             </h1>
             <div className="flex flex-row justify-between items-center w-full">
@@ -36,11 +36,11 @@ const Hero = () => {
                   muted
                 ></video>
               </motion.div>
-              <div className="text-[2.5rem] pr-[3rem] font-extralight italic">
+              <div className="text-[2.8rem] pr-[3rem] font-extralight italic">
                 Makes
               </div>
             </div>
-            <h1 className="font-medium mb-0 text-[2.5rem] pb-0 text-left w-full">
+            <h1 className="font-medium mb-0 pt-3 text-[2.8rem] pb-0 text-left w-full">
               The Eyes Grow
             </h1>
           </div>

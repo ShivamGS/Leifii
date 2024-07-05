@@ -43,10 +43,10 @@ const BlogList = () => {
     <div className="bg-black pb-20 px-10">
       <div className="bg-white h-[1px] w-[80%] mx-auto"></div>
       <div className="overflow-hidden flex flex-col items-center justify-center">
-        <motion.h1 className="text-[40px] text-white ml-5 mt-12 mr-5 mb-3 font-[Questrial]">
+        <motion.h1 className="text-[2.5rem] md:text-[40px] text-white ml-5 pt-[3rem] mt-12 mr-5 mb-3 font-[Questrial]">
           Resources
         </motion.h1>
-        <motion.h1 className="text-[55px] text-white ml-5 pt-5 mr-5 mb-5 font-[Questrial]">
+        <motion.h1 className="text-[1.5rem] md:text-[55px] text-white ml-5 pt-5 mr-5 mb-5 font-[Questrial]">
           The Latest from LEIFII Co
         </motion.h1>
       </div>

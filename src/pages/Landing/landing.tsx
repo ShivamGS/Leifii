@@ -49,14 +49,14 @@ const Landing = () => {
 
         <Hero />
         <Video />
-        <div className="h-screen"></div>
+        <div className="h-[70vh]"></div>
         <Intro />
         <Parallax />
         {/* <HeroParallaxDemo /> */}
         <Element />
 
         <div className="bg-black text-white pt-10">
-          <div className="text-[30px] sm:text-[35px] md:text-[40px] lg:text-[45px] p-4 sm:p-10 pb-0 flex justify-center font-[Questrial]">
+          <div className="text-[2.5rem] md:text-[40px] lg:text-[4rem] p-4 sm:p-10 pb-0 flex justify-center font-[Questrial]">
             Why us?
           </div>
 
@@ -85,7 +85,7 @@ const Landing = () => {
         {/* <Blog /> */}
         <BlogList />
 
-        <div className="h-[50vh] flex text-center items-center justify-center text-[5rem] bg-white text-black">
+        <div className="h-[50vh] flex text-center items-center justify-center text-[1rem] md:text-[3rem] bg-white text-black">
           {" "}
           Video Upcoming
         </div>

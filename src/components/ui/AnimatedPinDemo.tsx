@@ -3,12 +3,12 @@ import { PinContainer } from "./3dpin.tsx";
 
 export function AnimatedPinDemo() {
   return (
-    <div className="h-[20rem] w-full flex items-center justify-end ">
+    <div className=" md:h-[20rem] w-full flex items-center justify-end ">
       <PinContainer
         title="Click here to open maps"
         href="https://maps.app.goo.gl/KaUPD26bf7CADsAk8"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[18rem] h-[18rem] ">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] md:w-[18rem] md:h-[18rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             Find us on
           </h3>
