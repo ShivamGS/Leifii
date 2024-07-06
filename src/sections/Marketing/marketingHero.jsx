@@ -12,10 +12,10 @@ const cardImages = [
   // Add more image paths as needed
 ];
 const cardDescriptions = [
-  "Description for Card 1. This is of the layout.",
-  "Description for Card 2. This is of the layout.",
-  "Description for Card 3. This is of the layout.",
-  "Description for Card 4. This is of the layout.",
+  "Description for Card 1.",
+  "Description for Card 2. ",
+  "Description for Card 3. ",
+  "Description for Card 4. ",
   // Add more descriptions as needed
 ];
 
@@ -63,12 +63,13 @@ const MarketingHero = () => {
       animateText();
     }
   };
+
   return (
-    <div className="relative w-full h-screen flex items-center justify-end  overflow-hidden pr-[10rem] mt-10">
+    <div className="relative w-full h-screen flex items-center justify-end overflow-hidden px-4 lg:pr-[10rem] mt-10">
       {/* Left Side Text */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 px-4">
+      <div className="absolute left-[3rem] bottom-[5rem] md:left-0 md:top-1/2 w-[20rem] transform -translate-y-1/2 px-4">
         <motion.p
-          className="text-black text-[3rem] w-[40rem] p-10 ml-10"
+          className="text-black sm:text-[3rem] lg:text-[3rem] w-full lg:w-[40rem] p-4 lg:p-10 ml-4 lg:ml-10"
           initial={{ opacity: 1 }} // Set initial opacity to 1
           animate={textAnimationControls}
         >
@@ -76,7 +77,7 @@ const MarketingHero = () => {
         </motion.p>
 
         <motion.p
-          className="text-black text-[1.5rem] w-[40rem] p-10 ml-11 pt-0"
+          className="text-black sm:text-[3rem] lg:text-[1.5rem] w-full lg:w-[40rem] p-4 lg:p-10 ml-4 lg:ml-11 pt-0"
           initial={{ opacity: 1 }} // Set initial opacity to 1
           animate={textAnimationControls}
         >
@@ -150,7 +151,7 @@ const Card = ({
       onDragEnd={handleDragEndLocal}
       animate={controls}
       exit={{ opacity: 0 }}
-      className={`absolute w-[25rem] h-[30rem] flex items-center justify-center rounded-lg shadow-lg cursor-grab  ${
+      className={`absolute left-[4rem] top-[8rem] md:left-auto md:top-auto w-[16rem] h-[21rem] sm:w-[25rem] sm:h-[30rem] flex items-center justify-center rounded-lg shadow-lg cursor-grab ${
         isActive ? "z-10" : "z-0"
       } transition-transform transform ${isActive ? "scale-100" : "scale-75"}`}
       style={{
@@ -162,4 +163,5 @@ const Card = ({
     ></motion.div>
   );
 };
+
 export default MarketingHero;

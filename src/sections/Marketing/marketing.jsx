@@ -22,16 +22,22 @@ const Marketing = () => {
 
   return (
     <CursorProvider>
-      <Navbar />
+      {/* <Navbar /> */}
+      <div className="h-[2rem] md:h-[5rem] w-full text-[1.5rem] ml-[4rem] mt-[4rem]">
+        {" "}
+        Back Button
+      </div>
       <MarketingHero />
       <div className="flex flex-col bg-[#fafafa] pb-8">
-        <div className="flex justify-between px-10 py-4">
-          <h2 className="text-[2rem] font-medium mt-10">Recent Projects</h2>
+        <div className="flex justify-center py-4">
+          <h2 className="text-[2rem] md:text-[3rem] font-medium mt-10">
+            Recent Projects
+          </h2>
         </div>
 
-        <div className="flex flex-row">
+        <div className="flex flex-wrap justify-center px-6">
           <motion.div
-            className="w-1/4 h-[28rem] m-10 mx-9"
+            className="w-full h-[40rem] sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
             ref={ref1}
             initial="hidden"
             animate={inView1 ? "visible" : "hidden"}
@@ -40,19 +46,19 @@ const Marketing = () => {
             <img
               src="/images/1.jpg"
               alt="Your Image"
-              className="w-full h-[20rem]"
+              className="w-full h-2/3 sm:h-[20rem] md:h-[23rem]"
             />
             <p className="text-black font-medium py-4 mt-2 pb-2">
               Marketing & Design for Karmara Enterprises Solution Co
             </p>
-            <p className="text-[1rem] text-gray-700 ">
+            <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               adipisicing elit. adipisicing <br /> elit adipisicing lorem....
             </p>
           </motion.div>
 
           <motion.div
-            className="w-1/4 h-[23rem]  m-10 mx-3"
+            className="w-full h-[40rem] sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
             ref={ref2}
             initial="hidden"
             animate={inView2 ? "visible" : "hidden"}
@@ -61,19 +67,19 @@ const Marketing = () => {
             <img
               src="/images/2.jpg"
               alt="Your Image"
-              className="w-full h-[20rem]"
+              className="w-full h-2/3 sm:h-[20rem] md:h-[23rem]"
             />
             <p className="text-black font-medium py-4 mt-2 pb-2">
               Product Marketing for Veerali Enterprises Solution
             </p>
-            <p className="text-[1rem] text-gray-700 ">
+            <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               adipisicing elit. adipisicing <br /> elit adipisicing lorem....
             </p>
           </motion.div>
 
           <motion.div
-            className="w-1/4 h-[23rem]  m-10 mx-3"
+            className="w-full h-[40rem] sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
             ref={ref3}
             initial="hidden"
             animate={inView3 ? "visible" : "hidden"}
@@ -82,19 +88,19 @@ const Marketing = () => {
             <img
               src="/images/3.jpg"
               alt="Your Image"
-              className="w-full h-[20rem]"
+              className="w-full h-2/3 sm:h-[20rem] md:h-[23rem]"
             />
             <p className="text-black font-medium py-4 mt-2 pb-2">
               Product Marketing & Design for KHS Enterprises Solution
             </p>
-            <p className="text-[1rem] text-gray-700 ">
+            <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               adipisicing elit. adipisicing <br /> elit adipisicing lorem....
             </p>
           </motion.div>
 
           <motion.div
-            className="w-1/4 h-[23rem] m-10 mx-9 "
+            className="w-full h-[40rem] sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
             ref={ref4}
             initial="hidden"
             animate={inView4 ? "visible" : "hidden"}
@@ -103,12 +109,12 @@ const Marketing = () => {
             <img
               src="/images/4.jpg"
               alt="Your Image"
-              className="w-full h-[20rem]"
+              className="w-full h-2/3 sm:h-[20rem] md:h-[23rem]"
             />
             <p className="text-black font-medium py-4 mt-2 pb-2">
               Product Marketing & Design for KHS Solution Enterprises
             </p>
-            <p className="text-[1rem] text-gray-700 ">
+            <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               adipisicing elit. adipisicing <br /> elit adipisicing lorem....
             </p>
@@ -116,11 +122,13 @@ const Marketing = () => {
         </div>
       </div>
 
-      <div className="mt-[100px]">
+      <div className="mt-[20px] md:mt-[100px]">
         <div className="flex justify-center">
           <div className="flex px-10 pt-4 flex-col">
-            <h2 className="text-[3rem] font-medium mt-10 ">Recent Work</h2>
-            <div className="bg-black h-[2px] w-[280px] mt-5"></div>
+            <h2 className="text-[2rem] md:text-[3rem] font-medium mt-10 ">
+              Recent Work
+            </h2>
+            <div className="bg-black h-[2px]  w-[200px] md:w-[280px] mt-5"></div>
           </div>
         </div>
 
@@ -152,10 +160,10 @@ const Marketing = () => {
 
           {/* Second item */}
           <SwiperSlide>
-            <div className="group relative w-[300px] h-[300px]">
+            <div className="group relative w-[200px] h-[200px]  md:w-[300px] md:h-[300px]">
               <img
                 src="/images/blob3.png"
-                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+                className="w-60 h-60 md:w-80 md:h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
               />
               <img
                 src="/images/6.jpg"
@@ -179,10 +187,10 @@ const Marketing = () => {
           </SwiperSlide> */}
 
           <SwiperSlide>
-            <div className="group relative w-[300px] h-[300px]">
+            <div className="group relative w-[200px] h-[200px]  md:w-[300px] md:h-[300px]">
               <img
                 src="/images/blob3.png"
-                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+                className="w-60 h-60 md:w-80 md:h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
               />
               <img
                 src="/images/8.jpg"
@@ -192,10 +200,10 @@ const Marketing = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="group relative w-[300px] h-[300px]">
+            <div className="group relative w-[200px] h-[200px]  md:w-[300px] md:h-[300px]">
               <img
                 src="/images/blob3.png"
-                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+                className="w-60 h-60 md:w-80 md:h-80  transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
               />
               <img
                 src="/images/4.jpg"
@@ -205,10 +213,10 @@ const Marketing = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="group relative w-[300px] h-[300px]">
+            <div className="group relative w-[200px] h-[200px]  md:w-[300px] md:h-[300px]">
               <img
                 src="/images/blob3.png"
-                className="w-80 h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
+                className="w-60 h-60 md:w-80 md:h-80 transform scale-0 transition-transform duration-700 origin-center group-hover:scale-[150%]"
               />
               <img
                 src="/images/9.jpg"

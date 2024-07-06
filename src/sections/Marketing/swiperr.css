@@ -6,3 +6,10 @@
     height: 600px;
     
   }
+
+  @media (max-width: 480px) {
+    .swiper {
+      padding-top: 80px;
+      height: 450px;
+    }
+}

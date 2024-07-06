@@ -62,9 +62,7 @@ function App() {
         <Route path="/services/web" element={<Web />} />
 
         <Route path="/project/1" element={<Project1 />} />
-        <Route path="/project/2" element={<Trail />} />
-        {/* <Route path="/project/3" element={<Bulge />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        {/* <Route path="/project/2" element={<Trail />} /> */}
       </Routes>
     </>
   );

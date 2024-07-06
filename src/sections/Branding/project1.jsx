@@ -199,7 +199,7 @@ const Project1 = () => {
             <div className="flex justify-between text-lg text-gray-700 mt-[3rem] pb-[5rem]">
               <motion.div
                 ref={refSummaryDesc}
-                initial="hidden"
+                initial="visible"
                 animate={controlsSummaryDesc}
                 variants={revealVariant}
                 className="w-1/3 px-4 text-center"
@@ -211,7 +211,7 @@ const Project1 = () => {
               </motion.div>
               <motion.div
                 ref={refSummaryDesc}
-                initial="hidden"
+                initial="visible"
                 animate={controlsSummaryDesc}
                 variants={revealVariant}
                 className="w-1/3 px-4 border-l border-r border-gray-300 text-center"
@@ -223,7 +223,7 @@ const Project1 = () => {
               </motion.div>
               <motion.div
                 ref={refSummaryDesc}
-                initial="hidden"
+                initial="visible"
                 animate={controlsSummaryDesc}
                 variants={revealVariant}
                 className="w-1/3 px-4 text-center"
