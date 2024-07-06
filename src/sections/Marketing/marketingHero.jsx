@@ -65,7 +65,7 @@ const MarketingHero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-end overflow-hidden px-4 lg:pr-[10rem] mt-10">
+    <div className="relative w-full h-screen flex items-center justify-end overflow-hidden px-4 lg:pr-[10rem]">
       {/* Left Side Text */}
       <div className="absolute left-[3rem] bottom-[5rem] md:left-0 md:top-1/2 w-[20rem] transform -translate-y-1/2 px-4">
         <motion.p

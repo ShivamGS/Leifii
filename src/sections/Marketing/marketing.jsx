@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "./swiperr.css";
+import BackButton from "../../components/BackButton.jsx/backButton.jsx";
 
 const Marketing = () => {
   const [ref1, inView1] = useInView({ threshold: 0.1 });
@@ -23,10 +24,10 @@ const Marketing = () => {
   return (
     <CursorProvider>
       {/* <Navbar /> */}
-      <div className="h-[2rem] md:h-[5rem] w-full text-[1.5rem] ml-[4rem] mt-[4rem]">
-        {" "}
-        Back Button
+      <div className="pt-[2rem] pl-[2rem] md:pt-[4rem] md:pl-[4rem]">
+        <BackButton />
       </div>
+
       <MarketingHero />
       <div className="flex flex-col bg-[#fafafa] pb-8">
         <div className="flex justify-center py-4">

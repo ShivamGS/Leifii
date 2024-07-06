@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./photo.css";
 import { useGSAP } from "@gsap/react";
 import Trail from "../Trial/trail";
+import BackButton from "../../components/BackButton.jsx/backButton";
 
 const Photo = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -73,6 +74,10 @@ const Photo = () => {
 
   return (
     <div className="bodyyy">
+      <div className="pt-[2rem] pl-[2rem] md:pt-[4rem] md:pl-[2rem]">
+        <BackButton />
+      </div>
+
       <div className="intro">
         <h1 className="intro__title">
           <span className="intro__title-pre">On-Scroll</span>
