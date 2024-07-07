@@ -109,6 +109,7 @@ body #cdawrap {
   padding: 1rem;
   max-width: 1000px;
   margin: 20vh auto;
+  margin-top: 0;
   display: grid;
   grid-column-gap: 7vw;
   grid-row-gap: 0.5rem;

@@ -13,8 +13,8 @@ import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 import Lottie from "lottie-react";
 import arroww from "./arroww.json";
 import emailjs from "emailjs-com";
+import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
 import CountUp from "react-countup";
-import { FinalCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
 
 const ServicesMain = () => {
   const containerRef = useRef(null);
@@ -108,10 +108,12 @@ const ServicesMain = () => {
                     </div>
                   </div>
                 </div>
+                <div className="hidden lg:block">
+                  {" "}
+                  <HeroCardPreview />
+                </div>
 
-                <FinalCardPreview />
-
-                <div className="flex flex-col lg:flex-row my-10">
+                <div className="flex flex-col lg:flex-row mb-10 mt-0 md:mt-10">
                   <div className="w-full lg:w-[50%] flex flex-col justify-start">
                     <div className="text-[40px] sm:text-[50px] md:text-[60px] font-[questrial] text-justify pl-10 sm:pl-16 md:pl-20 pt-[3rem]">
                       Approach

@@ -117,10 +117,6 @@ const Branding = () => {
       <div className="frame"></div>
 
       <section className="project project--intro">
-        <span className="project__label project__label--name">Project</span>
-        <span className="project__name">AI Art</span>
-        <span className="project__label project__label--date">Date</span>
-        <span className="project__date">July, 2023</span>
         <h2 className="project__title">
           Branding <span className="project__title-line">Redefined</span>
         </h2>

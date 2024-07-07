@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Define image paths and configurations
 const images = [
   {
     path: "/blog1.png",
+    link: "/product-photography",
     startScroll: 20,
     endScroll: 30,
     startScale: 0.2,
@@ -20,6 +22,7 @@ const images = [
   },
   {
     path: "/blog3.jpg",
+    link: "/event-photography",
     startScroll: 30,
     endScroll: 40,
     startScale: 0.2,
@@ -36,6 +39,7 @@ const images = [
   },
   {
     path: "/blog4.jpg",
+    link: "/modelling-shoots",
     startScroll: 40,
     endScroll: 50,
     startScale: 0.2,
@@ -52,6 +56,7 @@ const images = [
   },
   {
     path: "/blog5.jpg",
+    link: "/restaurant-shoots",
     startScroll: 50,
     endScroll: 60,
     startScale: 0.2,
@@ -64,12 +69,13 @@ const images = [
     endY: 20,
     startGradient: "linear-gradient(to right, #2b1a1a, #4b2b2b)", // Image 4 gradient
     endGradient: "linear-gradient(to right, #1b0a0a, #2b1b1b)", // Image 4 end gradient
-    text: "Restaurent Shoots",
+    text: "Restaurant Shoots",
   },
 ];
 
 const Trail = () => {
   const [scrollValue, setScrollValue] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -157,7 +163,12 @@ const Trail = () => {
       position: "fixed",
       top: "50%",
       left: "50%",
+      cursor: "pointer",
     };
+  };
+
+  const handleImageClick = (link) => {
+    navigate(link);
   };
 
   return (
@@ -166,7 +177,7 @@ const Trail = () => {
       <div className="h-[100vh] bg-gradient-to-b from-[#1a1a3b] to-[#2c140a]"></div>
       <div className="h-[100vh] bg-gradient-to-b from-[#2c140a] to-[#05282f]"></div>
       <div
-        className="h-[300vh] text-white relative overflow-hidden  bg-gradient-to-b from-[#05282f] to-[#2e0733]"
+        className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#05282f] to-[#2e0733]"
         // style={{ background: getBackgroundGradient() }}
       >
         <div className="flex justify-center space-x-4 mt-20 absolute inset-0">
@@ -175,8 +186,9 @@ const Trail = () => {
               key={index}
               className="w-[50px] h-[50px] md:w-[200px] md:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
               style={getImageStyles(image)}
+              onClick={() => handleImageClick(image.link)}
             >
-              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-30px] left-1/2 transform -translate-x-1/2  px-2 py-1  text-white ">
+              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-30px] left-1/2 transform -translate-x-1/2 px-2 py-1 text-white">
                 {image.text}
               </div>
               <img
