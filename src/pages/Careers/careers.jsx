@@ -10,6 +10,7 @@ import work from "./worki.json";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
 import { Navbar } from "../../components/Nav/Navbar/index.tsx";
 import { Footer } from "../../sections/Footer/index.tsx";
+import SvgLine from "../../components/SvgLine/svgLine.jsx";
 
 const Careers = () => {
   const [data, setData] = useState({
@@ -115,22 +116,81 @@ const Careers = () => {
   return (
     <CursorProvider>
       <Navbar />
+      <div className="text-[6rem] my-[15rem] m-[10rem] w-full h-[10rem] font-[questrial]">
+        <span className=" font-light italic">Creativity</span>
+        <br />
+        <span className="">meets technology</span>
+      </div>
+
+      <div className="h-[80vh] mt-[10rem] w-full">
+        <img src="/job1.png"></img>
+      </div>
+
+      <div className="flex flex-row h-[50vh] w-full m-[10rem] mt-[13rem] mb-0 font-[questrial] ">
+        <div className="w-1/5 text-[1.2rem]">OUR TEAM CULTURE</div>
+        <div className="w-3/5 text-[1.75rem] px-[5rem] ">
+          At Leifii, our team culture is built on creativity, collaboration, and
+          a commitment to excellence. We believe in the power of diverse
+          perspectives and foster an environment where every team member is
+          encouraged to contribute their unique ideas. Our team is composed of
+          individuals with rich creative backgrounds, all dedicated to bringing
+          innovative solutions to life. We live to beautify dreams and meet
+          needs, transforming them into reality for a better world.
+        </div>
+      </div>
+
+      <SvgLine />
+
+      <div className="flex flex-col h-[50vh] my-[5rem] w-full text-center items-center justify-center leading-[1.6em] font-[questrial]">
+        <div className="text-[4rem] h-[7rem]">Team at Leifii.Co</div>
+        <div className="h-[5rem] text-[2.3rem]">
+          Degree doesn't matter to us. Skills Does!
+        </div>
+        <div className="h-[15rem] text-[1.2rem] w-[60%] leading-[1.6em]">
+          We are always looking to hire talented individuals to join our
+          marketing team. Our team is looking for creative, innovative, and
+          strategic thinkers who can help us reach the next level of success. We
+          offer a variety of positions, ranging from entry-level to experienced
+          roles, in digital marketing, content marketing, SEO, social media
+          management, and more. If you’re passionate about helping organizations
+          reach their marketing goals and have the skills to back it up, we’d
+          love to hear from you
+        </div>
+      </div>
+
+      <div className="h-[100vh] w-full flex flex-row m-[5rem] mx-[10rem] gap-10 ">
+        <div className="w-[40%] h-[70%] ">
+          <img src="/job2.jpg" className="rounded-[3rem]"></img>
+        </div>
+        <div className="w-[40%] h-[100%] pt-[15rem]">
+          <img src="/job3.jpg" className="rounded-[3rem]"></img>
+        </div>
+      </div>
+
+      <SvgLine />
+
+      <div className="h-[5vh] mb-0 mt-[6rem] m-[10rem]  font-[questrial] text-center leading-[6rem]">
+        <div className="text-[5rem]">Think you have what it takes?</div>
+        <div className="text-[5rem]">Send us your Resume</div>
+      </div>
       <div>
         <header className="cb-request">
           <div className="cb-request-content">
             <div className="cb-request-container">
               <div className="cb-request-header ">
-                <h1>
-                  <span className="italic font-light">Hey! </span> <br></br>{" "}
-                  Design your future with LEIFII{" "}
-                </h1>
-                <div className="absolute right-[7rem] top-[14rem] h-[10rem] w-[10rem]">
+                {/* <h1>
+                  <span className="font-light">
+                    Think You Have What It Takes!{" "}
+                  </span>{" "}
+                  <br></br> Send us your Resume
+                </h1> */}
+                {/* <div className="absolute right-[7rem] top-[14rem] h-[10rem] w-[10rem]">
                   {" "}
                   <Lottie
                     animationData={work}
                     style={{ width: "100%", height: "100%" }}
                   />
-                </div>
+                </div> */}
               </div>
 
               <div className="cb-request-form">
@@ -407,7 +467,7 @@ const Careers = () => {
                       <div className="cb-input_light-message"></div>
                     </div>
                   </div>
-                  <div className="cb-form-group">
+                  {/* <div className="cb-form-group">
                     <div className="cb-form-label -smooth">
                       Available start date
                     </div>
@@ -428,7 +488,7 @@ const Careers = () => {
                       </div>
                       <div className="cb-input_light-message"></div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="cb-form-group">
                     <div
                       className="cb-input cb-input_light"

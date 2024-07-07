@@ -21,7 +21,7 @@ import Contact from "./pages/Contact/contact.jsx";
 import BlogList from "./sections/Blog/blogList.jsx";
 import BlogDetail from "./sections/Blog/blogDetail.jsx";
 import Web from "./sections/Web/web.tsx";
-import Careers from "./pages/Careers/careers.tsx";
+import Careers from "./pages/Careers/careers.jsx";
 import Trail from "./sections/Trial/trail.jsx";
 import Photography from "./sections/Photography/photography.tsx";
 

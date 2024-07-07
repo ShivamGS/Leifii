@@ -73,7 +73,7 @@ export const MacbookScroll = ({
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="dark:text-white text-neutral-800 text-[4rem] md:text-4xl font-bold mb-20 text-center font-[questrial] leading-[5rem] md:leading-[3rem]"
+        className="text-white text-[4rem] md:text-4xl font-bold mb-20 text-center font-[questrial] leading-[5rem] md:leading-[3rem]"
       >
         {title || (
           <span>
