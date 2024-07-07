@@ -110,7 +110,7 @@ const ServicesMain = () => {
                   </div>
                 </div>
 
-                {/* <HeroCardPreview /> */}
+                <HeroCardPreview />
 
                 <div className="flex flex-col lg:flex-row my-10">
                   <div className="w-full lg:w-[50%] flex flex-col justify-start">
