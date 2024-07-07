@@ -25,8 +25,6 @@ import drag from "./dragWhite.json";
 import Lottie from "lottie-react";
 import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
-import { TextRevealCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
-import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
 
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);

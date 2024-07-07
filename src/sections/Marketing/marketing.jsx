@@ -9,6 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "./swiperr.css";
 import BackButton from "../../components/BackButton.jsx/backButton.jsx";
+import Lottie from "lottie-react";
+import dragBlack from "./dragBlack.json";
 
 const Marketing = () => {
   const [ref1, inView1] = useInView({ threshold: 0.1 });
@@ -31,7 +33,7 @@ const Marketing = () => {
       <MarketingHero />
       <div className="flex flex-col bg-[#fafafa] pb-8">
         <div className="flex justify-center py-4">
-          <h2 className="text-[2rem] md:text-[3rem] font-medium mt-10">
+          <h2 className="text-[2rem] md:text-[3rem] font-medium my-[20px] md:my-[50px]">
             Recent Projects
           </h2>
         </div>
@@ -228,6 +230,16 @@ const Marketing = () => {
 
           {/* Add more SwiperSlide components as needed */}
         </Swiper>
+
+        <div className="text-black flex justify-end pr-10 align-middle items-center">
+          <div className="">
+            <Lottie
+              animationData={dragBlack}
+              style={{ width: "100px", height: "100px" }}
+            />
+          </div>
+          Drag to explore ➡
+        </div>
       </div>
 
       <Footer />

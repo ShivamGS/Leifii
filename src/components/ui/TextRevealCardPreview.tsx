@@ -3,14 +3,14 @@ import {
   TextRevealCard,
   TextRevealCardDescription,
   TextRevealCardTitle,
-} from "./text-reveal-card.tsx";
+} from "./textrevealcard.tsx";
 
-export function TextRevealCardPreview() {
+export function FinalCardPreview() {
   return (
-    <div className="flex items-center justify-center bg-black h-[40rem] rounded-2xl w-[1400px]">
+    <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
       <TextRevealCard
         text="You know the business"
-        revealText="We know the chemistry "
+        revealText="I know the chemistry "
       >
         <TextRevealCardTitle>
           Sometimes, you just need to see it.

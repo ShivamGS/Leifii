@@ -3,13 +3,13 @@
     padding-top: 180px;
     padding-left: 100px;
     width: 1400px;
-    height: 600px;
+    height: 550px;
     
   }
 
   @media (max-width: 480px) {
     .swiper {
       padding-top: 80px;
-      height: 450px;
+      height: 400px;
     }
 }

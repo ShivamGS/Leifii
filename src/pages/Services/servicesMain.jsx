@@ -9,13 +9,12 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { Footer } from "../../sections/Footer/index.tsx";
 import { Cursor } from "../../components/Cursor/index.tsx";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
-import { TextRevealCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
 import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 import Lottie from "lottie-react";
 import arroww from "./arroww.json";
 import emailjs from "emailjs-com";
-import { HeroCardPreview } from "../../components/ui/HeroCardPreview.tsx";
 import CountUp from "react-countup";
+import { FinalCardPreview } from "../../components/ui/TextRevealCardPreview.tsx";
 
 const ServicesMain = () => {
   const containerRef = useRef(null);
@@ -110,7 +109,7 @@ const ServicesMain = () => {
                   </div>
                 </div>
 
-                {/* <HeroCardPreview /> */}
+                <FinalCardPreview />
 
                 <div className="flex flex-col lg:flex-row my-10">
                   <div className="w-full lg:w-[50%] flex flex-col justify-start">
