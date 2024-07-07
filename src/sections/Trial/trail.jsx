@@ -162,19 +162,21 @@ const Trail = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="h-[200vh] bg-gradient-to-b from-black to-[#1a1a3b]"></div>
+      <div className="h-[100vh] bg-gradient-to-b from-[#2d0d3a] to-[#1a1a3b]"></div>
+      <div className="h-[100vh] bg-gradient-to-b from-[#1a1a3b] to-[#2c140a]"></div>
+      <div className="h-[100vh] bg-gradient-to-b from-[#2c140a] to-[#05282f]"></div>
       <div
-        className="h-[400vh] text-white relative overflow-hidden"
-        style={{ background: getBackgroundGradient() }}
+        className="h-[300vh] text-white relative overflow-hidden  bg-gradient-to-b from-[#05282f] to-[#2e0733]"
+        // style={{ background: getBackgroundGradient() }}
       >
         <div className="flex justify-center space-x-4 mt-20 absolute inset-0">
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-[200px] h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
+              className="w-[50px] h-[50px] md:w-[200px] md:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
               style={getImageStyles(image)}
             >
-              <div className="absolute w-[10rem] top-[-30px] left-1/2 transform -translate-x-1/2  px-2 py-1  text-white ">
+              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-30px] left-1/2 transform -translate-x-1/2  px-2 py-1  text-white ">
                 {image.text}
               </div>
               <img

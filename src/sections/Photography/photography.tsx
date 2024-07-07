@@ -7,6 +7,8 @@ const Photography = () => {
   return (
     <div>
       <Photo />
+      <div className="h-[100vh] bg-gradient-to-b from-black to-[#2d0d3a]"></div>
+
       <Trail />
     </div>
   );

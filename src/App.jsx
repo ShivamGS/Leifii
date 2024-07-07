@@ -5,7 +5,7 @@ import Landing from "./pages/Landing/landing.tsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Services from "./pages/Services/services.js";
-import ServicesMain from "./pages/Services/servicesMain.tsx";
+import ServicesMain from "./pages/Services/servicesMain.jsx";
 import Photo from "./sections/Photo/photo.jsx";
 import Testimonials from "./components/Testimonials/testimonials.jsx";
 import { TracingBeamDemo } from "./components/ui/TracingBeamDemo.tsx";
@@ -62,7 +62,7 @@ function App() {
         <Route path="/services/web" element={<Web />} />
 
         <Route path="/project/1" element={<Project1 />} />
-        {/* <Route path="/project/2" element={<Trail />} /> */}
+        <Route path="/project/2" element={<Trail />} />
       </Routes>
     </>
   );

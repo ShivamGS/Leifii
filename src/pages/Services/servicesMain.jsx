@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Services from "./services";
+import Services from "./services.js";
 import { Navbar } from "../../components/Nav/Navbar/index.tsx";
 import "./services.css";
 import Banner from "../../components/Banner/banner.jsx";
