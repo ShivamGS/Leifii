@@ -38,7 +38,10 @@ export const LampContainer = ({
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "35rem" }}
+          whileInView={{
+            opacity: 1,
+            width: window.innerWidth <= 640 ? "20rem" : "35rem", // Adjust the width based on the screen size
+          }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -49,12 +52,15 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-blue-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
-          <div className="absolute  w-[100%] left-0 bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-          <div className="absolute  w-40 h-[100%] left-0 bg-slate-950  bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
+          <div className="absolute w-[100%] left-0 bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
+          <div className="absolute w-40 h-[100%] left-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "35rem" }}
+          whileInView={{
+            opacity: 1,
+            width: window.innerWidth <= 640 ? "20rem" : "35rem",
+          }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -83,7 +89,7 @@ export const LampContainer = ({
         ></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
-          whileInView={{ width: "35rem" }}
+          whileInView={{ width: window.innerWidth <= 640 ? "25rem" : "35rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,

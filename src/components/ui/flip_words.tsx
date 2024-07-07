@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../utils/cn";
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 500,
   className,
 }: {
   words: string[];
@@ -59,7 +59,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-blue-500 px-2 pl-10 font-[questrial]",
+          "z-10 inline-block relative text-left text-neutral-900 dark:text-blue-500 px-2 pl-3 md:pl-10 font-[questrial]",
           className
         )}
         key={currentWord}

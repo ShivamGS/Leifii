@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 import "./branding.css";
 import SliderComponent from "./sliderComponent";
+import BackButton from "../../components/BackButton.jsx/backButton";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -110,32 +111,10 @@ const Branding = () => {
 
   return (
     <main className="bodii">
-      <div className="frame">
-        <div className="frame__title">
-          <h1 className="frame__title-main">
-            On-Scroll Image Layout Animations
-          </h1>
-          <a
-            aria-label="Back to the article"
-            className="frame__title-back"
-            href="https://tympanus.net/codrops/?p=72941"
-          >
-            <span className="oh__inner">Back to the article</span>
-            <svg width="18px" height="18px" viewBox="0 0 24 24">
-              <path
-                vectorEffect="non-scaling-stroke"
-                d="M18.25 15.5a.75.75 0 00.75-.75v-9a.75.75 0 00-.75-.75h-9a.75.75 0 000 1.5h7.19L6.22 16.72a.75.75 0 101.06 1.06L17.5 7.56v7.19c0 .414.336.75.75.75z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <a
-          className="frame__prev"
-          href="https://tympanus.net/Development/TextBlockTransitions/"
-        >
-          Previous demo
-        </a>
+      <div className="pt-[2rem] pl-[2rem] md:pt-[4rem] md:pl-[4rem]">
+        <BackButton />
       </div>
+      <div className="frame"></div>
 
       <section className="project project--intro">
         <span className="project__label project__label--name">Project</span>
@@ -143,8 +122,7 @@ const Branding = () => {
         <span className="project__label project__label--date">Date</span>
         <span className="project__date">July, 2023</span>
         <h2 className="project__title">
-          <span className="project__title-line">Creativity</span>
-          <span className="project__title-line">Redefined</span>
+          Branding <span className="project__title-line">Redefined</span>
         </h2>
         <span className="project__label project__label--mission">Mission</span>
         <div className="project__mission">
@@ -468,15 +446,21 @@ const Branding = () => {
           <div class="caption">The Art of Perfection?</div>
         </div>
       </div>
-      <div className="flex text-justify justify-center text-[3rem]">
-        Explore the projects
+      <div className="flex text-justify justify-center text-[2rem] md:text-[3rem]">
+        Explore the Projects
       </div>
 
       <div className="h-screen text-white">
         <SliderComponent />{" "}
       </div>
+    </main>
+  );
+};
 
-      {/* <div class="gallery-wrap gallery-wrap--dense">
+export default Branding;
+
+{
+  /* <div class="gallery-wrap gallery-wrap--dense">
         <div
           class="gallery gallery--stack gallery--stack-inverse gallery--stack-dark"
           id="gallery-4"
@@ -653,11 +637,9 @@ const Branding = () => {
           the profound human expression that sparks true resonance, evoking a
           sense of emptiness in the face of machine-driven artistry.
         </p>
-      </section> */}
+      </section> */
+}
 
-      {/* <div className="h-screen bg-black"></div> */}
-    </main>
-  );
-};
-
-export default Branding;
+{
+  /* <div className="h-screen bg-black"></div> */
+}

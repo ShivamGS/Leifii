@@ -68,6 +68,29 @@ const SliderComponent = () => {
     prevArrow: <PrevArrow />,
     beforeChange: () => setIsDragging(true),
     afterChange: () => setIsDragging(false),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const projects = [
@@ -100,8 +123,8 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className="h-screen text-white bg-gray-800 flex items-center justify-center w-full">
-      <div className="w-full max-w-7xl relative">
+    <div className=" h-[100vh] md:h-screen text-white bg-[#131417] flex items-center justify-center w-full">
+      <div className="w-full max-w-7xl relative px-4 sm:px-6 lg:px-8">
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div key={index} className="p-4">
@@ -112,10 +135,12 @@ const SliderComponent = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-96 object-cover transition-transform duration-500 transform group-hover:scale-110"
+                  className="w-[full] h-80 sm:h-80 md:h-96 object-cover transition-transform duration-500 transform group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <h3 className="text-2xl text-white">{project.title}</h3>
+                  <h3 className="text-xl sm:text-2xl text-white">
+                    {project.title}
+                  </h3>
                 </div>
               </div>
             </div>
