@@ -247,13 +247,26 @@ body #cdawrap {
     font-size: clamp(2rem,8vw,5rem);
     color: var(--color-title);
     text-transform: uppercase;
+
+	
 }
+@media (max-width: 480px) {
+    .intro__title-pre {
+		font-size: clamp(2rem,8vw,5rem);
+	}
+    }
 
 .intro__title-sub {
     font-size: clamp(1.5rem,20vw,8rem);
     max-width: 15ch;
     margin: 0 auto;
 }
+
+@media (max-width: 480px) {
+    .intro__title-sub {
+		font-size: clamp(1.5rem,14vw,8rem);
+	}
+    }
 
 .intro__info {
 	max-width: 15ch;
