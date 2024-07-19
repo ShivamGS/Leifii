@@ -70,9 +70,9 @@
   text-align: center;
   width: 101%;
   font-family: 'Questrial';
-  font-weight: 300;
-  font-size: 1rem;
-  margin-top: 17px;
+  font-weight: 200;
+  font-size: 1.25rem;
+  margin-top: 20px;
   overflow: hidden;
   font-weight: bold;
 }
@@ -156,17 +156,23 @@ a {
 
   .footer {
     font-size: 14px;
-    margin-top: 8vh;
+    margin-top: 10vh;
   }
 
   .button-container-1,
   .button-container-2,
   .button-container-3 {
-    width: 20rem;
-    height: 8rem;
+    width: 16rem;
+    height: 6rem;
+
+    button{
+      font-size: 1rem;
+
+    }
   }
 
   .mas {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    margin-top: 25px;
   }
 }

@@ -24,6 +24,7 @@ import Web from "./sections/Web/web.tsx";
 import Careers from "./pages/Careers/careers.jsx";
 import Trail from "./sections/Trial/trail.jsx";
 import Photography from "./sections/Photography/photography.tsx";
+import Influencer from "./pages/Influencer/influencer.jsx";
 
 // import Contact from "./pages/Contact/contact.jsx";
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/services" element={<ServicesMain />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/influencer" element={<Influencer />} />
 
         {/* <Route path="/blog" element={<TracingBeamDemo />} /> */}
         <Route path="/blog" element={<BlogList />} />

@@ -66,7 +66,7 @@ export const HeroCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#000] w-full max-w-[40rem] rounded-lg p-8 relative overflow-hidden",
+        "bg-[#000] w-full max-w-[60rem] rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
@@ -94,7 +94,7 @@ export const HeroCard = ({
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-[1.8rem] sm:text-[3rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-[1.8rem] sm:text-[5rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
           >
             {revealText}
           </p>
@@ -110,7 +110,7 @@ export const HeroCard = ({
         ></motion.div>
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-[1.8rem] sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+          <p className="text-[1.8rem] sm:text-[5rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
             {text}
           </p>
           <MemoizedStars />
@@ -144,7 +144,7 @@ export const TextRevealCardDescription = ({
   className?: string;
 }) => {
   return (
-    <p className={twMerge("text-[#a9a9a9] text-sm sm:text-base", className)}>
+    <p className={twMerge("text-[#a9a9a9] text-sm sm:text-[1rem]", className)}>
       {children}
     </p>
   );

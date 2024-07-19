@@ -53,10 +53,14 @@ export const Navbar = () => {
     <nav className={"navbar"}>
       <div className={"navbar-wrapper"} ref={nav}>
         <div className={"navbar-left"}>
-          <Link className="" to="/">
-            <div className={"logo-container"}>
-              <img className="" src="/logol.png" alt=""></img>
-              <img className="" src="/LEIFII.png" alt=""></img>
+          <Link className="group" to="/">
+            <div className="logo-container">
+              <img className="logoo" src="/logol.png" alt="" />
+              <img
+                className="name opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                src="/LEIFII.png"
+                alt=""
+              />
             </div>
           </Link>
         </div>

@@ -18,7 +18,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="w-full md:w-[50%] flex flex-col justify-center items-start">
-        <div className="info text-[1.2rem] md:text-3xl font-[questrial] m-4 md:m-10 text-left">
+        <div className="info text-[1.2rem] md:text-3xl font-[questrial] m-4  md:m-10 text-left">
           Leifii is a leading digital product agency focused on branding, UI/UX
           design, mobile, and web development.
         </div>

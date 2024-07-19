@@ -20,7 +20,7 @@ export const Menu = ({ isMenuOpened, handleMenuOpen }: Props) => {
   //   "Twitter",
   //   "Github",
   // ;
-  const links2 = ["About", "Services", "Careers", "Contact"];
+  const links2 = ["About", "Services", "Careers", "Contact", "Influencer"];
 
   const [isTouchScreen, setIsTouchScreen] = useState(false);
 
