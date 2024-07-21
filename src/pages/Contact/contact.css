@@ -3972,6 +3972,7 @@ em {
     -o-transition: opacity 0.4s;
     -moz-transition: opacity 0.4s;
     transition: opacity 0.4s;
+    
 }
 
 @media (min-width: 768px) {
@@ -3979,6 +3980,7 @@ em {
         padding: 9px 0;
         font-size: 22px;
         line-height: 28px;
+        
     }
 }
 

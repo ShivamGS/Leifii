@@ -104,6 +104,19 @@ const Banner = () => {
               />
             </Link>
           </BannerComponent>
+          <BannerComponent>
+            <Link to="/services/space">
+              <img
+                src="img/pod01.png"
+                className="ban-pic"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="3"
+                data-scroll-target="#up"
+                alt="Image 5"
+              />
+            </Link>
+          </BannerComponent>
         </Container>
       </SectionWrapper>
     </div>

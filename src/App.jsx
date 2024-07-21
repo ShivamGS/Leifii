@@ -25,6 +25,7 @@ import Careers from "./pages/Careers/careers.jsx";
 import Trail from "./sections/Trial/trail.jsx";
 import Photography from "./sections/Photography/photography.tsx";
 import Influencer from "./pages/Influencer/influencer.jsx";
+import Spaces from "./sections/Spaces/spaces.jsx";
 
 // import Contact from "./pages/Contact/contact.jsx";
 
@@ -62,6 +63,7 @@ function App() {
         <Route path="/services/branding" element={<Branding />} />
         <Route path="/services/marketing" element={<Marketing />} />
         <Route path="/services/web" element={<Web />} />
+        <Route path="/services/space" element={<Spaces />} />
 
         <Route path="/project/1" element={<Project1 />} />
         <Route path="/project/2" element={<Trail />} />

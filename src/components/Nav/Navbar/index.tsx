@@ -55,11 +55,11 @@ export const Navbar = () => {
         <div className={"navbar-left"}>
           <Link className="group" to="/">
             <div className="logo-container">
-              <img className="logoo" src="/logol.png" alt="" />
+              <img className="logoo" src="/logol.png" alt="Logo" />
               <img
-                className="name opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="name opacity-0 transform translate-x-[-1rem] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
                 src="/LEIFII.png"
-                alt=""
+                alt="LEIFII"
               />
             </div>
           </Link>

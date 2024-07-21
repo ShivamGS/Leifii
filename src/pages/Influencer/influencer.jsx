@@ -119,10 +119,10 @@ const Influencer = () => {
               <div className="cb-request-header">
                 <h1>
                   <span className="italic font-light">Hey! </span> <br></br>{" "}
-                  Design your leaves with LEIFII{" "}
+                  Influence people with LEIFII{" "}
                   <img
-                    src="../assets/leaf.png"
-                    srcSet="/assets/leaf.png 2x"
+                    className="w-[10rem] h-[3rem] md:h-[5rem]"
+                    src="../assets/influ.jpg"
                     alt=""
                   ></img>
                 </h1>
@@ -363,7 +363,7 @@ const Influencer = () => {
                       <div className="cb-input_light-box">
                         <textarea
                           name="message"
-                          placeholder="Tell us about your project"
+                          placeholder="Tell us about yourself"
                           aria-label="Tell us about your project"
                           onChange={handleChange}
                         ></textarea>
@@ -481,7 +481,7 @@ const Influencer = () => {
                   </div>
                   <div className="cb-form-submit">
                     <button
-                      className="cb-btn cb-btn_send"
+                      className="text-[1.25rem] border-[#ccc] border-2 rounded-full p-4 transition-colors duration-300 hover:bg-[#333] hover:text-white"
                       type="submit"
                       data-magnetic
                       data-cursor="-opaque"
