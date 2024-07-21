@@ -542,7 +542,7 @@ const Careers = () => {
                   </div>
                   <div className="cb-form-submit">
                     <button
-                      className="text-[1.25rem] border-[#ccc] border-2 rounded-full p-4 transition-colors duration-300 hover:bg-[#333] hover:text-white"
+                      className="text-[1.2rem] text-white border-[#000] border-2 rounded-full p-4 transition-colors duration-300 bg-[#000] hover:bg-white hover:text-black"
                       type="submit"
                       data-magnetic
                       data-cursor="-opaque"
