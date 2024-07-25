@@ -24,7 +24,7 @@ const Hero2 = () => {
 
   return (
     <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
-      <div className="text-black absolute top-[17rem] font-[questrial] text-[5rem] tracking-widest">
+      <div className="text-black absolute top-[17rem] font-[questrial] text-[1.8rem] md:text-[3rem] lg:text-[5rem] tracking-widest">
         THIS IS YOUR BUSINESS
       </div>
       <div className="absolute top-[25rem] left-[42rem]">
@@ -61,7 +61,7 @@ const Hero2 = () => {
           <div className="flex w-[4rem] h-[0.5rem] ml-8 space-x-1">
             <li>
               <motion.img
-                src="/photography/1.png"
+                src="/photography/1c.png"
                 alt="Image 1"
                 className="w-[0rem] h-[0rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -71,7 +71,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/1.png"
+                src="/photography/1c.png"
                 alt="Image 1"
                 className="w-[0rem] h-[0rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -81,7 +81,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/1.png"
+                src="/photography/1c.png"
                 alt="Image 1"
                 className="w-[0rem] h-[0rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -91,7 +91,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/2.png"
+                src="/photography/2c.png"
                 alt="Image 2"
                 className="w-[0.15rem] h-[0.15rem] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -101,7 +101,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/3.png"
+                src="/photography/3c.png"
                 alt="Image 3"
                 className="w-[0.15rem] h-[0.15rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -111,7 +111,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/4.png"
+                src="/photography/4c.png"
                 alt="Image 4"
                 className="w-[0.15rem] h-[0.15rem] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -121,7 +121,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/5.png"
+                src="/photography/5c.png"
                 alt="Image 5"
                 className="w-[0.15rem] h-[0.15rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -131,7 +131,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/6.png"
+                src="/photography/6c.png"
                 alt="Image 6"
                 className="w-[0.15rem] h-[0.15rem] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
@@ -141,7 +141,7 @@ const Hero2 = () => {
             </li>
             <li>
               <motion.img
-                src="/photography/1.png"
+                src="/photography/1c.png"
                 alt="Image 7"
                 className="w-[0.15rem] h-[0.15rem] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
