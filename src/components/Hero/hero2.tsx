@@ -27,9 +27,9 @@ const Hero2 = () => {
       <div className="text-black absolute top-[17rem] font-[questrial] text-[1.8rem] md:text-[3rem] lg:text-[5rem] tracking-widest">
         THIS IS YOUR BUSINESS
       </div>
-      <div className="absolute top-[25rem] left-[42rem]">
+      <div className="absolute top-[20rem] left-[10rem] lg:top-[25rem] lg:left-[42rem]">
         {" "}
-        <Lottie animationData={down} className="h-[15rem] w-20" />
+        <Lottie animationData={down} className="h-[15rem] lg:h-[15rem] w-20" />
       </div>
 
       <motion.div
@@ -42,7 +42,7 @@ const Hero2 = () => {
         }}
       >
         <motion.div
-          className="absolute text-white top-[0.55rem] flex space-x-2 text-[0.15rem]"
+          className="absolute text-white top-[0.55rem] flex space-x-2 text-[0.08rem] lg:text-[0.15rem]"
           style={{ x: xWhoWeAre, opacity }}
         >
           <div className="flex w-[2rem] h-[0.5rem] ml-8 space-x-[0.1rem] list-none">
@@ -55,7 +55,7 @@ const Hero2 = () => {
           </div>
         </motion.div>
         <motion.div
-          className="absolute text-white top-[0.4rem] flex space-x-4 text-[0.05rem]"
+          className="absolute text-white top-[0.37rem] lg:top-[0.4rem] flex space-x-4 text-[0.05rem]"
           style={{ x: xImages, opacity }}
         >
           <div className="flex w-[4rem] h-[0.5rem] ml-8 space-x-1">
