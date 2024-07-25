@@ -1,24 +1,37 @@
 import React from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+import down from "./downarrow.json";
+import Lottie from "lottie-react";
 
 const Hero2 = () => {
   const { scrollY } = useViewportScroll();
 
   // The circle scales up from 1 to 100 as you scroll from 0 to 300, and stays at scale 100 after 300.
-  const scale = useTransform(scrollY, [0, 300, 800], [10, 100, 100]);
+  const scale = useTransform(scrollY, [0, 350, 1200], [5, 100, 100]);
 
   // The text opacity fades in from 0 to 1 as you scroll from 100 to 300.
-  const opacity = useTransform(scrollY, [100, 300], [0, 1]);
+  const opacity = useTransform(scrollY, [0, 200, 400], [0, 0, 1]);
 
-  // The x transform controls the horizontal scrolling of the list items.
-  const x = useTransform(scrollY, [250, 800], [0, -100]);
+  // The x transform controls the horizontal scrolling of the image list items.
+  const xImages = useTransform(scrollY, [200, 800], [0, -55]);
+
+  // The x transform for the "Who We Are" text list.
+  const xWhoWeAre = useTransform(scrollY, [200, 900], [0, -38]); // Different properties
 
   // The y transform controls the vertical position of the circle.
   // The circle stays fixed from scroll position 300 to 800.
-  const y = useTransform(scrollY, [0, 300, 800], [0, 0, 500]);
+  const y = useTransform(scrollY, [0, 50, 300, 1200], [0, -150, 0, 750]);
 
   return (
-    <div className="flex items-center justify-center h-[150vh] bg-white overflow-hidden">
+    <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
+      <div className="text-black absolute top-[17rem] font-[questrial] text-[5rem] tracking-widest">
+        THIS IS YOUR BUSINESS
+      </div>
+      <div className="absolute top-[25rem] left-[42rem]">
+        {" "}
+        <Lottie animationData={down} className="h-[15rem] w-20" />
+      </div>
+
       <motion.div
         className="bg-black rounded-full flex items-center justify-center relative"
         style={{
@@ -29,47 +42,112 @@ const Hero2 = () => {
         }}
       >
         <motion.div
-          className="text-white text-[0.15rem] text-center flex items-center justify-center h-full"
-          style={{ opacity }}
+          className="absolute text-white top-[0.55rem] flex space-x-2 text-[0.15rem]"
+          style={{ x: xWhoWeAre, opacity }}
         >
-          Who We Are
+          <div className="flex w-[2rem] h-[0.5rem] ml-8 space-x-[0.1rem] list-none">
+            <li>THIS</li>
+            <li>IS</li>
+            <li>HOW</li>
+            <li>WE</li>
+            <li>CAN</li>
+            <li>GROW.</li>
+          </div>
         </motion.div>
         <motion.div
-          className="absolute text-white top-[0.4rem] flex space-x-4 text-[0.05rem] " // Increased spacing
-          style={{ x, opacity }}
+          className="absolute text-white top-[0.4rem] flex space-x-4 text-[0.05rem]"
+          style={{ x: xImages, opacity }}
         >
-          <div className="flex w-[2rem] h-[0.5rem] ml-8 space-x-1">
+          <div className="flex w-[4rem] h-[0.5rem] ml-8 space-x-1">
             <li>
-              <img
-                src="/blog1.png"
+              <motion.img
+                src="/photography/1.png"
                 alt="Image 1"
-                className="w-[0.25rem] h-[0.15rem] mt-1"
-              />{" "}
-              {/* Adjust dimensions as needed */}
+                className="w-[0rem] h-[0rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
             </li>
             <li>
-              <img
-                src="/blog3.jpg"
+              <motion.img
+                src="/photography/1.png"
                 alt="Image 1"
-                className="w-[0.25rem] h-[0.15rem] mb-1"
-              />{" "}
-              {/* Adjust dimensions as needed */}
+                className="w-[0rem] h-[0rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
             </li>
             <li>
-              <img
-                src="/blog4.jpg"
+              <motion.img
+                src="/photography/1.png"
                 alt="Image 1"
-                className="w-[0.25rem] h-[0.15rem] mt-1"
-              />{" "}
-              {/* Adjust dimensions as needed */}
+                className="w-[0rem] h-[0rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
             </li>
             <li>
-              <img
-                src="/blog5.jpg"
-                alt="Image 1"
-                className="w-[0.25rem] h-[0.15rem] mb-1"
-              />{" "}
-              {/* Adjust dimensions as needed */}
+              <motion.img
+                src="/photography/2.png"
+                alt="Image 2"
+                className="w-[0.15rem] h-[0.15rem] mb-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
+            </li>
+            <li>
+              <motion.img
+                src="/photography/3.png"
+                alt="Image 3"
+                className="w-[0.15rem] h-[0.15rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
+            </li>
+            <li>
+              <motion.img
+                src="/photography/4.png"
+                alt="Image 4"
+                className="w-[0.15rem] h-[0.15rem] mb-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
+            </li>
+            <li>
+              <motion.img
+                src="/photography/5.png"
+                alt="Image 5"
+                className="w-[0.15rem] h-[0.15rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
+            </li>
+            <li>
+              <motion.img
+                src="/photography/6.png"
+                alt="Image 6"
+                className="w-[0.15rem] h-[0.15rem] mb-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
+            </li>
+            <li>
+              <motion.img
+                src="/photography/1.png"
+                alt="Image 7"
+                className="w-[0.15rem] h-[0.15rem] mt-1"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+                transition={{ duration: 0.2 }}
+              />
             </li>
           </div>
         </motion.div>
