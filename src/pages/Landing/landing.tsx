@@ -25,6 +25,7 @@ import drag from "./dragWhite.json";
 import Lottie from "lottie-react";
 import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
+import Hero2 from "../../components/Hero/hero2.tsx";
 
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,15 +38,17 @@ const Landing = () => {
   return (
     <CursorProvider>
       <div>
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
-        </AnimatePresence>
+        </AnimatePresence> */}
         <Navbar />
         <div className="h-20  "></div>
 
         {/* <HeroCardPreview /> */}
 
-        <Hero />
+        {/* <Hero /> */}
+        <Hero2 />
+        <div className="h-[10vh]"></div>
         <Video />
         <div className="h-[80vh]"></div>
         <Intro />
