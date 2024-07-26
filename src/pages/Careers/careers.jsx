@@ -116,37 +116,41 @@ const Careers = () => {
   return (
     <CursorProvider>
       <Navbar />
-      <div className="text-[6rem] my-[15rem] m-[10rem] w-full h-[10rem] font-[questrial]">
+      <div className="text-[3rem] md:text-[4rem] lg:text-[6rem] my-[15rem] mx-[1rem] md:mx-[7rem] lg:mx-[10rem] w-full h-[3rem] md:h-[7rem] lg:h-[10rem] font-[questrial]">
         <span className=" font-light italic">Creativity</span>
         <br />
         <span className="">meets technology</span>
       </div>
 
-      <div className="h-[80vh] mt-[10rem] w-full">
+      <div className="h-[40vh] md:h-[60vh] lg:h-[80vh] mt-[10rem] w-full">
         <img src="/job1.png"></img>
       </div>
 
-      <div className="flex flex-row h-[50vh] w-full m-[10rem] mt-[13rem] mb-0 font-[questrial] ">
-        <div className="w-1/5 text-[1.2rem]">OUR TEAM CULTURE</div>
-        <div className="w-3/5 text-[1.75rem] px-[5rem] ">
+      <div className="flex flex-col md:flex-row h-auto md:h-[40vh] lg:h-[50vh] w-full mx-4 md:mx-[5rem] lg:mx-[10rem] mt-[5rem] md:mt-[10rem] lg:mt-[13rem] mb-0 font-[questrial]">
+        <div className="w-full md:w-1/5 text-[1.2rem] md:text-[1.5rem] mb-4 md:mb-0 px-4">
+          OUR TEAM CULTURE
+        </div>
+        <div className="w-full md:w-3/5 text-[1rem] md:text-[1.25rem] lg:text-[1.75rem] px-4 md:px-[2.5rem] lg:px-[5rem] text-justify pr-8 tracking-wider leading-[1.25rem] lg:leading-[2rem]">
           At Leifii, our team culture is built on creativity, collaboration, and
           a commitment to excellence. We believe in the power of diverse
           perspectives and foster an environment where every team member is
           encouraged to contribute their unique ideas. Our team is composed of
           individuals with rich creative backgrounds, all dedicated to bringing
           innovative solutions to life. We live to beautify dreams and meet
-          needs, transforming them into reality for a better world.
+          needs, transforming them into reality for a better world.
         </div>
       </div>
 
       <SvgLine />
 
-      <div className="flex flex-col h-[50vh] my-[5rem] w-full text-center items-center justify-center leading-[1.6em] font-[questrial]">
-        <div className="text-[4rem] h-[7rem]">Team at Leifii.Co</div>
-        <div className="h-[5rem] text-[2.3rem]">
+      <div className="flex flex-col h-[50vh] my-[4rem] w-full text-center items-center justify-center leading-[1.6em] font-[questrial]">
+        <div className="text-[2rem] md:text-[3rem] lg:text-[4rem] h-[7rem]">
+          Team at Leifii.Co
+        </div>
+        <div className="h-[5rem] text-[1.2rem] md:text-[1.5rem] lg:text-[2.3rem]">
           Degree doesn't matter to us. Skills Does!
         </div>
-        <div className="h-[15rem] text-[1.2rem] w-[60%] leading-[1.6em]">
+        <div className="h-[15rem] text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] w-[80%] lg:w-[60%] leading-[1.6em]">
           We are always looking to hire talented individuals to join our
           marketing team. Our team is looking for creative, innovative, and
           strategic thinkers who can help us reach the next level of success. We
@@ -158,20 +162,32 @@ const Careers = () => {
         </div>
       </div>
 
-      <div className="h-[100vh] w-full flex flex-row m-[5rem] mx-[10rem] gap-10 ">
-        <div className="w-[40%] h-[70%] ">
-          <img src="/job2.jpg" className="rounded-[3rem]"></img>
+      <div className="h-auto md:h-[80vh] w-full flex flex-row m-4 md:m-[1rem] lg:m-[5rem] mx-2 md:mx-[3rem] lg:mx-[10rem] gap-4 md:gap-10 ">
+        <div className="w-[50%] md:w-[40%] h-[40%] md:h-[60%] lg:h-[70%]">
+          <img
+            src="/job2.jpg"
+            className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
+            alt="Job 2"
+          />
         </div>
-        <div className="w-[40%] h-[100%] pt-[15rem]">
-          <img src="/job3.jpg" className="rounded-[3rem]"></img>
+        <div className="w-[50%] md:w-[40%] h-[50%] md:h-[90%]  lg:h-[100%] pt-8 md:pt-[15rem]">
+          <img
+            src="/job3.jpg"
+            className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
+            alt="Job 3"
+          />
         </div>
       </div>
 
       <SvgLine />
 
-      <div className="h-[5vh] mb-0 mt-[6rem] m-[10rem]  font-[questrial] text-center leading-[6rem]">
-        <div className="text-[5rem]">Think you have what it takes?</div>
-        <div className="text-[5rem]">Send us your Resume</div>
+      <div className="h-[1vh] mb-0 mt-[6rem] m-2 md:m-[10rem]  font-[questrial] text-center leading-[2rem] md:leading-[4rem] lg:leading-[6rem]">
+        <div className="text-[2.5rem] md:text-[4rem] lg:text-[5rem]">
+          Think you have what it takes?
+        </div>
+        <div className="text-[2.35rem] md:text-[3.5rem] lg:text-[5rem]">
+          Send us your Resume
+        </div>
       </div>
       <div>
         <header className="cb-request">

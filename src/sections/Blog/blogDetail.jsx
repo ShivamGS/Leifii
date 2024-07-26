@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import blogData from "./blogData";
 import { TracingBeam } from "../../components/ui/tracingBeam";
+import BackButton from "../../components/BackButton.jsx/backButton";
 
 const BlogDetail = () => {
   useEffect(() => {
@@ -17,9 +18,15 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-black px-10 py-20">
-      <TracingBeam className="px-6">
-        <div className="max-w-2xl mx-auto antialiased pt-4 relative text-white">
-          <h1 className="text-[55px] font-[Questrial]">{blog.title}</h1>
+      <div className="pb-[2rem] pl-[1rem]">
+        <BackButton />
+      </div>
+
+      <TracingBeam className="px-6 ml-0 md:ml-[2rem] lg:ml-[15rem]">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative text-white pl-[2rem] md:pl-[1rem] lg:pl-[2rem]">
+          <h1 className="text-[45px] lg:text-[55px] font-[Questrial]">
+            {blog.title}
+          </h1>
           <h2 className="bg-black text-white rounded-full text-sm w-fit mt-5  py-1 mb-4">
             {blog.badge}
           </h2>

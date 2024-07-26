@@ -60,7 +60,7 @@ const SvgLine = () => {
     progress = 0;
   };
   return (
-    <div className="flex h-[10vh] w-full items-center justify-center bg-white">
+    <div className="flex mt-5 md:mt-2 lg:mt-5 h-[10vh] w-full items-center justify-center bg-white">
       <div className="body">
         <div className="line">
           <div
