@@ -74,7 +74,7 @@ const Column = ({ images, y }) => {
     <motion.div className="column" style={{ y }}>
       {images.map((src, i) => (
         <div key={i} className="imageContainer">
-          <Link to={`/project/${i}`}>
+          <Link to={`/projects/project${i}`}>
             <img src={`/images/${src}`} alt={`image ${i}`} fill />
           </Link>
         </div>

@@ -12,7 +12,6 @@ import { InfiniteMovingCardsDemo } from "../../components/ui/InfiniteMovingCards
 import ImageSlider from "../../components/ImageSlider/imageSlider.jsx";
 import Philosophy from "../../sections/Philosophy/philosophy.tsx";
 import Intro from "../../sections/Intro/intro.tsx";
-
 import Bulge from "../../components/Bulge/bulge.jsx";
 import Preloader from "../../components/Preloader/preloader.jsx";
 import { AnimatePresence } from "framer-motion";
@@ -30,15 +29,15 @@ import Hero2 from "../../components/Hero/hero2.tsx";
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isFirstLoad, setIsFirstLoad] = useState(
-    !localStorage.getItem("firstLoad")
+    !sessionStorage.getItem("firstLoad")
   );
 
   useEffect(() => {
     if (isFirstLoad) {
       setTimeout(() => {
         setIsLoading(false);
-        localStorage.setItem("firstLoad", "false");
-      }, 3000);
+        sessionStorage.setItem("firstLoad", "false");
+      }, 3000); // Show the preloader for 3 seconds
     } else {
       setIsLoading(false);
     }
@@ -51,18 +50,14 @@ const Landing = () => {
           {isLoading && isFirstLoad && <Preloader />}
         </AnimatePresence>
         <Navbar />
-        <div className="h-20  "></div>
+        <div className="h-20"></div>
 
-        {/* <HeroCardPreview /> */}
-
-        {/* <Hero /> */}
         <Hero2 />
         <div className="h-[100vh]"></div>
         <Video />
         <div className="h-[80vh]"></div>
         <Intro />
         <Parallax />
-        {/* <HeroParallaxDemo /> */}
         <Element />
 
         <div className="bg-black text-white pt-10">
@@ -86,31 +81,12 @@ const Landing = () => {
         <div>
           <Testimonials />
         </div>
-
-        {/* <Philosophy /> */}
-        {/* <div className="bg-white">
-          <InfiniteMovingCardsDemo />
-        </div> */}
-
-        {/* <Blog /> */}
         <BlogList />
 
         <div className="h-[50vh] flex text-center items-center justify-center text-[1rem] md:text-[3rem] bg-white text-black">
-          {" "}
           Video Upcoming
         </div>
-
-        {/* <Bulge /> */}
-
-        {/* <div className="rounded-xl bg-slate-400  mt-10  ">
-          <ImageSlider />
-        </div> */}
-
-        {/* <div className="h-screen"></div> */}
-
-        {/* <FooterText /> */}
         <Footer />
-        {/* <Cursor /> */}
       </div>
     </CursorProvider>
   );
