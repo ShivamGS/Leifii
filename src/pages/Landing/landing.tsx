@@ -29,18 +29,27 @@ import Hero2 from "../../components/Hero/hero2.tsx";
 
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFirstLoad, setIsFirstLoad] = useState(
+    !localStorage.getItem("firstLoad")
+  );
+
   useEffect(() => {
-    setTimeout(() => {
+    if (isFirstLoad) {
+      setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem("firstLoad", "false");
+      }, 3000);
+    } else {
       setIsLoading(false);
-    }, 3000);
-  }, []);
+    }
+  }, [isFirstLoad]);
 
   return (
     <CursorProvider>
       <div>
-        {/* <AnimatePresence mode="wait">
-          {isLoading && <Preloader />}
-        </AnimatePresence> */}
+        <AnimatePresence mode="wait">
+          {isLoading && isFirstLoad && <Preloader />}
+        </AnimatePresence>
         <Navbar />
         <div className="h-20  "></div>
 
