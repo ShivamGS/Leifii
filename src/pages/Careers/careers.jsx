@@ -116,7 +116,7 @@ const Careers = () => {
   return (
     <CursorProvider>
       <Navbar />
-      <div className="text-[3rem] md:text-[4rem] lg:text-[6rem] my-[15rem] mx-[1rem] md:mx-[7rem] lg:mx-[10rem] w-full h-[3rem] md:h-[7rem] lg:h-[10rem] font-[questrial]">
+      <div className="text-[2.8rem] md:text-[4rem] lg:text-[6rem] my-[15rem] mx-[1rem] md:mx-[7rem] lg:mx-[10rem] w-full h-[3rem] md:h-[7rem] lg:h-[10rem] font-[questrial]">
         <span className=" font-light italic">Creativity</span>
         <br />
         <span className="">meets technology</span>
@@ -162,15 +162,15 @@ const Careers = () => {
         </div>
       </div>
 
-      <div className="h-auto md:h-[80vh] w-full flex flex-row m-4 md:m-[1rem] lg:m-[5rem] mx-2 md:mx-[3rem] lg:mx-[10rem] gap-4 md:gap-10 ">
-        <div className="w-[50%] md:w-[40%] h-[40%] md:h-[60%] lg:h-[70%]">
+      <div className="h-[20vh] md:h-[80vh] w-full flex flex-row m-4 md:m-[1rem] lg:m-[5rem] mx-[2rem] md:mx-[3rem] lg:mx-[10rem] gap-4 md:gap-10 ">
+        <div className="w-[30%] md:w-[40%] h-[80%] md:h-[60%] lg:h-[70%]">
           <img
             src="/job2.jpg"
             className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
             alt="Job 2"
           />
         </div>
-        <div className="w-[50%] md:w-[40%] h-[50%] md:h-[90%]  lg:h-[100%] pt-8 md:pt-[15rem]">
+        <div className="w-[30%] md:w-[40%] h-[90%] md:h-[90%]  lg:h-[100%] pt-8 md:pt-[15rem]">
           <img
             src="/job3.jpg"
             className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
