@@ -25,6 +25,7 @@ import Lottie from "lottie-react";
 import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
 import Hero2 from "../../components/Hero/hero2.tsx";
+import Showcase from "../../components/Showcase/showcase.jsx";
 
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -57,7 +58,12 @@ const Landing = () => {
         <Video />
         <div className="h-[80vh]"></div>
         <Intro />
-        <Parallax />
+        <div className="hidden md:block">
+          <Parallax />
+        </div>
+        <div className="block md:hidden">
+          <Showcase />
+        </div>
         <Element />
 
         <div className="bg-black text-white pt-10">
