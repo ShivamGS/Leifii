@@ -17,14 +17,14 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="bg-black px-10 py-20">
+    <div className="bg-black px-10 py-20 h-[550vh]">
       <div className="pb-[2rem] pl-[1rem]">
         <BackButton />
       </div>
 
       <TracingBeam className="px-6 ml-0 md:ml-[2rem] lg:ml-[15rem]">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative text-white pl-[2rem] md:pl-[1rem] lg:pl-[2rem]">
-          <h1 className="text-[45px] lg:text-[55px] font-[Questrial]">
+          <h1 className="text-[35px] lg:text-[55px] font-[Questrial]">
             {blog.title}
           </h1>
           <h2 className="bg-black text-white rounded-full text-sm w-fit mt-5  py-1 mb-4">
@@ -33,7 +33,7 @@ const BlogDetail = () => {
           <p className="text-sm text-neutral-400">
             {blog.date} at {blog.time}
           </p>
-          <h3 className="text-[30px] font-[Questrial] mt-6 mb-6 ">
+          <h3 className="text-[25px] lg:text-[30px] font-[Questrial] mt-6 mb-6 ">
             {blog.subheading}
           </h3>
           <img

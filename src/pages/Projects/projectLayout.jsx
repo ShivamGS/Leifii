@@ -83,13 +83,13 @@ const ProjectLayout = ({ project }) => {
     <CursorProvider>
       <div className="">
         <Navbar />
-        <div className="flex flex-col h-[700px] p-4">
+        <div className="flex flex-col h-[400px] md:h-[600px] lg:h-[700px] p-4">
           <motion.div
             ref={refTitle}
             initial="hidden"
             animate={controlsTitle}
             variants={revealVariant}
-            className="text-[6rem] p-[10rem] pb-5"
+            className="text-[2rem] md:text-[4rem] lg:text-[6rem] p-[2rem] lg:p-[10rem] pb-5 lg:pb-[2rem] mt-[5rem] md:mt-[7rem] lg:mt-0"
           >
             <span className="italic font-normal font-[questrial]">
               {project.title}
@@ -98,27 +98,26 @@ const ProjectLayout = ({ project }) => {
             {project.subtitle}
           </motion.div>
 
-          <div className="flex mx-[10rem] space-x-4 my-5">
+          <div className="flex mx-[2rem] lg:mx-[10rem] space-x-4 my-5">
             {project.categories.map((category, index) => (
               <div
                 key={index}
-                className="border-[2px] inline-flex items-center rounded-full bg-black hover:bg-white transition-colors duration-300 group min-w-[150px] min-h-[56px]"
+                className="border-[2px] inline-flex items-center rounded-full bg-black hover:bg-white transition-colors duration-300 group min-w-[100px] min-h-[40px] sm:min-w-[150px] sm:min-h-[56px]"
               >
-                <div className="py-2 px-4 text-white flex items-center hover:text-black transition-colors duration-300 text-[1.3rem]">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 transition-colors duration-300 group-hover:bg-black"></span>
+                <div className="py-1 px-2 text-white flex items-center hover:text-black transition-colors duration-300 text-[0.8rem] sm:py-2 sm:px-4 sm:text-[1.2rem]">
+                  <span className="w-2 h-2 bg-white rounded-full mr-2 sm:mr-3 transition-colors duration-300 group-hover:bg-black"></span>
                   {category}
                 </div>
               </div>
             ))}
           </div>
         </div>
-
         <div className="flex justify-center">
           <motion.div
             ref={ref1}
-            initial={{ scale: 0.8 }}
+            initial={{ scale: 0.6 }}
             animate={controls1}
-            className="mb-8 flex justify-center w-[1500px] h-[600px] rounded-lg"
+            className="mb-8 flex justify-center w-[1500px] h-[400px] md:h-[500px] lg:h-[800px] rounded-lg"
           >
             <motion.video
               className="video_section h-full w-[98%] object-cover border rounded-3xl"
@@ -131,29 +130,31 @@ const ProjectLayout = ({ project }) => {
           </motion.div>
         </div>
 
-        <div className="flex flex-col p-4 mx-[5rem] mt-10 ">
+        {/* Project Description */}
+
+        <div className="flex flex-col p-4 mx-[1rem] lg:mx-[5rem] mt-10 ">
           <motion.div
-            className="flex flex-col md:flex-row ml-[1rem] mb-[5rem]"
+            className="flex flex-col md:flex-row ml-[1rem] md:ml-[2rem] mb-[2rem] md:mb-[5rem]"
             ref={refClientDesc}
             initial="hidden"
             animate={controlsClientDesc}
             variants={revealVariant}
           >
-            <div className=" md:w-1/2 pr-4">
-              <h2 className="text-[2rem] mb-10 font-bold">
+            <div className="w-full md:w-1/2 pr-4 mb-0 md:mb-0">
+              <h2 className="text-[1rem] md:text-[1.5rem] lg:text-[2rem] mb-4 md:mb-10 font-bold">
                 {project.descriptionTitle}
               </h2>
-              <p className=" text-lg text-gray-700 mb-8 max-w-2xl text-justify mr-10 pr-10">
+              <p className="text-[0.8rem] md:text-[1rem] lg:text-lg text-gray-700 mb-8 max-w-2xl text-justify mr-2 md:mr-10 pr-0 lg:pr-10">
                 {project.descriptionText}
               </p>
             </div>
             <hr className="w-full my-4 md:hidden" />
-            <hr className="hidden md:block md:w-[2px] md:h-[210px] md:bg-[#cacaca] mr-5 mt-10" />
-            <div className="md:w-1/2 pl-4 ">
-              <h2 className="text-[2rem] mb-10 font-bold ml-10 pl-10">
+            <hr className="hidden md:block md:w-[2px] md:h-[300px] lg:h-[250px] bg-[#cacaca] mr-5 mt-10" />
+            <div className="w-full md:w-1/2 lg:pl-4 mt-6 md:mt-0">
+              <h2 className="text-[1rem] md:text-[1.5rem] lg:text-[2rem] mb-4 md:mb-10 font-bold ml-0 md:ml-10 pl-0 md:pl-10">
                 {project.solutionTitle}
               </h2>
-              <p className="text-lg text-gray-700 mb-8 max-w-2xl text-justify  pl-10 ml-10 text-right">
+              <p className="text-[0.8rem] md:text-[1rem] lg:text-lg text-gray-700 mb-8 max-w-2xl text-justify pl-0 md:pl-10 ml-0 md:ml-10 ">
                 {project.solutionText}
               </p>
             </div>
@@ -163,14 +164,14 @@ const ProjectLayout = ({ project }) => {
             {project.images.slice(0, 2).map((imgSrc, index) => (
               <div
                 key={index}
-                className="w-[45%] h-[300px] flex justify-center items-center rounded-lg overflow-hidden mx-2"
+                className="w-[45%] h-[180px] md:[250px] lg:h-[300px] flex justify-center items-center rounded-lg overflow-hidden mx-2"
               >
                 <img src={imgSrc} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
 
-          <div className="w-full max-w-7xl mt-[5rem]">
+          <div className="w-full max-w-7xl mt-[2rem] md:mt-[5rem]">
             <motion.div
               ref={refSummaryTitle}
               initial="hidden"
@@ -178,12 +179,12 @@ const ProjectLayout = ({ project }) => {
               variants={revealVariant}
               className="flex justify-center mb-4"
             >
-              <h2 className=" mb-8 border-[2px] w-auto h-[56px] rounded-full bg-black hover:bg-white transition-colors duration-300 group p-4 px-8 text-white flex items-center hover:text-black text-xl">
+              <h2 className=" mb-8 border-[2px] w-auto h-[56px] rounded-full bg-black hover:bg-white transition-colors duration-300 group p-4 px-8 text-white flex items-center hover:text-black text-[0.75rem] md:text-xl">
                 Deliverables
               </h2>
             </motion.div>
 
-            <div className="flex justify-between text-lg text-gray-700 mt-[3rem] pb-[5rem]">
+            <div className="flex justify-between text-[1rem] lg:text-[1.75rem] text-gray-700 mt-[3rem] pb-[5rem]">
               {project.deliverables.map((deliverable, index) => (
                 <motion.div
                   key={index}
@@ -194,13 +195,14 @@ const ProjectLayout = ({ project }) => {
                   className="w-1/3 px-4 text-center"
                 >
                   <h3 className="font-semibold mb-2">{deliverable.title}</h3>
-                  <p>{deliverable.description}</p>
+                  <p className="text-[0.85rem] lg:text-[1.5rem]">
+                    {deliverable.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
-
         {/* Additional large banner */}
         <div className="flex justify-center mt-8">
           <motion.img
@@ -208,73 +210,77 @@ const ProjectLayout = ({ project }) => {
             ref={ref2}
             initial={{ scale: 0.8 }}
             animate={controls2}
-            className="mb-8 flex justify-center w-[1500px] h-[600px] rounded-lg"
+            className="mb-8 flex justify-center w-[90%] lg:w-[1500px] h-[200px] lg:h-[600px] rounded-lg"
           />
         </div>
-
         {/* Summary of Project */}
-        <div className="flex flex-col p-4 mx-[5rem] my-[5rem]">
+        <div className="flex flex-col p-4 mx-[2rem] md:mx-[5rem] my-[2rem] md:my-[3rem] lg:my-[5rem]">
           <motion.div
-            className="flex ml-[5rem] mb-[5rem] justify-center"
+            className="flex ml-0 lg:ml-[5rem] mb-[2rem] md:mb-[5rem] justify-center"
             ref={refSummaryDesc}
             initial="hidden"
             animate={controlsSummaryDesc}
             variants={revealVariant}
           >
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl justify-center">
+            <p className="text-[1rem] md:text-[1.2rem] text-gray-700 mb-8 max-w-2xl justify-center">
               "{project.summary}"
             </p>
           </motion.div>
         </div>
 
-        <div className="flex justify-center w-full max-w-7xl mb-8 mx-auto gap-[1rem]">
-          {project.images.slice(2, 4).map((imgSrc, index) => (
-            <div
-              key={index}
-              className="w-[48%] h-[300px] flex justify-center items-center rounded-lg overflow-hidden mx-2"
-            >
-              <img src={imgSrc} className="w-full h-full object-cover" />
-            </div>
-          ))}
+        <div className="flex justify-center">
+          {" "}
+          <div className="flex justify-between w-full max-w-7xl mb-8">
+            {project.images.slice(2, 4).map((imgSrc, index) => (
+              <div
+                key={index}
+                className="w-[45%] h-[180px] md:[250px] lg:h-[300px] flex justify-center items-center rounded-lg overflow-hidden mx-2"
+              >
+                <img src={imgSrc} className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col p-4 mx-[5rem] mt-[5rem] pl-[6rem]">
+        {/* Client Review Card */}
+
+        <div className="flex flex-col p-4 mx-[1rem] sm:mx-[2rem] lg:mx-[5rem] mt-[2rem] lg:mt-[5rem] pl-[1rem] sm:pl-[2rem] lg:pl-[6rem]">
           <motion.div
-            className="flex ml-[5rem] mb-[1rem]"
+            className="flex flex-col lg:flex-row lg:ml-[5rem] mb-[1rem]"
             ref={refReviewTitle}
             initial="hidden"
             animate={controlsReviewTitle}
             variants={revealVariant}
           >
-            <h2 className="text-[2rem] mb-4 w-1/3">{project.reviewTitle}</h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl w-2/3">
+            <h2 className="text-[1.25rem] lg:text-[2rem] mb-4 lg:w-1/3 w-full">
+              {project.reviewTitle}
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-8 lg:max-w-2xl w-full lg:w-2/3">
               "{project.reviewText}"
             </p>
           </motion.div>
 
           <motion.div
-            className="flex flex-col items-end  px-8 mx-[5rem] "
+            className="flex flex-col items-center lg:items-end px-4 sm:px-8 lg:mx-[5rem] mt-4"
             ref={refReviewDesc}
             initial="hidden"
             animate={controlsReviewDesc}
             variants={revealVariant}
           >
-            <div className="w-1/3"></div>
-            <div className="w-2/3 flex items-center ">
-              <div className="bg-gray-300 rounded-full h-12 w-12 flex items-center justify-center ">
+            <div className="w-full lg:w-1/3"></div>
+            <div className="w-full lg:w-2/3 flex items-center flex-col lg:flex-row">
+              <div className="bg-gray-300 rounded-full h-12 w-12 flex items-center justify-center">
                 <img
                   src={project.clientAvatar}
                   alt="Client Avatar"
-                  className="rounded-full"
+                  className="rounded-full h-10 w-10"
                 />
               </div>
-              <div className="ml-4">
-                <div className="text-lg font-semibold text-left">
+              <div className="mt-4 lg:mt-0 lg:ml-4 text-center lg:text-left">
+                <div className="text-lg font-semibold">
                   {project.clientName}
                 </div>
-                <div className="text-gray-500 text-left">
-                  {project.clientCompany}
-                </div>
+                <div className="text-gray-500">{project.clientCompany}</div>
               </div>
             </div>
           </motion.div>
