@@ -26,6 +26,8 @@ import Trail from "./sections/Trial/trail.jsx";
 import Photography from "./sections/Photography/photography.tsx";
 import Influencer from "./pages/Influencer/influencer.jsx";
 import Spaces from "./sections/Spaces/spaces.jsx";
+import ProjectLayout from "./pages/Projects/projectLayout.jsx";
+import projectData from "./pages/Projects/projectData.jsx";
 
 // import Contact from "./pages/Contact/contact.jsx";
 
@@ -66,7 +68,15 @@ function App() {
         <Route path="/services/space" element={<Spaces />} />
 
         <Route path="/project/1" element={<Project1 />} />
-        <Route path="/project/2" element={<Trail />} />
+        <Route path="/project/2" element={<ProjectLayout />} />
+
+        {projectData.map((project) => (
+          <Route
+            key={project.id}
+            path={`/projects/${project.id}`}
+            element={<ProjectLayout project={project} />}
+          />
+        ))}
       </Routes>
     </>
   );
