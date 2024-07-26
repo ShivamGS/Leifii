@@ -28,7 +28,6 @@ const Hero2 = () => {
         THIS IS YOUR BUSINESS
       </div>
       <div className="absolute top-[20rem] left-[10rem] lg:top-[25rem] lg:left-[42rem]">
-        {" "}
         <Lottie animationData={down} className="h-[8rem] lg:h-[15rem] w-20" />
       </div>
 
@@ -42,10 +41,10 @@ const Hero2 = () => {
         }}
       >
         <motion.div
-          className="absolute text-white top-[0.55rem] flex space-x-2 text-[0.08rem] lg:text-[0.15rem]"
+          className="absolute text-white top-[0.55rem] flex space-x-2 text-[1.25px] lg:text-[2px]"
           style={{ x: xWhoWeAre, opacity }}
         >
-          <div className="flex w-[2rem] h-[0.5rem] ml-8 space-x-[0.1rem] list-none">
+          <div className="flex w-[32px] h-[8px] ml-8 space-x-[1.6px] list-none">
             <li>THIS</li>
             <li>IS</li>
             <li>HOW</li>
@@ -55,15 +54,15 @@ const Hero2 = () => {
           </div>
         </motion.div>
         <motion.div
-          className="absolute text-white top-[0.35rem] lg:top-[0.4rem] flex space-x-4 text-[0.05rem]"
+          className="absolute text-white top-[5.6px] lg:top-[6.4px] flex space-x-4"
           style={{ x: xImages, opacity }}
         >
-          <div className="flex w-[4rem] h-[0.5rem] ml-8 space-x-1">
+          <div className="flex w-[64px] h-[8px] ml-8 space-x-1 list-none">
             <li>
               <motion.img
                 src="/photography/1c.png"
                 alt="Image 1"
-                className="w-[0rem] h-[0rem] mt-1"
+                className="w-[0px] h-[0px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -73,7 +72,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/1c.png"
                 alt="Image 1"
-                className="w-[0rem] h-[0rem] mt-1"
+                className="w-[0px] h-[0px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -83,7 +82,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/1c.png"
                 alt="Image 1"
-                className="w-[0rem] h-[0rem] mt-1"
+                className="w-[0px] h-[0px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -93,7 +92,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/2c.png"
                 alt="Image 2"
-                className="w-[0.15rem] h-[0.15rem] mb-1"
+                className="w-[2.4px] h-[2.4px] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -103,7 +102,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/3c.png"
                 alt="Image 3"
-                className="w-[0.15rem] h-[0.15rem] mt-1"
+                className="w-[2.4px] h-[2.4px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -113,7 +112,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/4c.png"
                 alt="Image 4"
-                className="w-[0.15rem] h-[0.15rem] mb-1"
+                className="w-[2.4px] h-[2.4px] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -123,7 +122,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/5c.png"
                 alt="Image 5"
-                className="w-[0.15rem] h-[0.15rem] mt-1"
+                className="w-[2.4px] h-[2.4px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -133,7 +132,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/6c.png"
                 alt="Image 6"
-                className="w-[0.15rem] h-[0.15rem] mb-1"
+                className="w-[2.4px] h-[2.4px] mb-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
@@ -143,7 +142,7 @@ const Hero2 = () => {
               <motion.img
                 src="/photography/1c.png"
                 alt="Image 7"
-                className="w-[0.15rem] h-[0.15rem] mt-1"
+                className="w-[2.4px] h-[2.4px] mt-1"
                 initial={{ filter: "grayscale(100%)" }}
                 whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.2 }}
