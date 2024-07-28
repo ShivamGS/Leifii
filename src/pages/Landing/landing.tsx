@@ -53,7 +53,7 @@ const Landing = () => {
         <Navbar />
         <div className="h-20"></div>
 
-        <Hero2 />
+        {/* <Hero2 /> */}
         <div className="h-[100vh]"></div>
         <Video />
         <div className="h-[80vh]"></div>

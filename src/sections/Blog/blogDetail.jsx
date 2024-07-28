@@ -17,7 +17,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="bg-black px-10 py-20 h-[550vh]">
+    <div className="bg-black px-4 py-20 h-[550vh]">
       <div className="pb-[2rem] pl-[1rem]">
         <BackButton />
       </div>
