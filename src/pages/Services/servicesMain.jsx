@@ -51,7 +51,7 @@ const ServicesMain = () => {
         options={{
           smooth: true,
           smartphone: {
-            smooth: true,
+            // smooth: true,
           },
           tablet: {
             smooth: true,
