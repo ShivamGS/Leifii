@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
-import Services from "./services.js";
 import { Navbar } from "../../components/Nav/Navbar/index.tsx";
-import "./services.css";
 import Banner from "../../components/Banner/banner.jsx";
 import { AnimatePresence } from "framer-motion";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -51,7 +49,7 @@ const ServicesMain = () => {
         options={{
           smooth: true,
           smartphone: {
-            // smooth: true,
+            smooth: true,
           },
           tablet: {
             smooth: true,
@@ -201,7 +199,6 @@ const ServicesMain = () => {
           </CursorProvider>
         </AnimatePresence>
       </LocomotiveScrollProvider>
-      <Services />
     </div>
   );
 };

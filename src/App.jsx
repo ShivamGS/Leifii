@@ -4,7 +4,6 @@ import { HeroParallaxDemo } from "../src/components/ui/HeroParallaxDemo.tsx";
 import Landing from "./pages/Landing/landing.tsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Services from "./pages/Services/services.js";
 import ServicesMain from "./pages/Services/servicesMain.jsx";
 import Photo from "./sections/Photo/photo.jsx";
 import Testimonials from "./components/Testimonials/testimonials.jsx";
