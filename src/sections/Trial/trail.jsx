@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Define image paths and configurations
 const images = [
   {
-    path: "/blog1.png",
+    path: "/photography/1c.png",
     link: "/product-photography",
     startScroll: 20,
     endScroll: 30,
@@ -16,12 +16,12 @@ const images = [
     endX: 40,
     startY: 0,
     endY: 20,
-    startGradient: "linear-gradient(to right, #000000, #1b1b1b)", // Image 1 start gradient
-    endGradient: "linear-gradient(to right, #000000, #0b0b0b)", // Image 1 end gradient
+    startGradient: "linear-gradient(to right, #000000, #1b1b1b)",
+    endGradient: "linear-gradient(to right, #000000, #0b0b0b)",
     text: "Product Photography ",
   },
   {
-    path: "/blog3.jpg",
+    path: "/photography/2c.png",
     link: "/event-photography",
     startScroll: 30,
     endScroll: 40,
@@ -33,12 +33,12 @@ const images = [
     endX: -35,
     startY: 0,
     endY: 20,
-    startGradient: "linear-gradient(to right, #1a2a1b, #2b3a2b)", // Image 2 gradient
-    endGradient: "linear-gradient(to right, #0a1a0b, #1b2b1b)", // Image 2 end gradient
+    startGradient: "linear-gradient(to right, #1a2a1b, #2b3a2b)",
+    endGradient: "linear-gradient(to right, #0a1a0b, #1b2b1b)",
     text: "Event Photography",
   },
   {
-    path: "/blog4.jpg",
+    path: "/photography/3c.png",
     link: "/modelling-shoots",
     startScroll: 40,
     endScroll: 50,
@@ -50,12 +50,12 @@ const images = [
     endX: 40,
     startY: 0,
     endY: 20,
-    startGradient: "linear-gradient(to right, #1a1a3b, #2b2b4b)", // Image 3 gradient
-    endGradient: "linear-gradient(to right, #0a0a1b, #1b1b2b)", // Image 3 end gradient
+    startGradient: "linear-gradient(to right, #1a1a3b, #2b2b4b)",
+    endGradient: "linear-gradient(to right, #0a0a1b, #1b1b2b)",
     text: "Modelling Shoots",
   },
   {
-    path: "/blog5.jpg",
+    path: "/photography/4c.png",
     link: "/restaurant-shoots",
     startScroll: 50,
     endScroll: 60,
@@ -67,9 +67,43 @@ const images = [
     endX: -35,
     startY: 0,
     endY: 20,
-    startGradient: "linear-gradient(to right, #2b1a1a, #4b2b2b)", // Image 4 gradient
-    endGradient: "linear-gradient(to right, #1b0a0a, #2b1b1b)", // Image 4 end gradient
+    startGradient: "linear-gradient(to right, #2b1a1a, #4b2b2b)",
+    endGradient: "linear-gradient(to right, #1b0a0a, #2b1b1b)",
     text: "Restaurant Shoots",
+  },
+  {
+    path: "/photography/5c.png",
+    link: "/wedding-photography",
+    startScroll: 60,
+    endScroll: 70,
+    startScale: 0.2,
+    endScale: 2,
+    startOpacity: 0,
+    endOpacity: 1,
+    startX: 0,
+    endX: 40,
+    startY: 0,
+    endY: 20,
+    startGradient: "linear-gradient(to right, #3a1a3a, #4b2b4b)",
+    endGradient: "linear-gradient(to right, #2a0a2a, #3b1b3b)",
+    text: "Wedding Photography",
+  },
+  {
+    path: "/photography/6c.png",
+    link: "/landscape-photography",
+    startScroll: 70,
+    endScroll: 80,
+    startScale: 0.2,
+    endScale: 2,
+    startOpacity: 0,
+    endOpacity: 1,
+    startX: 0,
+    endX: -35,
+    startY: 0,
+    endY: 20,
+    startGradient: "linear-gradient(to right, #1a3a1a, #2b4b2b)",
+    endGradient: "linear-gradient(to right, #0a2a0a, #1b3b1b)",
+    text: "Landscape Photography",
   },
 ];
 
@@ -176,10 +210,7 @@ const Trail = () => {
       <div className="h-[100vh] bg-gradient-to-b from-[#2d0d3a] to-[#1a1a3b]"></div>
       <div className="h-[100vh] bg-gradient-to-b from-[#1a1a3b] to-[#2c140a]"></div>
       <div className="h-[100vh] bg-gradient-to-b from-[#2c140a] to-[#05282f]"></div>
-      <div
-        className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#05282f] to-[#2e0733]"
-        // style={{ background: getBackgroundGradient() }}
-      >
+      <div className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#05282f] to-[#2e0733]">
         <div className="flex justify-center space-x-4 mt-20 absolute inset-0">
           {images.map((image, index) => (
             <div
@@ -188,12 +219,12 @@ const Trail = () => {
               style={getImageStyles(image)}
               onClick={() => handleImageClick(image.link)}
             >
-              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-30px] left-1/2 transform -translate-x-1/2 px-2 py-1 text-white">
+              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-10%] md:top-[-50%] left-[50%] md:left-[50%] transform md:translate-x-[-50%] text-center">
                 {image.text}
               </div>
               <img
                 src={image.path}
-                alt={`Image ${index + 1}`}
+                alt=""
                 className="w-full h-full object-cover"
               />
             </div>
