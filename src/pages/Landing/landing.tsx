@@ -54,7 +54,7 @@ const Landing = () => {
         <div className="h-20"></div>
 
         <Hero2 />
-        <div className="h-[100vh]"></div>
+        <div className="h-[100vh] bg-red-500"></div>
         <Video />
         <div className="h-[80vh]"></div>
         <Intro />

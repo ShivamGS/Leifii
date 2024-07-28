@@ -5,8 +5,34 @@ import Lottie from "lottie-react";
 
 const Hero2 = () => {
   const { scrollY } = useViewportScroll();
-  const scale = useTransform(scrollY, [10, 100], [0.1, 5]);
-  const x = useTransform(scrollY, [10, 1000], ["60%", "-100%"]);
+
+  // Define transformations based on screen size
+  const isMobile = window.innerWidth <= 768;
+
+  // Define scaleDot and xText transformations
+  const scaleDot = useTransform(
+    scrollY,
+    isMobile ? [10, 300] : [10, 300],
+    isMobile ? ["0.1", "15"] : ["0.1", "5.5"]
+  );
+  const xText = useTransform(
+    scrollY,
+    isMobile ? [150, 800] : [150, 930],
+    isMobile ? ["60%", "-75%"] : ["60%", "-70%"]
+  );
+  const scaleText = useTransform(scrollY, [10, 200, 500], [0.5, 1, 1]);
+
+  // Define transformations for imagesClass
+  const xImages = useTransform(scrollY, [200, 800], ["80%", "-230%"]);
+  const opacityImages = useTransform(scrollY, [0, 200, 220], [0, 0, 1]);
+
+  // Define yDot transformation for vertical movement of the dot
+  // const yDot = useTransform(scrollY, [0, 50], ["0%", "-30%"]); // Adjust the range and values as needed
+  const yDot = useTransform(
+    scrollY,
+    isMobile ? [0, 50] : [0, 80],
+    isMobile ? ["0%", "0%"] : ["0%", "-50%"]
+  );
 
   return (
     <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
@@ -18,12 +44,12 @@ const Hero2 = () => {
       </div>
 
       <motion.div
-        className="dot bg-black h-[30rem] w-[30rem] rounded-full overflow-hidden"
-        style={{ scale }}
+        className="dot bg-black h-[10rem] w-[10rem] md:h-[30rem] md:w-[30rem] rounded-full overflow-hidden"
+        style={{ scale: scaleDot, y: yDot }} // Apply yDot here
       />
       <motion.div
-        className="textClass fixed text-white text-[20rem] top-[15rem] flex space-x-[4rem] list-none gap-10"
-        style={{ x }}
+        className="textClass fixed text-white text-[8rem] md:text-[10rem] lg:text-[20rem] top-[15rem] flex space-x-[2rem] md:space-x-[2rem] lg:space-x-[4rem] list-none gap-1 md:gap-4 lg:gap-10"
+        style={{ x: xText, scale: scaleText }}
       >
         <li>THIS</li>
         <li>IS</li>
@@ -31,6 +57,42 @@ const Hero2 = () => {
         <li>WE</li>
         <li>CAN</li>
         <li>GROW.</li>
+      </motion.div>
+
+      <motion.div
+        className="imagesClass h-[50rem] fixed text-white top-[8rem] md:top-[6rem] lg:top-[8rem] flex space-x-[2rem] list-none gap-[20rem]"
+        style={{ x: xImages, opacity: opacityImages }}
+      >
+        <img
+          src="/photography/1c.png"
+          alt="Image 1"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+        />
+        <img
+          src="/photography/2c.png"
+          alt="Image 2"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+        />
+        <img
+          src="/photography/3c.png"
+          alt="Image 3"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+        />
+        <img
+          src="/photography/4c.png"
+          alt="Image 4"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+        />
+        <img
+          src="/photography/5c.png"
+          alt="Image 5"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+        />
+        <img
+          src="/photography/6c.png"
+          alt="Image 6"
+          className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+        />
       </motion.div>
     </div>
   );
