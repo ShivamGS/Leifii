@@ -7,15 +7,15 @@ const images = [
     path: "/photography/1c.png",
     link: "/product-photography",
     startScroll: 20,
-    endScroll: 30,
+    endScroll: 28,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
-    endX: 40,
+    endX: 50,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #000000, #1b1b1b)",
     endGradient: "linear-gradient(to right, #000000, #0b0b0b)",
     text: "Product Photography ",
@@ -26,13 +26,13 @@ const images = [
     startScroll: 30,
     endScroll: 40,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
     endX: -35,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #1a2a1b, #2b3a2b)",
     endGradient: "linear-gradient(to right, #0a1a0b, #1b2b1b)",
     text: "Event Photography",
@@ -43,13 +43,13 @@ const images = [
     startScroll: 40,
     endScroll: 50,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
-    endX: 40,
+    endX: 45,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #1a1a3b, #2b2b4b)",
     endGradient: "linear-gradient(to right, #0a0a1b, #1b1b2b)",
     text: "Modelling Shoots",
@@ -60,13 +60,13 @@ const images = [
     startScroll: 50,
     endScroll: 60,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
     endX: -35,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #2b1a1a, #4b2b2b)",
     endGradient: "linear-gradient(to right, #1b0a0a, #2b1b1b)",
     text: "Restaurant Shoots",
@@ -77,13 +77,13 @@ const images = [
     startScroll: 60,
     endScroll: 70,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
-    endX: 40,
+    endX: 45,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #3a1a3a, #4b2b4b)",
     endGradient: "linear-gradient(to right, #2a0a2a, #3b1b3b)",
     text: "Wedding Photography",
@@ -92,18 +92,36 @@ const images = [
     path: "/photography/6c.png",
     link: "/landscape-photography",
     startScroll: 70,
-    endScroll: 80,
+    endScroll: 75,
     startScale: 0.2,
-    endScale: 2,
+    endScale: 1.8,
     startOpacity: 0,
     endOpacity: 1,
     startX: 0,
     endX: -35,
     startY: 0,
-    endY: 20,
+    endY: 15,
     startGradient: "linear-gradient(to right, #1a3a1a, #2b4b2b)",
     endGradient: "linear-gradient(to right, #0a2a0a, #1b3b1b)",
     text: "Landscape Photography",
+  },
+
+  {
+    path: "/img/pod01.png",
+    link: "",
+    startScroll: 80,
+    endScroll: 100,
+    startScale: 0.2,
+    endScale: 1,
+    startOpacity: 0,
+    endOpacity: 1,
+    startX: 0,
+    endX: 50,
+    startY: 0,
+    endY: 50,
+    startGradient: "linear-gradient(to right, #1a3a1a, #2b4b2b)",
+    endGradient: "linear-gradient(to right, #0a2a0a, #1b3b1b)",
+    text: "",
   },
 ];
 
@@ -207,19 +225,21 @@ const Trail = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="h-[100vh] bg-gradient-to-b from-[#2d0d3a] to-[#1a1a3b]"></div>
-      <div className="h-[100vh] bg-gradient-to-b from-[#1a1a3b] to-[#2c140a]"></div>
-      <div className="h-[100vh] bg-gradient-to-b from-[#2c140a] to-[#05282f]"></div>
-      <div className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#05282f] to-[#2e0733]">
+      <div className="h-[75vh] bg-gradient-to-b from-[#333a91] to-[#591414]"></div>
+      <div className="h-[90vh] bg-gradient-to-b from-[#591414] to-[#2c140a]"></div>
+      <div className="h-[90vh] bg-gradient-to-b from-[#2c140a] to-[#c4b7be]"></div>
+      <div className="h-[75vh] bg-gradient-to-b from-[#c4b7be] to-[#b5853e]"></div>
+      <div className="h-[75vh] bg-gradient-to-b from-[#b5853e] to-[#0b5929]"></div>
+      <div className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#0b5929] to-[#2e0733]">
         <div className="flex justify-center space-x-4 mt-20 absolute inset-0">
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-[50px] h-[50px] md:w-[200px] md:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
+              className="w-[50px] h-[50px] md:w-[300px] md:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
               style={getImageStyles(image)}
               onClick={() => handleImageClick(image.link)}
             >
-              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-10%] md:top-[-50%] left-[50%] md:left-[50%] transform md:translate-x-[-50%] text-center">
+              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-10%] md:top-[-20%] left-[50%] md:left-[50%] transform md:translate-x-[-50%] text-center">
                 {image.text}
               </div>
               <img
