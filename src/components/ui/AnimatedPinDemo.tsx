@@ -8,7 +8,7 @@ export function AnimatedPinDemo() {
         title="Click here to open maps"
         href="https://maps.app.goo.gl/KaUPD26bf7CADsAk8"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] md:w-[18rem] md:h-[18rem] ">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] md:w-[15rem] md:h-[15rem] lg:w-[18rem] lg:h-[18rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             Find us on
           </h3>

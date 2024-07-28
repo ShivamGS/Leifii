@@ -183,16 +183,27 @@ const Careers = () => {
 
         <SvgLine />
 
-        <div className="h-[5vh] mb-0 mt-[6rem] m-2 md:m-[10rem]  font-[questrial] text-left md:text-center leading-[3rem] md:leading-[4rem] lg:leading-[6rem]">
-          <div className="text-[1.6rem]  md:text-[4rem] lg:text-[5rem]">
-            Think you have what it takes?
+        <div className="h-[5vh] md:h-[0vh] mb-0 mt-[6rem] m-2 md:m-[10rem] font-[questrial] text-left md:text-center leading-[2.5rem] md:leading-[4rem] lg:leading-[6rem]">
+          {/* Mobile View */}
+          <div className="block md:hidden px-5">
+            <div className="text-[1.5rem]">Think you have what it takes?</div>
+            <div className="text-[2.3rem]">
+              Send us your <br />
+              <span className="italic mt-2">Resume</span>
+            </div>
           </div>
 
-          <div className="text-[3.5rem] md:text-[3.5rem] lg:text-[5rem]">
-            Send us your <br />
-            <span className="italic mt-2 md:mt-0">Resume</span>
+          {/* Desktop View */}
+          <div className="hidden md:block">
+            <div className="text-[1.6rem] md:text-[4rem] lg:text-[5rem]">
+              Think you have what it takes?
+            </div>
+            <div className="text-[3.5rem] md:text-[3.5rem] lg:text-[5rem]">
+              Send us your Resume
+            </div>
           </div>
         </div>
+
         <div>
           <header className="cb-request">
             <div className="cb-request-content">
