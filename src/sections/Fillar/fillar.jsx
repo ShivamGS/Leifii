@@ -4,7 +4,7 @@ import SvgLine from "../../components/SvgLine/svgLine";
 const Fillar = () => {
   return (
     <div>
-      <div className="h-[95vh] w-full bg-white">
+      <div className="h-[100vh] md:h-[105vh] w-full bg-white overflow-hidden">
         <div className="h-[65%] w-full flex flex-col md:flex-row">
           <div className="order-2 md:order-1 w-full lg:w-[70%] text-[4rem] lg:text-[10rem] font-questrial mt-[2rem] lg:mt-[8rem] ml-[2rem] lg:ml-[5rem]">
             <div>CREATIVE</div>

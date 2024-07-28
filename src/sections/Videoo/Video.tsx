@@ -16,7 +16,9 @@ const Video = () => {
     <motion.div className=" w-full absolute transform-gpu overflow-hidden mt-[10rem] md:mt-0">
       <motion.video
         className={`video_section ${
-          isMobile ? "h-[450px]" : "h-[650px] sm:h-[500px] md:h-[650px]"
+          isMobile
+            ? "h-[450px] overflow-hidden"
+            : "h-[650px] sm:h-[500px] md:h-[650px]"
         } w-[100%] md:w-[95%] object-cover border rounded-3xl`}
         src="/newVid.mp4"
         playsInline

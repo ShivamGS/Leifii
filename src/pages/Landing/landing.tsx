@@ -57,7 +57,10 @@ const Landing = () => {
 
         <Hero2 />
         <Fillar />
-        <Video />
+        <div className="w-full overflow-hidden">
+          <Video />
+        </div>
+
         <div className="h-[80vh] "></div>
         <Intro />
         <div className="hidden md:block">

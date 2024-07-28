@@ -100,19 +100,19 @@ const About = () => {
             ></motion.div>
           </div>
 
-          <div className="description fixed top-[23rem] right-[6rem] w-[15rem] md:top-[10rem] md:right-[5rem] lg:top-[20rem] lg:right-[10rem] md:w-[20rem] lg:w-[30rem] font-[questrial] text-justify text-[1rem] md:text-[1rem] lg:text-[1.5rem] pt-5">
+          <div className="description fixed top-[23rem] right-[4rem] w-[15rem] md:top-[10rem] md:right-[5rem] lg:top-[20rem] lg:right-[10rem] md:w-[20rem] lg:w-[30rem] font-[questrial] text-justify text-[1rem] md:text-[1rem] lg:text-[1.5rem] pt-5">
             {description}
           </div>
         </div>
 
-        <div className=" w-full h-screen flex flex-col justify-center">
-          <div className="text-[3rem] font-[questrial] text-center p-[5rem]">
+        <div className=" mt-[60rem] md:mt-0 w-full h-[150vh] flex flex-col justify-center">
+          <div className="text-[2rem] md:text-[4rem] font-[questrial] text-center p-[2rem] md:p-[5rem]">
             Our Main Bodies
           </div>
           <Flipp />
         </div>
 
-        <Slider />
+        {/* <Slider /> */}
 
         <div className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-[questrial] text-center mt-[5rem]">
           Pillars at Leifii
