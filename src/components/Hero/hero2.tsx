@@ -5,19 +5,8 @@ import Lottie from "lottie-react";
 
 const Hero2 = () => {
   const { scrollY } = useViewportScroll();
-
-  // Adjust the scaling to avoid blurriness
-  const scale = useTransform(scrollY, [0, 350, 1200], [0.5, 5, 5]);
-
-  // Keep the same opacity transitions
-  const opacity = useTransform(scrollY, [0, 200, 400], [0, 0, 1]);
-
-  // Adjust the horizontal scrolling for images and text
-  const xImages = useTransform(scrollY, [200, 800], [0, -55]);
-  const xWhoWeAre = useTransform(scrollY, [200, 900], [0, -38]);
-
-  // The y transform controls the vertical position of the circle
-  const y = useTransform(scrollY, [0, 50, 300, 1200], [0, -150, 0, 750]);
+  const scale = useTransform(scrollY, [10, 100], [0.1, 5]);
+  const x = useTransform(scrollY, [60, 300], ["100%", "-100%"]);
 
   return (
     <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
@@ -29,52 +18,26 @@ const Hero2 = () => {
       </div>
 
       <motion.div
-        className="bg-black rounded-full flex items-center justify-center relative"
-        style={{
-          scale,
-          y,
-          width: "500px", // Increased size for better initial resolution
-          height: "500px",
-        }}
+        className="dot bg-black h-[30rem] w-[30rem] rounded-full"
+        style={{ scale }}
+      />
+      <motion.div
+        className="textClass absolute text-white text-[10rem] top-[25rem] flex space-x-[2rem] list-none"
+        style={{ x }}
       >
-        <motion.div
-          className="absolute text-white top-[2.75rem] flex space-x-2 text-[2.5px] lg:text-[100px]"
-          style={{ x: xWhoWeAre, opacity }}
-        >
-          <div className="flex w-[64px] h-[16px] ml-8 space-x-[1.6px] list-none">
-            <li>THIS</li>
-            <li>IS</li>
-            <li>HOW</li>
-            <li>WE</li>
-            <li>CAN</li>
-            <li>GROW.</li>
-          </div>
-        </motion.div>
-        <motion.div
-          className="absolute text-white top-[5.6px] lg:top-[6.4px] flex space-x-4"
-          style={{ x: xImages, opacity }}
-        >
-          <div className="flex w-[128px] h-[16px] ml-8 space-x-1 list-none">
-            {Array.from({ length: 9 }).map((_, index) => (
-              <li key={index}>
-                <motion.img
-                  src={`/photography/${(index % 6) + 1}c.png`}
-                  alt={`Image ${index + 1}`}
-                  className="w-[5px] h-[5px] mt-1"
-                  initial={{ filter: "grayscale(100%)" }}
-                  whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
-                  transition={{ duration: 0.2 }}
-                />
-              </li>
-            ))}
-          </div>
-        </motion.div>
+        <li>THIS</li>
+        <li>IS</li>
+        <li>HOW</li>
+        <li>WE</li>
+        <li>CAN</li>
+        <li>GROW.</li>
       </motion.div>
     </div>
   );
 };
 
 export default Hero2;
+
 // import React from "react";
 // import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import down from "./downarrow.json";
