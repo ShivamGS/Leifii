@@ -2,20 +2,22 @@ import React from "react";
 
 const Showcase = () => {
   return (
-    <div className="h-[300vh] bg-black font-[questrial] px-10">
-      <div className="text-white text-[3.5rem] pt-[66px] pb-1">Featured</div>
-      <div className="text-white text-[3.5rem]  flex flex-row items-center">
-        <div className="h-[3.5rem] w-[7rem] rounded-full bg-slate-600 overflow-hidden py-2">
-          <video
-            className=""
-            src="websitesHeader.mp4"
-            autoPlay
-            playsInline
-            loop
-            muted
-          ></video>
+    <div className="h-[300vh] bg-black font-[questrial] px-9">
+      <div className="pb-[20px]">
+        <div className="text-white text-[3.5rem] pt-[66px] pb-1">Featured</div>
+        <div className="text-white text-[3.5rem]  flex flex-row items-center">
+          <div className="h-[3.5rem] w-[7rem] rounded-full bg-slate-600 overflow-hidden py-2">
+            <video
+              className=""
+              src="websitesHeader.mp4"
+              autoPlay
+              playsInline
+              loop
+              muted
+            ></video>
+          </div>
+          <span className=" px-2">Projects</span>
         </div>
-        <span className=" px-2">Projects</span>
       </div>
 
       <div>
@@ -64,7 +66,9 @@ const Showcase = () => {
             muted
           ></video>
         </div>
-        <div className="text-white text-[1.3rem] mt-[2rem] mb-[4rem]">KHS</div>
+        <div className="text-white text-[1.3rem] mt-[2rem] mb-[4rem]">
+          Kaka Halwai
+        </div>
       </div>
 
       <div>
