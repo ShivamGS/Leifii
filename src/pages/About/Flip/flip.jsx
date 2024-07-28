@@ -13,13 +13,11 @@ const Flipp = () => {
           />
         </div>
         <div className="back flex flex-col lg:flex-row text-black font-[questrial] p-4 lg:p-10">
-          <div className="h-1/4 flex flex-row">
+          <div className="flex flex-row items-start lg:items-center mb-4 lg:mb-0">
             <div className="h-16 w-16 rounded-full overflow-hidden">
-              {" "}
-              <img src="/images/cover1.jpg"></img>
+              <img src="/images/cover1.jpg" alt="Profile" />
             </div>
-            <div className="p-5 pt-2 items-center leading-6 ">
-              {" "}
+            <div className="p-5 pt-2 leading-6">
               <div className="text-[1.2rem]">Kshitija Whaval</div>
               <div className="text-[1.2rem] text-[#797676]">Founder</div>
             </div>
@@ -28,7 +26,7 @@ const Flipp = () => {
             Hello, My name is Kshitija Whaval and this is my filler content
             about marketing and things about me.
           </div>
-          <div className="mt-4 lg:mt-0 lg:h-1/4 flex flex-col lg:flex-row  text-[1rem] lg:text-[1.25rem] justify-between items-start md:items-center">
+          <div className="mt-4 lg:mt-0 lg:h-1/4 flex flex-col lg:flex-row text-[1rem] lg:text-[1.25rem] justify-between items-start md:items-center">
             <div className="text-[#032a39] mb-4 lg:mb-0">
               AKA Branding Specialist
             </div>
@@ -53,13 +51,11 @@ const Flipp = () => {
           />
         </div>
         <div className="back flex flex-col lg:flex-row text-black font-[questrial] p-4 lg:p-10">
-          <div className="h-1/4 flex flex-row">
+          <div className="flex flex-row items-start lg:items-center mb-4 lg:mb-0">
             <div className="h-16 w-16 rounded-full overflow-hidden">
-              {" "}
-              <img src="/images/cover1.jpg"></img>
+              <img src="/images/cover1.jpg" alt="Profile" />
             </div>
-            <div className="p-5 pt-2 items-center leading-6 ">
-              {" "}
+            <div className="p-5 pt-2 leading-6">
               <div className="text-[1.2rem]">Richank Shah</div>
               <div className="text-[1.2rem] text-[#797676]">Co-Founder</div>
             </div>
@@ -68,7 +64,7 @@ const Flipp = () => {
             Hello, My name is Richank Shah and this is my filler content about
             marketing and things about me.
           </div>
-          <div className="mt-4 lg:mt-0 lg:h-1/4 flex flex-col lg:flex-row  text-[1rem] lg:text-[1.25rem] justify-between items-start md:items-center">
+          <div className="mt-4 lg:mt-0 lg:h-1/4 flex flex-col lg:flex-row text-[1rem] lg:text-[1.25rem] justify-between items-start md:items-center">
             <div className="text-[#032a39] mb-4 lg:mb-0">
               AKA Marketing Specialist
             </div>

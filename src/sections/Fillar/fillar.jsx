@@ -4,7 +4,7 @@ import SvgLine from "../../components/SvgLine/svgLine";
 const Fillar = () => {
   return (
     <div>
-      <div className="h-[100vh] md:h-[105vh] w-full bg-white overflow-hidden">
+      <div className="h-[120vh] md:h-[120vh] w-full bg-white overflow-hidden">
         <div className="h-[65%] w-full flex flex-col md:flex-row">
           <div className="order-2 md:order-1 w-full lg:w-[70%] text-[4rem] lg:text-[10rem] font-questrial mt-[2rem] lg:mt-[8rem] ml-[2rem] lg:ml-[5rem]">
             <div>CREATIVE</div>
@@ -26,9 +26,7 @@ const Fillar = () => {
         <div className="hidden md:block">
           <SvgLine />
         </div>
-
-        <div className="h-[4%]"></div>
-        <div className="h-[30%] flex flex-col md:flex-row font-questrial ml-[1.25rem] lg:ml-[8rem] px-4 lg:px-0 pt-[3rem] md:pt-0">
+        <div className="h-[30%] flex flex-col md:flex-row font-[questrial] ml-[1.25rem] lg:ml-[8rem] px-4 lg:px-0 pt-[3rem] md:pt-0">
           <div className="w-full lg:w-[30%] flex justify-start lg:justify-start mb-4 lg:mb-0">
             <img src="/logol.png" className="h-8 w-8" alt="Logo" />
           </div>
