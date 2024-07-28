@@ -123,15 +123,15 @@ const Careers = () => {
           <span className="">meets technology</span>
         </div>
 
-        <div className="h-[40vh] md:h-[60vh] lg:h-[80vh] mt-[10rem] w-full">
+        <div className="h-[65vh] md:h-[60vh] lg:h-[80vh] mt-[10rem] w-full">
           <img src="/job1.png"></img>
         </div>
 
-        <div className="flex flex-col md:flex-row h-auto md:h-[40vh] lg:h-[50vh] w-full mx-4 md:mx-[5rem] lg:mx-[10rem] mt-[5rem] md:mt-[10rem] lg:mt-[13rem] mb-0 font-[questrial]">
-          <div className="w-full md:w-1/5 text-[1.2rem] md:text-[1.5rem] mb-4 md:mb-0 px-4">
+        <div className="flex flex-col md:flex-row h-auto md:h-[40vh] lg:h-[50vh] w-full px-4 mx-0 md:mx-[5rem] lg:mx-[10rem] mt-[5rem] md:mt-[10rem] lg:mt-[13rem] mb-0 font-[questrial]">
+          <div className="w-full md:w-1/5 text-[1.4rem] md:text-[1.5rem] mb-8 md:mb-0 px-4">
             OUR TEAM CULTURE
           </div>
-          <div className="w-full md:w-3/5 text-[1rem] md:text-[1.25rem] lg:text-[1.75rem] px-4 md:px-[2.5rem] lg:px-[5rem] text-justify pr-8 tracking-wider leading-[1.25rem] lg:leading-[2rem]">
+          <div className="w-full md:w-3/5 text-[1rem] md:text-[1.25rem] lg:text-[1.75rem] px-4 md:px-[2.5rem] lg:px-[5rem] text-justify pr-4 tracking-wider leading-[1.25rem] lg:leading-[2rem]">
             At Leifii, our team culture is built on creativity, collaboration,
             and a commitment to excellence. We believe in the power of diverse
             perspectives and foster an environment where every team member is
@@ -151,7 +151,7 @@ const Careers = () => {
           <div className="h-[5rem] text-[1.2rem] md:text-[1.5rem] lg:text-[2.3rem]">
             Degree doesn't matter to us. Skills Does!
           </div>
-          <div className="h-[15rem] text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] w-[80%] lg:w-[60%] leading-[1.6em]">
+          <div className="h-[15rem] text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] w-[85%] lg:w-[60%] leading-[1.6em]">
             We are always looking to hire talented individuals to join our
             marketing team. Our team is looking for creative, innovative, and
             strategic thinkers who can help us reach the next level of success.
@@ -162,16 +162,17 @@ const Careers = () => {
             skills to back it up, we’d love to hear from you
           </div>
         </div>
+        <div className="h-[3rem] md:h-0"></div>
 
-        <div className="h-[30vh] pt-[2rem] md:pt-0 md:h-[80vh] w-[70vh] md:w-full flex flex-row m-[1rem] md:m-[1rem] lg:m-[5rem] mx-[2rem] md:mx-[3rem] lg:mx-[10rem] gap-6 md:gap-10 ">
-          <div className="w-[30%] md:w-[40%] h-[80%] md:h-[60%] lg:h-[70%]">
+        <div className="h-[45vh]  pt-[2rem] md:pt-0 md:h-[80vh] w-[70vh] md:w-full flex flex-row m-[1rem] md:m-[1rem] lg:m-[5rem] mx-[2rem] md:mx-[3rem] lg:mx-[10rem] gap-6 md:gap-10 ">
+          <div className="w-[30%] md:w-[40%] h-[70%] md:h-[60%] lg:h-[70%]">
             <img
               src="/job2.jpg"
               className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
               alt="Job 2"
             />
           </div>
-          <div className="w-[30%] md:w-[40%] h-[90%] md:h-[90%]  lg:h-[100%] pt-8 md:pt-[15rem]">
+          <div className="w-[30%] md:w-[40%] h-[85%] md:h-[90%]  lg:h-[100%] pt-[5rem] md:pt-[15rem]">
             <img
               src="/job3.jpg"
               className="rounded-[2rem] md:rounded-[3rem] w-full h-full object-cover"
@@ -182,12 +183,14 @@ const Careers = () => {
 
         <SvgLine />
 
-        <div className="h-[1vh] mb-0 mt-[6rem] m-2 md:m-[10rem]  font-[questrial] text-center leading-[2rem] md:leading-[4rem] lg:leading-[6rem]">
-          <div className="text-[2.5rem] md:text-[4rem] lg:text-[5rem]">
+        <div className="h-[5vh] mb-0 mt-[6rem] m-2 md:m-[10rem]  font-[questrial] text-left md:text-center leading-[3rem] md:leading-[4rem] lg:leading-[6rem]">
+          <div className="text-[1.6rem]  md:text-[4rem] lg:text-[5rem]">
             Think you have what it takes?
           </div>
-          <div className="text-[2.35rem] md:text-[3.5rem] lg:text-[5rem]">
-            Send us your Resume
+
+          <div className="text-[3.5rem] md:text-[3.5rem] lg:text-[5rem]">
+            Send us your <br />
+            <span className="italic mt-2 md:mt-0">Resume</span>
           </div>
         </div>
         <div>
@@ -565,7 +568,7 @@ const Careers = () => {
                     </div>
                     <div className="cb-form-submit">
                       <button
-                        className="text-[1.2rem] text-white border-[#000] border-2 rounded-full p-4 transition-colors duration-300 bg-[#000] hover:bg-white hover:text-black"
+                        className="text-[1.2rem] text-white border-[#000] border-2 rounded-full p-4 transition-colors duration-300 bg-[#000] hover:bg-white hover:text-black font-[questrial]"
                         type="submit"
                         data-magnetic
                         data-cursor="-opaque"

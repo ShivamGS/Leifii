@@ -459,7 +459,7 @@ const Contact = () => {
                   </div>
                   <div className="cb-form-submit">
                     <button
-                      className="text-[1.2rem] text-white border-[#000] border-2 rounded-full p-4 transition-colors duration-300 bg-[#333] hover:bg-white hover:text-black"
+                      className="text-[1.2rem] text-white border-[#000] border-2 rounded-full p-4 transition-colors duration-300 bg-[#000] hover:bg-white hover:text-black font-[questrial]"
                       type="submit"
                       data-magnetic
                       data-cursor="-opaque"
