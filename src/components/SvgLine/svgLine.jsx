@@ -64,9 +64,9 @@ const SvgLine = () => {
   };
 
   return (
-    <div className="flex pl-10 mt-5 md:mt-2 lg:mt-2 h-[10vh] w-full items-center justify-center bg-white">
+    <div className="flex lg:pl-10 mt-5 md:mt-2 lg:mt-2 h-[10vh] w-full items-center justify-center bg-white">
       <div className="bodu">
-        <div className="line pl-12 ">
+        <div className="line pl-6 lg:pl-12 ">
           <div
             onMouseEnter={manageMouseEnter}
             onMouseMove={manageMouseMove}

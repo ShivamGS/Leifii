@@ -229,17 +229,17 @@ const Trail = () => {
       <div className="h-[90vh] bg-gradient-to-b from-[#591414] to-[#2c140a]"></div>
       <div className="h-[90vh] bg-gradient-to-b from-[#2c140a] to-[#c4b7be]"></div>
       <div className="h-[75vh] bg-gradient-to-b from-[#c4b7be] to-[#b5853e]"></div>
-      <div className="h-[75vh] bg-gradient-to-b from-[#b5853e] to-[#0b5929]"></div>
-      <div className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#0b5929] to-[#2e0733]">
+      <div className="h-[75vh] bg-gradient-to-b from-[#b5853e] to-[#515751]"></div>
+      <div className="h-[300vh] text-white relative overflow-hidden bg-gradient-to-b from-[#515751] to-[#000000]">
         <div className="flex justify-center space-x-4 mt-20 absolute inset-0">
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-[50px] h-[50px] md:w-[300px] md:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
+              className="w-[60px] h-[60px] md:w-[100px] md:h-[80px] lg:w-[300px] lg:h-[200px] bg-gray-500 transform scale-0 opacity-0 relative"
               style={getImageStyles(image)}
               onClick={() => handleImageClick(image.link)}
             >
-              <div className="absolute text-[0.5rem] md:text-[1rem] w-[4rem] md:w-[11rem] top-[-10%] md:top-[-20%] left-[50%] md:left-[50%] transform md:translate-x-[-50%] text-center">
+              <div className="absolute text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] w-[4rem] md:w-[11rem] top-[-55%] md:top-[-35%] lg:top-[-20%] left-[0%] md:left-[50%] transform md:translate-x-[-50%] text-center">
                 {image.text}
               </div>
               <img

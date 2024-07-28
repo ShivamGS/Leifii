@@ -5,7 +5,7 @@ const Fillar = () => {
   return (
     <div>
       <div className="h-[95vh] w-full bg-white">
-        <div className="h-[65%] w-full flex flex-col lg:flex-row">
+        <div className="h-[65%] w-full flex flex-col md:flex-row">
           <div className="order-2 md:order-1 w-full lg:w-[70%] text-[4rem] lg:text-[10rem] font-questrial mt-[2rem] lg:mt-[8rem] ml-[2rem] lg:ml-[5rem]">
             <div>CREATIVE</div>
             <div>DESIGN</div>
@@ -28,14 +28,14 @@ const Fillar = () => {
         </div>
 
         <div className="h-[4%]"></div>
-        <div className="h-[30%] flex flex-col lg:flex-row font-questrial ml-[2rem] lg:ml-[8rem] px-4 lg:px-0 pt-[5rem] md:pt-0">
+        <div className="h-[30%] flex flex-col md:flex-row font-questrial ml-[1.25rem] lg:ml-[8rem] px-4 lg:px-0 pt-[3rem] md:pt-0">
           <div className="w-full lg:w-[30%] flex justify-start lg:justify-start mb-4 lg:mb-0">
             <img src="/logol.png" className="h-8 w-8" alt="Logo" />
           </div>
-          <div className="w-full lg:w-[10%] text-[1rem] lg:text-[1.25rem] pt-1 text-start  lg:text-left">
+          <div className="w-full lg:w-[10%] text-[1.25rem] lg:text-[1.25rem] pt-1 text-start  lg:text-left">
             Creative Design
           </div>
-          <div className="w-full lg:w-[50%] text-[1rem] lg:text-[1.75rem] tracking-wide px-1 pt-4 md:pt-0 lg:px-5 text-start">
+          <div className="w-full lg:w-[50%] text-[1.25rem] lg:text-[1.75rem] tracking-wide px-1 pt-4 md:pt-0 lg:px-5 text-start">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni
             incidunt illo? Modi officia nobis repudiandae neque eius dolorum
             quisquam.

@@ -60,7 +60,7 @@ const Hero2 = () => {
       </motion.div>
 
       <motion.div
-        className="imagesClass h-[50rem] fixed text-white top-[10rem] md:top-[6rem] lg:top-[8rem] flex space-x-[2rem] list-none gap-[20rem]"
+        className="imagesClass h-[50rem] fixed text-white top-[10rem] md:top-[6rem] lg:top-[8rem] flex space-x-[2rem] list-none gap-[20rem] overflow-hidden"
         style={{ x: xImages, opacity: opacityImages }}
       >
         <img
