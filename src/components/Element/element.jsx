@@ -26,7 +26,7 @@ const Element = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-auto mb-20">
+      <div className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-auto mb-20 p-[1rem]">
         <div className="h-auto w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-4 lg:pl-8 flex flex-col">
           <div className="text-[hsla(0,0%,7%,.7)]">001</div>
           <div className="flex items-start py-5 pr-4 lg:pr-10">
@@ -50,8 +50,7 @@ const Element = () => {
           </div>
           <div className="text-lg lg:text-xl">Marketing</div>
           <div className="text-[hsla(0,0%,7%,.7)] text-sm lg:text-base">
-            We solve problems with strategic design. Lorem ipsum, dolor sit amet
-            consectetu
+            We solve problems with strategic design. Lorem ipsum, dolor
           </div>
         </div>
         <div className="h-auto w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-4 lg:pl-8 flex flex-col">

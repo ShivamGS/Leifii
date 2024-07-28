@@ -164,7 +164,7 @@ const Careers = () => {
         </div>
         <div className="h-[3rem] md:h-0"></div>
 
-        <div className="h-[45vh]  pt-[2rem] md:pt-0 md:h-[80vh] w-[70vh] md:w-full flex flex-row m-[1rem] md:m-[1rem] lg:m-[5rem] mx-[2rem] md:mx-[3rem] lg:mx-[10rem] gap-6 md:gap-10 ">
+        <div className="h-[45vh]  pt-[2rem] md:pt-0 md:h-[80vh] w-[70vh] md:w-full flex flex-row m-[1rem] md:m-[1rem] lg:m-[5rem] mx-[2rem] md:mx-[3rem] lg:mx-[10rem] gap-6 md:gap-10 pr-0 md:pr-[3rem] lg:pr-0 ">
           <div className="w-[30%] md:w-[40%] h-[70%] md:h-[60%] lg:h-[70%]">
             <img
               src="/job2.jpg"
