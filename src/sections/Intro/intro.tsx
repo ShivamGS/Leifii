@@ -8,9 +8,9 @@ const Intro = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="h-auto flex flex-col md:flex-row justify-center items-center p-4 md:h-[700px]  pt-0 md:pt-[10rem]">
-      <div className="w-full md:w-[50%] flex justify-center mb-4 md:mb-0">
-        <div className="align-middle flex items-center justify-center p-4 md:p-[20px] rounded-3xl h-[20rem] md:h-[35rem]">
+    <div className="h-auto flex flex-col md:flex-row justify-center items-center p-4 pb-0 md:pb-4 md:h-[700px]  pt-0 md:pt-[10rem]">
+      <div className="w-full md:w-[50%] flex justify-center mb-0 md:mb-0">
+        <div className="align-middle flex items-center justify-center p-4 md:p-[20px] rounded-3xl h-[20rem] md:h-[35rem] mt-[2rem] md:mt-0">
           <Lottie
             animationData={zeroTree}
             style={{ width: "100%", height: "100%" }}

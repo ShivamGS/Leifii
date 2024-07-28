@@ -7,9 +7,9 @@ import love from "./love.json";
 
 const Element = () => {
   return (
-    <div className="h-auto bg-[#fff] flex flex-col px-4 sm:px-8 lg:px-16">
+    <div className="h-auto bg-[#fff] flex flex-col px-1 sm:px-8 lg:px-16">
       <div className="text-container ml-[2rem] md:ml-[0rem] flex flex-col lg:flex-row items-center pb-10 pt-16">
-        <p className="text-[2rem] md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-[1.5rem] mt-10 lg:mt-0">
+        <p className="text-[2.3rem] md:text-4xl lg:text-6xl w-full lg:w-1/2 lg:pl-[1.5rem] mt-5 lg:mt-0">
           Designing your
           <br /> leaves with
         </p>
@@ -26,7 +26,7 @@ const Element = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-auto mb-20 p-[1rem]">
+      <div className="w-full p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-auto md:mt-20 mb-20 ">
         <div className="h-auto w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-4 lg:pl-8 flex flex-col">
           <div className="text-[hsla(0,0%,7%,.7)]">001</div>
           <div className="flex items-start py-5 pr-4 lg:pr-10">
@@ -50,7 +50,8 @@ const Element = () => {
           </div>
           <div className="text-lg lg:text-xl">Marketing</div>
           <div className="text-[hsla(0,0%,7%,.7)] text-sm lg:text-base">
-            We solve problems with strategic design. Lorem ipsum, dolor
+            We solve problems with strategic design. Lorem ipsum, dolor sit amet
+            consectetu
           </div>
         </div>
         <div className="h-auto w-full border border-[hsla(0,0%,7%,.2)] border-l-2 border-y-0 border-r-0 pl-4 lg:pl-8 flex flex-col">
