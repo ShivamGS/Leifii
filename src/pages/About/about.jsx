@@ -11,6 +11,8 @@ import scroll from "./scroll.json";
 import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
 import { Footer } from "../../sections/Footer/index.tsx";
+import Flipp from "./Flip/flip.jsx";
+import Slider from "./Slider/slider.jsx";
 
 const About = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -103,15 +105,24 @@ const About = () => {
           </div>
         </div>
 
-        <div className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-[questrial] text-center">
+        <div className=" w-full h-screen flex flex-col justify-center">
+          <div className="text-[3rem] font-[questrial] text-center p-[5rem]">
+            Our Main Bodies
+          </div>
+          <Flipp />
+        </div>
+
+        <Slider />
+
+        <div className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-[questrial] text-center mt-[5rem]">
           Pillars at Leifii
           <div
             style={{
-              width: "50px",
+              width: "280px",
               height: "2px",
               backgroundColor: "#000",
               margin: "auto",
-              marginTop: "10px",
+              marginTop: "15px",
             }}
           ></div>
         </div>
