@@ -26,6 +26,8 @@ import FooterText from "../../sections/FooterText/footerText.jsx";
 import BlogList from "../../sections/Blog/blogList.jsx";
 import Hero2 from "../../components/Hero/hero2.tsx";
 import Showcase from "../../components/Showcase/showcase.jsx";
+import SvgLine from "../../components/SvgLine/svgLine.jsx";
+import Fillar from "../../sections/Fillar/fillar.jsx";
 
 const Landing = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,9 +56,10 @@ const Landing = () => {
         <div className="h-20"></div>
 
         <Hero2 />
-        <div className="h-[100vh]"></div>
+        <Fillar />
+        <div className="h-[8vh]"></div>
         <Video />
-        <div className="h-[80vh]"></div>
+        <div className="h-[80vh] "></div>
         <Intro />
         <div className="hidden md:block">
           <Parallax />

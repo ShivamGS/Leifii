@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./svgLine.css";
-import { useRef, useEffect } from "react";
 
 const SvgLine = () => {
   const path = useRef(null);
@@ -11,10 +10,14 @@ const SvgLine = () => {
 
   useEffect(() => {
     setPath(progress);
+    window.addEventListener("resize", setPath.bind(null, progress)); // Handle resize
+    return () =>
+      window.removeEventListener("resize", setPath.bind(null, progress));
   }, []);
 
   const setPath = (progress) => {
-    const width = window.innerWidth * 0.7;
+    const width =
+      path.current?.parentElement?.offsetWidth || window.innerWidth * 0.85;
     path.current.setAttributeNS(
       null,
       "d",
@@ -59,20 +62,15 @@ const SvgLine = () => {
     time = Math.PI / 2;
     progress = 0;
   };
+
   return (
-    <div className="flex mt-5 md:mt-2 lg:mt-5 h-[10vh] w-full items-center justify-center bg-white">
-      <div className="body">
-        <div className="line">
+    <div className="flex pl-10 mt-5 md:mt-2 lg:mt-2 h-[10vh] w-full items-center justify-center bg-white">
+      <div className="bodu">
+        <div className="line pl-12 ">
           <div
-            onMouseEnter={() => {
-              manageMouseEnter();
-            }}
-            onMouseMove={(e) => {
-              manageMouseMove(e);
-            }}
-            onMouseLeave={() => {
-              manageMouseLeave();
-            }}
+            onMouseEnter={manageMouseEnter}
+            onMouseMove={manageMouseMove}
+            onMouseLeave={manageMouseLeave}
             className="box"
           ></div>
           <svg>
