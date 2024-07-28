@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 const Hero2 = () => {
   const { scrollY } = useViewportScroll();
   const scale = useTransform(scrollY, [10, 100], [0.1, 5]);
-  const x = useTransform(scrollY, [60, 300], ["100%", "-100%"]);
+  const x = useTransform(scrollY, [10, 1000], ["60%", "-100%"]);
 
   return (
     <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
@@ -18,11 +18,11 @@ const Hero2 = () => {
       </div>
 
       <motion.div
-        className="dot bg-black h-[30rem] w-[30rem] rounded-full"
+        className="dot bg-black h-[30rem] w-[30rem] rounded-full overflow-hidden"
         style={{ scale }}
       />
       <motion.div
-        className="textClass absolute text-white text-[10rem] top-[25rem] flex space-x-[2rem] list-none"
+        className="textClass fixed text-white text-[20rem] top-[15rem] flex space-x-[4rem] list-none gap-10"
         style={{ x }}
       >
         <li>THIS</li>
