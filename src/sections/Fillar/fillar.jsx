@@ -23,7 +23,7 @@ const Fillar = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:block">
+        <div className="">
           <SvgLine />
         </div>
         <div className="h-[30%] flex flex-col md:flex-row font-[questrial] ml-[1.25rem] lg:ml-[8rem] px-4 lg:px-0 pt-[3rem] md:pt-0">

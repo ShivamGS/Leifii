@@ -60,38 +60,56 @@ const Hero2 = () => {
       </motion.div>
 
       <motion.div
-        className="imagesClass h-[50rem] fixed text-white top-[10rem] md:top-[6rem] lg:top-[8rem] flex space-x-[2rem] list-none gap-[20rem] overflow-hidden"
+        className="imagesClass h-[50rem] fixed text-white top-[10rem] md:top-[6rem] lg:top-[8rem] flex space-x-[2rem] list-none gap-[20rem] "
         style={{ x: xImages, opacity: opacityImages }}
       >
-        <img
+        <motion.img
           src="/photography/1c.png"
           alt="Image 1"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
-        <img
+        <motion.img
           src="/photography/2c.png"
           alt="Image 2"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
-        <img
+        <motion.img
           src="/photography/3c.png"
           alt="Image 3"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
-        <img
+        <motion.img
           src="/photography/4c.png"
           alt="Image 4"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
-        <img
+        <motion.img
           src="/photography/5c.png"
           alt="Image 5"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
-        <img
+        <motion.img
           src="/photography/6c.png"
           alt="Image 6"
           className="h-[10rem] w-[15rem] md:h-[10rem] md:w-[15rem] lg:h-[15rem] lg:w-[20rem] mt-[15rem] md:mt-[20rem] lg:mt-[25rem]   object-cover"
+          style={{ filter: "grayscale(100%)" }}
+          whileHover={{ filter: "grayscale(0%)", scale: 1.1 }}
+          transition={{ duration: 0.3 }}
         />
       </motion.div>
     </div>
