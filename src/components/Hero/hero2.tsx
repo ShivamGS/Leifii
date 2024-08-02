@@ -13,7 +13,7 @@ const Hero2 = () => {
   const scaleDot = useTransform(
     scrollY,
     isMobile ? [10, 300] : [10, 300],
-    isMobile ? ["0.1", "15"] : ["0.1", "5.5"]
+    isMobile ? ["0.1", "15"] : ["0.1", "6"]
   );
   const xText = useTransform(
     scrollY,
@@ -39,8 +39,11 @@ const Hero2 = () => {
       <div className="text-black absolute top-[17rem] font-[questrial] text-[1.6rem] md:text-[3rem] lg:text-[5rem] mx-[1rem] lg:mx-0 tracking-widest">
         THIS IS YOUR BUSINESS
       </div>
-      <div className="absolute top-[20rem] left-[10rem] lg:top-[25rem] lg:left-[42rem]">
-        <Lottie animationData={down} className="h-[10rem] lg:h-[15rem] w-20" />
+      <div className="absolute top-[20rem] lg:top-[25rem] pr-[3rem] md:pr-[6rem] lg:pr-[8rem]">
+        <Lottie
+          animationData={down}
+          className="h-[8rem] md:h-[12rem] lg:h-[15rem] w-20"
+        />
       </div>
 
       <motion.div

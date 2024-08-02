@@ -13,7 +13,7 @@ const Video = () => {
   );
 
   return (
-    <motion.div className=" w-full absolute transform-gpu overflow-hidden mt-[10rem] md:mt-0">
+    <motion.div className=" w-full  transform-gpu overflow-hidden mt-[10rem] md:mt-0">
       <motion.video
         className={`video_section ${
           isMobile

@@ -6,6 +6,7 @@ import "./contact.css";
 import { Navbar } from "../../components/Nav/Navbar/index.tsx";
 import { Footer } from "../../sections/Footer/index.tsx";
 import CursorProvider from "../../lib/context/cursorContext.tsx";
+import PageLoader from "../../components/PageLoader/pageLoader.jsx";
 
 const Influencer = () => {
   const [data, setData] = useState({
@@ -110,7 +111,7 @@ const Influencer = () => {
 
   return (
     <CursorProvider>
-      {" "}
+      <PageLoader />{" "}
       <div>
         <Navbar />
         <header className="cb-request">
