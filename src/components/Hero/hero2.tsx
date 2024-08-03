@@ -35,7 +35,7 @@ const Hero2 = () => {
   );
 
   return (
-    <div className="flex items-center justify-center h-[165vh] bg-white overflow-hidden">
+    <div className="flex items-center justify-center h-[190vh] bg-white overflow-hidden">
       <div className="text-black absolute top-[17rem] font-[questrial] text-[1.6rem] md:text-[3rem] lg:text-[5rem] mx-[1rem] lg:mx-0 tracking-widest">
         THIS IS YOUR BUSINESS
       </div>

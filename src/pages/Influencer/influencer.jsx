@@ -14,8 +14,8 @@ const Influencer = () => {
     email: "",
     message: "",
     services: [],
-    budget: "",
     files: [],
+    phonenumber: "",
   });
 
   const navigate = useNavigate();
@@ -75,6 +75,7 @@ const Influencer = () => {
       message: data.message,
       services: data.services.join(", "),
       budget: data.budget,
+      phonenumber: data.phonenumber,
       attachments: JSON.stringify(attachments),
     };
 
@@ -96,7 +97,8 @@ const Influencer = () => {
             instagramid: "",
             message: "",
             services: [],
-            budget: "",
+            phonenumber: "",
+            // budget: "",
             files: [],
           });
           // Redirect to the contact page
@@ -136,9 +138,7 @@ const Influencer = () => {
                   encType="multipart/form-data"
                 >
                   <div className="cb-form-group">
-                    <div className="cb-form-label -smooth">
-                      I'm interested in...
-                    </div>
+                    <div className="cb-form-label -smooth">I'm a...</div>
                     <div className="cb-checkbox-group">
                       <div
                         className="cb-checkbox cb-checkbox_rounded"
@@ -148,13 +148,13 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="Branding"
+                            value=" Food Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="Brand Strategy Design & Execution">
-                                Brand Strategy Design & Execution
+                              <span data-text="Food Influencer">
+                                Food Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -171,13 +171,13 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="Website Development"
+                            value="Health & Wellness Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="Website & Application Development">
-                                Website & Application Development
+                              <span data-text="Health & Wellness Influencer">
+                                Health & Wellness Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -194,34 +194,13 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="UX/UI Design"
+                            value="Fashion Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="UX/UI Design">UX/UI Design</span>
-                            </span>
-                            <span className="cb-checkbox_rounded-ripple">
-                              <span></span>
-                            </span>
-                          </span>
-                        </label>
-                      </div>
-                      <div
-                        className="cb-checkbox cb-checkbox_rounded"
-                        data-magnetic
-                      >
-                        <label>
-                          <input
-                            type="checkbox"
-                            name="services"
-                            value="Logo Design"
-                            onChange={handleChange}
-                          ></input>
-                          <span className="cb-checkbox_rounded-box">
-                            <span className="cb-checkbox_rounded-title">
-                              <span data-text="Logo, Packaging Design & Production">
-                                Logo, Packaging Design & Production
+                              <span data-text="Fashion Influencer">
+                                Fashion Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -238,13 +217,13 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="Corporate Events"
+                            value="Lifestyle Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="Corporate Events Strategy">
-                                Corporate Events Strategy
+                              <span data-text="Lifestyle Influencer">
+                                Lifestyle Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -261,13 +240,13 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="Content Creation"
+                            value="Memes & Pop Culture Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="Content Creation & Production">
-                                Content Creation & Production
+                              <span data-text=" Memes & Pop Culture Influencer">
+                                Memes & Pop Culture Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -284,13 +263,59 @@ const Influencer = () => {
                           <input
                             type="checkbox"
                             name="services"
-                            value="Online Marketing"
+                            value="Travel Influencer"
                             onChange={handleChange}
                           ></input>
                           <span className="cb-checkbox_rounded-box">
                             <span className="cb-checkbox_rounded-title">
-                              <span data-text="Online Marketing">
-                                Online Marketing
+                              <span data-text="Travel Influencer">
+                                Travel Influencer
+                              </span>
+                            </span>
+                            <span className="cb-checkbox_rounded-ripple">
+                              <span></span>
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                      <div
+                        className="cb-checkbox cb-checkbox_rounded"
+                        data-magnetic
+                      >
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="services"
+                            value="Beauty Influencer"
+                            onChange={handleChange}
+                          ></input>
+                          <span className="cb-checkbox_rounded-box">
+                            <span className="cb-checkbox_rounded-title">
+                              <span data-text="Beauty Influencer">
+                                Beauty Influencer
+                              </span>
+                            </span>
+                            <span className="cb-checkbox_rounded-ripple">
+                              <span></span>
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                      <div
+                        className="cb-checkbox cb-checkbox_rounded"
+                        data-magnetic
+                      >
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="services"
+                            value="Art Influencer"
+                            onChange={handleChange}
+                          ></input>
+                          <span className="cb-checkbox_rounded-box">
+                            <span className="cb-checkbox_rounded-title">
+                              <span data-text="Art Influencer">
+                                Art Influencer
                               </span>
                             </span>
                             <span className="cb-checkbox_rounded-ripple">
@@ -349,9 +374,9 @@ const Influencer = () => {
                         <input
                           type="text"
                           name="instagramid"
-                          placeholder="Your Instagram Id"
+                          placeholder="Your Instagram/Youtube/Facebook Id"
                           required
-                          aria-label="Your Instagram Id"
+                          aria-label="Your Instagram/Youtube/Facebook Id"
                           onChange={handleChange}
                         ></input>
                         <div className="cb-input_light-line"></div>
@@ -364,15 +389,29 @@ const Influencer = () => {
                       <div className="cb-input_light-box">
                         <textarea
                           name="message"
-                          placeholder="Tell us about yourself"
-                          aria-label="Tell us about your project"
+                          placeholder="Motive to connect"
+                          aria-label="Motive to connect"
                           onChange={handleChange}
                         ></textarea>
                         <div className="cb-input_light-line"></div>
                       </div>
                     </div>
                   </div>
+
                   <div className="cb-form-group">
+                    <div className="cb-input cb-input_light">
+                      <div className="cb-input_light-box">
+                        <textarea
+                          name="phonenumber"
+                          placeholder="Phone Number"
+                          aria-label="Phone Number"
+                          onChange={handleChange}
+                        ></textarea>
+                        <div className="cb-input_light-line"></div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* <div className="cb-form-group">
                     <div className="cb-form-label -smooth">Budget</div>
                     <div className="cb-checkbox-group">
                       <div
@@ -460,7 +499,8 @@ const Influencer = () => {
                         </label>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+
                   <div className="cb-form-group">
                     {/* <div
                   data-validity='{"size":26214400,"limit":10}'
